@@ -164,6 +164,8 @@ export const ui = {
     "pricing.p4.cap": "Hasta 500 clientes",
     "pricing.p5.name": "Plan Escala Industrial",
     "pricing.p5.cap": "Hasta 1000 clientes",
+    "pricing.badge.popular": "Popular",
+    "pricing.cta.choose": "Elegir Plan",
     "pricing.includes.title": "¿Qué incluye cada plan?",
     "pricing.inc1.title": "Gestión de Membresías",
     "pricing.inc1.desc":
@@ -348,6 +350,8 @@ export const ui = {
     "pricing.p4.cap": "Up to 500 clients",
     "pricing.p5.name": "Industrial Scale Plan",
     "pricing.p5.cap": "Up to 1000 clients",
+    "pricing.badge.popular": "Most Popular",
+    "pricing.cta.choose": "Choose Plan",
     "pricing.includes.title": "What does each plan include?",
     "pricing.inc1.title": "Membership Management",
     "pricing.inc1.desc": "Creation of plans by exact days and fast linking.",

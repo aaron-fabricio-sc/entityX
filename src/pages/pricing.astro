@@ -55,7 +55,7 @@ const features = [
                         <div class="col-md-6 col-lg-4">
                              <div class={`card h-100 bg-sidebar border-0 shadow-sm text-center feature-card ${plan.featured ? 'border-primary' : ''}`}>
                                 <div class="card-header bg-transparent border-0 pt-4">
-                                     {plan.featured && <span class="badge bg-primary mb-2">Popular</span>}
+                                     {plan.featured && <span class="badge bg-primary mb-2">{t('pricing.badge.popular')}</span>}
                                     <h4 class="text-neon">{plan.name}</h4>
                                     <p class="text-light small">{plan.cap}</p>
                                 </div>
@@ -63,12 +63,12 @@ const features = [
                                     <h2 class="card-title display-6 fw-bold text-white mb-0">{plan.monthly}</h2>
                                     <p class="text-secondary small mb-3">{t('pricing.table.monthly')}</p>
                                     
-                                     <h3 class="card-title h4 text-success mb-0">{plan.yearly}</h3>
+                                     <h3 class="card-title h4 text-neon mb-0">{plan.yearly}</h3>
                                      <p class="text-secondary small">{t('pricing.table.yearly')}</p>
                                 </div>
                                 <div class="card-footer bg-transparent border-0 pb-4">
                                      <a href={`https://wa.me/59170668135?text=Hola,%20estoy%20interesado%20en%20el%20${plan.name}`} target="_blank" class={`btn w-100 ${plan.featured ? 'btn-primary' : 'btn-outline-primary'}`}>
-                                        <i class="bi bi-whatsapp me-2"></i> Elegir Plan
+                                        <i class="bi bi-whatsapp me-2"></i> {t('pricing.cta.choose')}
                                      </a>
                                 </div>
                             </div>
