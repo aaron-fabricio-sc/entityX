@@ -1,17 +1,11 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { useTranslations } from '../i18n/utils';
 
-export function getStaticPaths() {
-  return [
-    {params: {lang: 'en'}},
-  ];
-}
-
-const { lang } = Astro.params;
-const t = useTranslations(lang as any); // cast to any to avoid strict type error during dev if types aren't fully updated yet
+const lang = 'es';
+const t = useTranslations(lang);
 ---
 
 <Layout 
@@ -124,10 +118,10 @@ const t = useTranslations(lang as any); // cast to any to avoid strict type erro
 </Layout>
 
 <style lang="scss">
-    @import "../../styles/variables";
+    @use "../styles/variables" as vars;
     
     .text-gradient {
-        background: linear-gradient(120deg, $text-light 0%, $active-color 100%);
+        background: linear-gradient(120deg, vars.$text-light 0%, vars.$active-color 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

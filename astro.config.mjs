@@ -1,13 +1,32 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
+  site: "https://aaron-fabricio-sc.github.io",
   i18n: {
     defaultLocale: "es",
     locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
   },
+
   server: {
     port: 4321,
   },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          quietDeps: true,
+        },
+      },
+    },
+  },
+
+  integrations: [sitemap()],
 });

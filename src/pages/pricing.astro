@@ -1,17 +1,11 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { useTranslations } from '../i18n/utils';
 
-export function getStaticPaths() {
-  return [
-    {params: {lang: 'en'}},
-  ];
-}
-
-const { lang } = Astro.params;
-const t = useTranslations(lang as 'es' | 'en');
+const lang = 'es';
+const t = useTranslations(lang);
 
 const plans = [
     { name: t('pricing.p1.name'), cap: t('pricing.p1.cap'), monthly: '200 BOB', yearly: '2.000 BOB' },
@@ -81,8 +75,6 @@ const features = [
                         </div>
                     ))}
                 </div>
-
-                <!-- Cards for mobile (visible only on small screens if needed, or stick to responsive table) -->
             </div>
         </section>
 
