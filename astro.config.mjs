@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://aaron-fabricio-sc.github.io",
+  base: "/landing-page-entityx",
   i18n: {
     defaultLocale: "es",
     locales: ["es", "en"],

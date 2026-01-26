@@ -56,7 +56,7 @@ const t = useTranslations(lang);
         <div class="row g-3 mt-5">
             <div class="col-6 col-md-4">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
-                    <img src="/imagenes/photo-1534438327276-14e5300c3a48.avif" class="w-100 h-100 object-fit-cover" alt="Gym">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/photo-1534438327276-14e5300c3a48.avif'} class="w-100 h-100 object-fit-cover" alt="Gym">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-6">{t('biz.gym')}</h5>
                     </div>
@@ -64,7 +64,7 @@ const t = useTranslations(lang);
             </div>
             <div class="col-6 col-md-4">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
-                    <img src="/imagenes/photo-1600334089648-b0d9d3028eb2.avif" class="w-100 h-100 object-fit-cover" alt="Spa">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/photo-1600334089648-b0d9d3028eb2.avif'} class="w-100 h-100 object-fit-cover" alt="Spa">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-6">{t('biz.spa')}</h5>
                     </div>
@@ -72,7 +72,7 @@ const t = useTranslations(lang);
             </div>
             <div class="col-6 col-md-4">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
-                    <img src="/imagenes/photo-1523580494863-6f3031224c94.avif" class="w-100 h-100 object-fit-cover" alt="School">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/photo-1523580494863-6f3031224c94.avif'} class="w-100 h-100 object-fit-cover" alt="School">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-6">{t('biz.school')}</h5>
                     </div>
@@ -122,7 +122,7 @@ const t = useTranslations(lang);
     <div class="container py-5">
         <div class="row py-5 align-items-center">
              <div class="col-lg-6 order-lg-2">
-                 <img src="/imagenes/aplicaciones web.jpg"class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="Dashboard">
+                 <img src={import.meta.env.BASE_URL + 'imagenes/aplicaciones web.jpg'} class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="Dashboard">
              </div>
              <div class="col-lg-6 order-lg-1">
                  <h2 class="mb-4 ">{t('feat.agnostic.title')}</h2>
@@ -137,7 +137,7 @@ const t = useTranslations(lang);
 
         <div class="row py-5 align-items-center">
             <div class="col-lg-6">
-                <img src="/imagenes/recepcionis.jpg" class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="Access Control">
+                <img src={import.meta.env.BASE_URL + 'imagenes/recepcionis.jpg'} class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="Access Control">
             </div>
             <div class="col-lg-6">
                 <h2 class="mb-4 ">{t('feat.access.title')}</h2>

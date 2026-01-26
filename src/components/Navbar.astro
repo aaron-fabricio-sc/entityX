@@ -7,12 +7,15 @@ const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
 
 function getPathForLang(l: string) {
+    // Get the base path (e.g., /landing-page-entityx)
+    const base = import.meta.env.BASE_URL.replace(/\/$/, ""); // Remove trailing slash if any
+
     // Force root path for Spanish (default)
-    if (l === 'es') return ''; 
+    if (l === 'es') return base || ''; 
     // Force /en prefix for English
-    if (l === 'en') return '/en';
+    if (l === 'en') return `${base}/en`;
     // Fallback to root
-    return '';
+    return base || '';
 }
 ---
 
