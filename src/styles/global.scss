@@ -1,19 +1,23 @@
 @use "sass:color";
 @use "variables" as vars;
 
-// Bridge SASS modules to global scope for Legacy Bootstrap 5 configuration
-$primary: vars.$active-color;
-$secondary: vars.$text-muted;
-$success: vars.$green-color;
-$dark: vars.$nav-color;
-$light: vars.$content-color;
-$body-bg: vars.$content-color;
-$body-color: vars.$nav-color;
-$font-family-sans-serif: vars.$font-family-sans-serif;
-
-@import "bootstrap/scss/bootstrap";
+// No @import "bootstrap" because we are using CDN
 
 :root {
+  // Bootstrap 5 Overrides via CSS Variables
+  --bs-primary: #{vars.$active-color};
+  --bs-primary-rgb:
+    #{red(vars.$active-color)}, #{green(vars.$active-color)},
+    #{blue(vars.$active-color)};
+  --bs-secondary: #{vars.$text-muted};
+  --bs-success: #{vars.$green-color};
+  --bs-dark: #{vars.$nav-color};
+  --bs-light: #{vars.$content-color};
+  --bs-body-bg: #{vars.$content-color};
+  --bs-body-color: #{vars.$nav-color};
+  --bs-body-font-family: #{vars.$font-family-sans-serif};
+
+  // Custom Variables
   --neon-cyan: #{vars.$text-light};
   --active-color: #{vars.$active-color};
   --nav-color: #{vars.$nav-color};

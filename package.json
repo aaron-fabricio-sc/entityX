@@ -11,7 +11,6 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.16.15",
-    "bootstrap": "^5.3.8",
     "sass": "^1.97.3"
   }
 }

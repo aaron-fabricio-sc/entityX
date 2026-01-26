@@ -18,15 +18,5 @@ export default defineConfig({
     port: 4321,
   },
 
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          quietDeps: true,
-        },
-      },
-    },
-  },
-
   integrations: [sitemap()],
 });
