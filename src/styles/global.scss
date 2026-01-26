@@ -7,8 +7,9 @@
   // Bootstrap 5 Overrides via CSS Variables
   --bs-primary: #{vars.$active-color};
   --bs-primary-rgb:
-    #{red(vars.$active-color)}, #{green(vars.$active-color)},
-    #{blue(vars.$active-color)};
+    #{color.channel(vars.$active-color, "red", $space: rgb)},
+    #{color.channel(vars.$active-color, "green", $space: rgb)},
+    #{color.channel(vars.$active-color, "blue", $space: rgb)};
   --bs-secondary: #{vars.$text-muted};
   --bs-success: #{vars.$green-color};
   --bs-dark: #{vars.$nav-color};
