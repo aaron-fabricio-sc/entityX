@@ -1,0 +1,61 @@
+// Palette Neon (Teal/Cyan / Future Tech)
+$nav-color: #021014; // Deep Dark Teal/Black
+$sidebar-bg: #051921; // Dark Slate Teal
+$footer-color: #021014;
+$content-color: #f2fdff; // Very Light Azure (Readability)
+$text-light: #00f3ff; // Neon Cyan
+$text-muted: #5eead4; // Soft Teal
+$active-color: #00ffc8; // Bright Turquoise / Sea Green
+$hover-bg: #0e3d42; // Deep Teal Hover
+$white-color: #ffffff;
+$green-color: #00ff00;
+
+$sidebar-width: 260px;
+$sidebar-collapsed-width: 70px;
+$navbar-height: 64px;
+$footer-height: 56px;
+$transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Typography / Font Sizes
+// Desktop
+$font-size-title-desktop: 2rem;
+$font-size-subtitle-desktop: 1.1rem;
+$font-size-body-desktop: 1rem;
+$font-size-card-value-desktop: 2rem;
+
+// Tablet
+$font-size-title-tablet: 1.5rem;
+$font-size-subtitle-tablet: 1rem;
+$font-size-body-tablet: 0.95rem;
+$font-size-card-value-tablet: 1.6rem;
+
+// Mobile
+$font-size-title-mobile: 1.25rem;
+$font-size-subtitle-mobile: 0.9rem;
+$font-size-body-mobile: 0.875rem;
+$font-size-card-value-mobile: 1.4rem;
+
+// Chart Sizes
+$chart-height-desktop: 250px;
+$chart-height-tablet: 220px;
+$chart-height-mobile: 180px;
+
+// Bootstrap overrides map
+$primary: $active-color;
+$secondary: $text-muted;
+$success: $green-color;
+$dark: $nav-color;
+$light: $content-color;
+$body-bg: $content-color;
+$body-color: $nav-color;
+
+$font-family-sans-serif:
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif;

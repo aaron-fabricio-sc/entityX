@@ -1,0 +1,80 @@
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+
+// Global Overrides based on variables
+body {
+  font-family: $font-family-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $nav-color;
+  font-weight: 700;
+}
+
+// Helper classes matching the theme
+.text-neon {
+  color: $active-color !important;
+}
+
+.text-muted-teal {
+  color: $text-muted !important;
+}
+
+.bg-dark-teal {
+  background-color: $nav-color !important;
+}
+
+.bg-sidebar {
+  background-color: $sidebar-bg !important;
+}
+
+.bg-hover {
+  background-color: $hover-bg !important;
+}
+
+.btn-primary {
+  background-color: $active-color;
+  border-color: $active-color;
+  color: $nav-color;
+  font-weight: 600;
+
+  &:hover {
+    background-color: darken($active-color, 10%);
+    border-color: darken($active-color, 10%);
+    color: $nav-color;
+  }
+}
+
+.btn-outline-primary {
+  color: $active-color;
+  border-color: $active-color;
+
+  &:hover {
+    background-color: $active-color;
+    color: $nav-color;
+  }
+}
+
+// Gradient text effect often found in modern landings
+.text-gradient {
+  background: linear-gradient(90deg, $active-color 0%, $text-light 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Utility animations
+.hover-scale {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import Features from '../../components/Features.astro';
+import Footer from '../../components/Footer.astro';
+import { languages } from '../../i18n/ui';
+import { useTranslations } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'es'}},
+    {params: {lang: 'en'}},
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as 'es' | 'en');
+---
+
+<Layout 
+  title={t('seo.home.title')}
+  description={t('seo.home.desc')}
+  keywords={t('seo.home.keywords')}
+>
+    <Navbar />
+    <Hero />
+    <main>
+        <Features />
+    </main>
+    <Footer />
+</Layout>

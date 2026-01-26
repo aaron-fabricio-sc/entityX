@@ -1,0 +1,222 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!-- Section 1: What is EntityX -->
+<section id="features" class="py-5 bg-body"> 
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="display-4 mb-4 ">{t('feat.whatis.title')}</h2>
+                <p class="lead fw-bold mb-4">{t('feat.whatis.desc')}</p>
+                <p>{t('feat.whatis.p1')}</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card bg-sidebar border-0 h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title  text-neon">{t('feat.whatis.list1.title')}</h5>
+                                <p class="card-text text-light small">{t('feat.whatis.list1.desc')}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-sidebar border-0 h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-neon">{t('feat.whatis.list2.title')}</h5>
+                                <p class="card-text text-light small">{t('feat.whatis.list2.desc')}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-sidebar border-0 h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-neon">{t('feat.whatis.list3.title')}</h5>
+                                <p class="card-text text-light small">{t('feat.whatis.list3.desc')}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-sidebar border-0 h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-neon">{t('feat.whatis.list4.title')}</h5>
+                                <p class="card-text text-light small">{t('feat.whatis.list4.desc')}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Business Types Grid -->
+        <div class="row g-3 mt-5">
+            <div class="col-6 col-md-4">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
+                    <img src="/imagenes/photo-1534438327276-14e5300c3a48.avif" class="w-100 h-100 object-fit-cover" alt="Gym">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-6">{t('biz.gym')}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
+                    <img src="/imagenes/photo-1600334089648-b0d9d3028eb2.avif" class="w-100 h-100 object-fit-cover" alt="Spa">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-6">{t('biz.spa')}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
+                    <img src="/imagenes/photo-1523580494863-6f3031224c94.avif" class="w-100 h-100 object-fit-cover" alt="School">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-6">{t('biz.school')}</h5>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Memberships -->
+<section class="py-5 bg-dark-teal text-light">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill bg-primary text-dark mb-2">{t('feat.membership.subtitle')}</span>
+            <h2 class="display-4 text-gradient">{t('feat.membership.title')}</h2>
+            <p class="lead mx-auto" style="max-width: 700px;">{t('feat.membership.desc')}</p>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary rounded-4 h-100 hover-scale">
+                    <i class="bi bi-calendar-check fs-1 text-neon mb-3"></i>
+                    <h4 class="text-neon">{t('feat.membership.list1.title')}</h4>
+                    <p class="text-light">{t('feat.membership.list1.desc')}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary rounded-4 h-100 hover-scale">
+                    <i class="bi bi-link-45deg fs-1 text-neon mb-3"></i>
+                    <h4 class="text-neon">{t('feat.membership.list2.title')}</h4>
+                    <p class="text-light">{t('feat.membership.list2.desc')}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary rounded-4 h-100 hover-scale">
+                    <i class="bi bi-arrow-repeat fs-1 text-neon mb-3"></i>
+                    <h4 class="text-neon">{t('feat.membership.list3.title')}</h4>
+                    <p class="text-light">{t('feat.membership.list3.desc')}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Agnostic & Access -->
+<section class="py-5 bg-body">
+    <div class="container py-5">
+        <div class="row py-5 align-items-center">
+             <div class="col-lg-6 order-lg-2">
+                 <img src="/imagenes/aplicaciones web.jpg"class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="Dashboard">
+             </div>
+             <div class="col-lg-6 order-lg-1">
+                 <h2 class="mb-4 ">{t('feat.agnostic.title')}</h2>
+                 <p class="lead mb-4">{t('feat.agnostic.desc')}</p>
+                 <ul class="list-unstyled">
+                     <li class="mb-3 d-flex align-items-start"><i class="bi bi-check-circle-fill text-success me-2 mt-1"></i> {t('feat.agnostic.list1')}</li>
+                     <li class="mb-3 d-flex align-items-start"><i class="bi bi-check-circle-fill text-success me-2 mt-1"></i> {t('feat.agnostic.list2')}</li>
+                     <li class="mb-3 d-flex align-items-start"><i class="bi bi-check-circle-fill text-success me-2 mt-1"></i> {t('feat.agnostic.list3')}</li>
+                 </ul>
+             </div>
+        </div>
+
+        <div class="row py-5 align-items-center">
+            <div class="col-lg-6">
+                <img src="/imagenes/recepcionis.jpg" class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="Access Control">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-4 ">{t('feat.access.title')}</h2>
+                <p class="lead mb-4">{t('feat.access.desc')}</p>
+                <div class="d-flex gap-3 mb-4">
+                     <div class="p-3 bg-sidebar rounded text-center text-success flex-fill border border-success">
+                         <i class="bi bi-stoplights fs-2"></i><br>{t('common.active')}
+                     </div>
+                     <div class="p-3 bg-sidebar rounded text-center text-danger flex-fill border border-danger">
+                         <i class="bi bi-shield-lock fs-2"></i><br>{t('common.inactive')}
+                     </div>
+                </div>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="bi bi-dot text-primary me-2"></i> {t('feat.access.list1')}</li>
+                    <li class="mb-3"><i class="bi bi-dot text-primary me-2"></i> {t('feat.access.list2')}</li>
+                </ul>
+            </div>
+       </div>
+    </div>
+</section>
+
+<!-- Section 4: Grid of Extras -->
+<section class="py-5 bg-dark-teal">
+    <div class="container py-5">
+        <h2 class="display-5 text-center text-gradient mb-5">{t('feat.extras.title')}</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 bg-sidebar border-0 text-light feature-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-bag-check fs-1 text-info mb-3 d-block"></i>
+                        <h5 class="card-title text-neon">{t('feat.products.title')}</h5>
+                        <p class="card-text small text-light">{t('feat.products.desc')}</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-6 col-lg-4">
+                <div class="card h-100 bg-sidebar border-0 text-light feature-card">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-shield-check fs-1 text-info mb-3 d-block"></i>
+                        <h5 class="card-title text-neon">{t('feat.security.title')}</h5>
+                        <p class="card-text small text-light">{t('feat.security.desc')}</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-6 col-lg-4">
+                <div class="card h-100 bg-sidebar border-0 text-light feature-card">
+                    <div class="card-body text-center p-4">
+                         <i class="bi bi-people fs-1 text-info mb-3 d-block"></i>
+                         <h5 class="card-title text-neon">{t('feat.staff.title')}</h5>
+                         <p class="card-text small text-light">{t('feat.staff.desc')}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .hover-scale {
+        transition: transform 0.3s;
+    }
+    .hover-scale:hover {
+        transform: translateY(-5px);
+        border-color: var(--active-color) !important;
+        background-color: rgba(255,255,255,0.02);
+    }
+    .feature-card:hover {
+        background-color: rgba(5, 25, 33, 0.8);
+        box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+    }
+    .bg-gradient-dark {
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    }
+    .biz-card {
+        aspect-ratio: 1/1;
+        transition: transform 0.3s;
+    }
+    .biz-card:hover {
+        transform: scale(1.02);
+    }
+</style>

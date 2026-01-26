@@ -1,0 +1,135 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'es'}},
+    {params: {lang: 'en'}},
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as any); // cast to any to avoid strict type error during dev if types aren't fully updated yet
+---
+
+<Layout 
+  title={t('seo.partners.title')}
+  description={t('seo.partners.desc')}
+  keywords={t('seo.partners.keywords')}
+>
+    <Navbar />
+    
+    <main class="pt-5 mt-5">
+        <!-- Hero Section -->
+        <section class="py-5 text-center text-white bg-dark-teal position-relative overflow-hidden">
+            <div class="container py-5 position-relative z-1">
+                <span class="badge rounded-pill bg-info text-dark mb-3">{t('partners.badge')}</span>
+                <h1 class="display-3 fw-bold text-gradient mb-4">{t('partners.hero.title')}</h1>
+                <p class="lead mx-auto text-light" style="max-width: 800px;">{t('partners.hero.desc')}</p>
+            </div>
+            <!-- Abstract Background Decoration -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at 50% 50%, #00ffc8 0%, transparent 50%);"></div>
+        </section>
+
+        <!-- Features List -->
+        <section class="py-5 bg-body">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                         <img src="/imagenes/photo-1556761175-5973dc0f32e7.avif" class="img-fluid rounded-4 shadow-lg mb-4" alt="Meeting">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-sidebar p-3 rounded-circle text-neon border border-secondary">
+                                    <i class="bi bi-mortarboard fs-4"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h3 class="h4 ">{t('partners.list1.title')}</h3>
+                                <p class="">{t('partners.list1.desc')}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-sidebar p-3 rounded-circle text-neon border border-secondary">
+                                    <i class="bi bi-speedometer2 fs-4"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h3 class="h4 ">{t('partners.list2.title')}</h3>
+                                <p class="">{t('partners.list2.desc')}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-sidebar p-3 rounded-circle  border border-secondary">
+                                    <i class="bi bi-people fs-4"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h3 class="h4 ">{t('partners.list3.title')}</h3>
+                                <p class="">{t('partners.list3.desc')}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-5 align-items-center mt-4">
+                     <div class="col-lg-6 order-lg-2">
+                         <img src="/imagenes/photo-1542744173-05336fcc7ad4.avif" class="img-fluid rounded-4 shadow-lg mb-4" alt="Analytics">
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-sidebar p-3 rounded-circle text-neon border border-secondary">
+                                    <i class="bi bi-wallet2 fs-4"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h3 class="h4 ">{t('partners.list4.title')}</h3>
+                                <p class="">{t('partners.list4.desc')}</p>
+                            </div>
+                        </div>
+                         <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-sidebar p-3 rounded-circle  border border-secondary">
+                                    <i class="bi bi-briefcase fs-4"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h3 class="h4 ">{t('partners.list5.title')}</h3>
+                                <p class="">{t('partners.list5.desc')}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-5 bg-dark-teal text-center">
+            <div class="container">
+                <h2 class="text-gradient mb-4">{t('partners.cta.title')}</h2>
+                <a href="https://wa.me/59170668135?text=Hola,%20estoy%20interesado%20en%20el%20programa%20de%20asociados%20de%20EntityX" target="_blank" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">
+                    <i class="bi bi-whatsapp me-2"></i> {t('partners.cta.button')}
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style lang="scss">
+    @import "../../styles/variables";
+    
+    .text-gradient {
+        background: linear-gradient(120deg, $text-light 0%, $active-color 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
