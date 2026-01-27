@@ -143,6 +143,7 @@ export const ui = {
     "biz.spa": "Spas y Wellness",
     "biz.school": "Escuelas y Academias",
     "biz.club": "Clubes Privados",
+    "biz.deportes": "Escuelas de Deportes",
 
     // Pricing Page
     "pricing.title": "INVERSIÓN: PLANES QUE CRECEN CONTIGO",
@@ -328,6 +329,7 @@ export const ui = {
     "biz.spa": "Spas & Wellness",
     "biz.school": "Schools & Academies",
     "biz.club": "Private Clubs",
+    "biz.deportes": "Sports Schools",
 
     // Pricing Page
     "pricing.title": "INVESTMENT: PLANS THAT GROW WITH YOU",
