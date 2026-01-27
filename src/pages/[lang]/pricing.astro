@@ -42,8 +42,8 @@ const features = [
         <!-- Hero Section -->
         <section class="py-5 bg-dark-teal text-light text-center">
             <div class="container">
-                <h1 class="display-4 text-neon mb-4">{t('pricing.title')}</h1>
-                <p class="lead mx-auto mb-4" style="max-width: 800px;">{t('pricing.desc')}</p>
+                <h1 class="text-neon mb-4 responsive-title">{t('pricing.title')}</h1>
+                <p class="text-light mx-auto mb-4 responsive-desc" style="max-width: 800px;">{t('pricing.desc')}</p>
                 
                 <div class="alert alert-info bg-sidebar border-info text-info mx-auto" style="max-width: 700px;">
                     <i class="bi bi-info-circle-fill me-2"></i> {t('pricing.note')}
@@ -138,6 +138,25 @@ const features = [
 </Layout>
 
 <style>
+    .responsive-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    .responsive-desc {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    @media (min-width: 768px) {
+        .responsive-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+        }
+        .responsive-desc {
+            font-size: 1.25rem;
+        }
+    }
+
     .hover-scale {
         transition: transform 0.3s ease;
     }

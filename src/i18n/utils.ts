@@ -18,3 +18,15 @@ export function useTranslations(lang: keyof typeof ui) {
     return ui[lang][key] || ui[defaultLang][key];
   };
 }
+
+export function getPathForLang(l: string) {
+  // Get the base path (e.g., /entityX)
+  const base = import.meta.env.BASE_URL.replace(/\/$/, ""); // Remove trailing slash if any
+
+  // Force root path for Spanish (default)
+  if (l === "es") return base || "";
+  // Force /en prefix for English
+  if (l === "en") return `${base}/en`;
+  // Fallback to root
+  return base || "";
+}

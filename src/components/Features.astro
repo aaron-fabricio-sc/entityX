@@ -10,8 +10,8 @@ const t = useTranslations(lang);
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="display-4 mb-4 ">{t('feat.whatis.title')}</h2>
-                <p class="lead fw-bold mb-4">{t('feat.whatis.desc')}</p>
+                <h2 class="mb-4 responsive-feature-title">{t('feat.whatis.title')}</h2>
+                <p class="fw-bold mb-4 responsive-feature-desc">{t('feat.whatis.desc')}</p>
                 <p>{t('feat.whatis.p1')}</p>
             </div>
             <div class="col-lg-6">
@@ -89,7 +89,7 @@ const t = useTranslations(lang);
         <div class="text-center mb-5">
             <span class="badge rounded-pill bg-primary text-dark mb-2">{t('feat.membership.subtitle')}</span>
             <h2 class="display-4 text-gradient">{t('feat.membership.title')}</h2>
-            <p class="lead mx-auto" style="max-width: 700px;">{t('feat.membership.desc')}</p>
+            <p class="mx-auto responsive-feature-desc-small" style="max-width: 700px;">{t('feat.membership.desc')}</p>
         </div>
         <div class="row g-4 text-center">
             <div class="col-md-4">
@@ -126,7 +126,7 @@ const t = useTranslations(lang);
              </div>
              <div class="col-lg-6 order-lg-1">
                  <h2 class="mb-4 ">{t('feat.agnostic.title')}</h2>
-                 <p class="lead mb-4">{t('feat.agnostic.desc')}</p>
+                 <p class="mb-4 fw-bold responsive-feature-desc-bold">{t('feat.agnostic.desc')}</p>
                  <ul class="list-unstyled">
                      <li class="mb-3 d-flex align-items-start"><i class="bi bi-check-circle-fill text-success me-2 mt-1"></i> {t('feat.agnostic.list1')}</li>
                      <li class="mb-3 d-flex align-items-start"><i class="bi bi-check-circle-fill text-success me-2 mt-1"></i> {t('feat.agnostic.list2')}</li>
@@ -141,7 +141,7 @@ const t = useTranslations(lang);
             </div>
             <div class="col-lg-6">
                 <h2 class="mb-4 ">{t('feat.access.title')}</h2>
-                <p class="lead mb-4">{t('feat.access.desc')}</p>
+                <p class="mb-4 responsive-feature-desc-small">{t('feat.access.desc')}</p>
                 <div class="d-flex gap-3 mb-4">
                      <div class="p-3 bg-sidebar rounded text-center text-success flex-fill border border-success">
                          <i class="bi bi-stoplights fs-2"></i><br>{t('common.active')}
@@ -218,5 +218,40 @@ const t = useTranslations(lang);
     }
     .biz-card:hover {
         transform: scale(1.02);
+    }
+
+    /* Responsive typography */
+    .responsive-feature-title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .responsive-feature-desc {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .responsive-feature-desc-small {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .responsive-feature-desc-bold {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    @media (min-width: 768px) {
+        .responsive-feature-title {
+            font-size: 3.5rem; /* Equivalent to display-4 */
+            font-weight: 300;
+        }
+        .responsive-feature-desc {
+            font-size: 1.25rem; /* Equivalent to lead */
+        }
+        .responsive-feature-desc-small {
+            font-size: 1.25rem; /* Equivalent to lead */
+        }
+        .responsive-feature-desc-bold {
+             font-size: 1.25rem; /* Equivalent to lead */
+        }
     }
 </style>
