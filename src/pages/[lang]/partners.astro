@@ -27,7 +27,7 @@ const t = useTranslations(lang as any); // cast to any to avoid strict type erro
             <div class="container py-5 position-relative z-1">
                 <span class="badge rounded-pill bg-info text-dark mb-3">{t('partners.badge')}</span>
                 <h1 class="display-3 fw-bold text-gradient mb-4">{t('partners.hero.title')}</h1>
-                <p class="lead mx-auto text-light" style="max-width: 800px;">{t('partners.hero.desc')}</p>
+                <p class="mx-auto text-light responsive-partner-desc" style="max-width: 800px;">{t('partners.hero.desc')}</p>
             </div>
             <!-- Abstract Background Decoration -->
             <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at 50% 50%, #00ffc8 0%, transparent 50%);"></div>
@@ -113,7 +113,7 @@ const t = useTranslations(lang as any); // cast to any to avoid strict type erro
         <section class="py-5 bg-dark-teal text-center">
             <div class="container">
                 <h2 class="text-gradient mb-4">{t('partners.cta.title')}</h2>
-                <a href="https://wa.me/59170668135?text=Hola,%20estoy%20interesado%20en%20el%20programa%20de%20asociados%20de%20EntityX" target="_blank" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">
+                <a href="https://wa.me/59170668135?text=Hola,%20estoy%20interesado%20en%20el%20programa%20de%20asociados%20de%20EntityX" target="_blank" class="btn btn-primary rounded-pill shadow-lg responsive-cta-btn">
                     <i class="bi bi-whatsapp me-2"></i> {t('partners.cta.button')}
                 </a>
             </div>
@@ -130,5 +130,26 @@ const t = useTranslations(lang as any); // cast to any to avoid strict type erro
         background: linear-gradient(120deg, $text-light 0%, $active-color 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .responsive-partner-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .responsive-cta-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .responsive-partner-desc {
+            font-size: 1.25rem; /* Equivalent to lead */
+        }
+
+        .responsive-cta-btn {
+            padding: 1rem 3rem; 
+            font-size: 1.25rem; /* Equivalent to btn-lg */
+        }
     }
 </style>
