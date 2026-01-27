@@ -18,9 +18,7 @@ const currentPath = Astro.url.pathname;
         <li class="nav-item">
           <a class="nav-link text-light fw-bold" href={currentPath === getPathForLang(lang) || currentPath === getPathForLang(lang) + '/' ? '#home' : getPathForLang(lang) + '/#home'}>{t('nav.home')}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-light fw-bold" href={currentPath === getPathForLang(lang) || currentPath === getPathForLang(lang) + '/' ? '#features' : getPathForLang(lang) + '/#features'}>{t('nav.features')}</a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link text-light fw-bold" href={getPathForLang(lang) + '/pricing'}>{t('nav.pricing')}</a>
         </li>

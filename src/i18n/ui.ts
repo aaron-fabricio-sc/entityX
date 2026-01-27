@@ -137,6 +137,7 @@ export const ui = {
     "partners.cta.button": "Unirme al Programa",
     "common.active": "Activo",
     "common.inactive": "Inactivo",
+    "common.contact": "Contacto",
 
     // Business Types
     "biz.gym": "Gimnasios y Crossfit",
@@ -323,6 +324,7 @@ export const ui = {
     "partners.cta.button": "Join the Program",
     "common.active": "Active",
     "common.inactive": "Inactive",
+    "common.contact": "Contact",
 
     // Business Types
     "biz.gym": "Gyms & Crossfit",
