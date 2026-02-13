@@ -1,12 +1,14 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://aaron-fabricio-sc.github.io",
-  base: "/entityX",
+  // 1. Cambia tu GitHub Pages URL por tu dominio real
+  site: "https://entityx.tech",
+
+  // 2. Cambia el base de "/entityX" a "/"
+  base: "/",
+
   i18n: {
     defaultLocale: "es",
     locales: ["es", "en"],
