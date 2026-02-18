@@ -8,6 +8,7 @@ const lang = 'es';
 const t = useTranslations(lang);
 
 const plans = [
+    { name: t('pricing.p0.name'), cap: t('pricing.p0.cap'), monthly: '0 BOB', yearly: '0 BOB' },
     { name: t('pricing.p1.name'), cap: t('pricing.p1.cap'), monthly: '200 BOB', yearly: '2.000 BOB' },
     { name: t('pricing.p2.name'), cap: t('pricing.p2.cap'), monthly: '350 BOB', yearly: '3.500 BOB' },
     { name: t('pricing.p3.name'), cap: t('pricing.p3.cap'), monthly: '500 BOB', yearly: '5.000 BOB', featured: true },
@@ -101,23 +102,23 @@ const features = [
         <!-- Why Annual & Flexibility -->
         <section class="py-5 bg-body">
             <div class="container">
-                <div class="row g-5 align-items-center">
+                <div class="row g-5">
                     <div class="col-lg-4">
                         <div class="p-5 bg-sidebar rounded-4 shadow-sm border border-success h-100">
                              <h3 class="text-success mb-4"><i class="bi bi-calendar-check me-2"></i> {t('pricing.annual.title')}</h3>
-                             <p class="text-light small">{t('pricing.annual.desc')}</p>
+                             <p class="text-light">{t('pricing.annual.desc')}</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                          <div class="p-5 bg-sidebar rounded-4 shadow-sm border border-primary h-100">
                              <h3 class="text-primary mb-4"><i class="bi bi-arrows-expand me-2"></i> {t('pricing.flex.title')}</h3>
-                             <p class="text-light small">{t('pricing.flex.desc')}</p>
+                             <p class="text-light">{t('pricing.flex.desc')}</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="p-5 bg-sidebar rounded-4 shadow-sm border border-info h-100">
                             <h3 class="text-info mb-4"><i class="bi bi-eye me-2"></i> {t('pricing.transparency.title')}</h3>
-                            <p class="text-light small">{t('pricing.transparency.desc')}</p>
+                            <p class="text-light">{t('pricing.transparency.desc')}</p>
                        </div>
                    </div>
                 </div>

@@ -11,7 +11,7 @@ const t = useTranslations(lang);
         <h1 class="responsive-hero-title fw-bold text-gradient mb-4 fade-in-up">{t('hero.title')}</h1>
         <p class="responsive-hero-subtitle text-light mb-5 fade-in-up delay-1">{t('hero.subtitle')}</p>
         <div class="d-flex justify-content-center gap-3 fade-in-up delay-2">
-            <a href="#features" class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow-lg">{t('hero.cta')}</a>
+            <a href={`https://wa.me/59170668135?text=${encodeURIComponent(t('hero.whatsapp_message'))}`} target="_blank" class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow-lg">{t('hero.cta')}</a>
             <a href={getPathForLang(lang) + '/pricing'} class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill shadow-lg hover-scale">{t('hero.cta_pricing')}</a>
            
         </div>

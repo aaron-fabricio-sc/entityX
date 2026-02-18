@@ -11,10 +11,14 @@ export const ui = {
     "nav.features": "Características",
     "nav.pricing": "Precios",
     "nav.login": "Iniciar Sesión",
-    "hero.title": "EntityX",
+    "nav.terms_conditions": "Términos y Condiciones",
+    "hero.title":
+      "La plataforma inteligente para negocios basados en membresías",
     "hero.subtitle":
-      "Controla a tus clientes y sus membresías, la gestión de tus empleados y las ventas de tu negocio. Ideal para gimnasios, academias, clubes y más.",
-    "hero.cta": "Descubre Más",
+      "Desde gimnasios y academias hasta clubes y centros de bienestar. Gestiona clientes, pagos y accesos en un solo lugar",
+    "hero.cta": "Solicitar Acceso Demo",
+    "hero.whatsapp_message":
+      "Hola Aaron, vengo de la web de EntityX. Me interesa probar la plataforma para mi [Gimnasio/Academia/Club]. Mi nombre es...",
     "hero.cta_pricing": "Ver Precios",
 
     // SEO
@@ -40,7 +44,7 @@ export const ui = {
     // Section 1
     "feat.whatis.title": "¿QUÉ ES ENTITYX?",
     "feat.whatis.desc":
-      "EntityX es la herramienta perfecta para **negocios con clientes o alumnos**: Gimnasios, Academias, Clubes, Spas o Coworkings. Si cobras mensualidades, paquetes o por acceso, EntityX es para ti.",
+      "EntityX es la herramienta perfecta para **negocios con clientes o alumnos**: Gimnasios, Academias, Clubes, Spas o Coworkings. Si tu negocio vive de membresías, paquetes o ingresos recurrentes, EntityX es tu mejor aliado.",
     "feat.whatis.p1":
       "Más que un simple software, es un cerebro operativo que automatiza la gestión de **membresías** de todo tipo. Elimina el caos administrativo y profesionaliza tu operación, permitiéndote escalar cualquier modelo de negocio recurrente sin fricción.",
     "feat.whatis.list1.title": "Control Total de Ingresos",
@@ -116,22 +120,22 @@ export const ui = {
     "partners.hero.title":
       "PROGRAMA DE ALIADOS: CONVIÉRTETE EN UN ASESOR COMERCIAL DE ENTITYX",
     "partners.hero.desc":
-      "En EntityX buscamos expandirnos contigo. Si eres un promotor tecnológico, un consultor de negocios o una persona con gran capacidad de persuasión, nuestro programa comercial está diseñado para que generes ingresos significativos mientras ayudas a modernizar negocios.",
+      "EntityX crece contigo. Si eres consultor o promotor, genera ingresos recurrentes modernizando negocios.",
     "partners.list1.title": "Capacitación y Preparación",
     "partners.list1.desc":
-      "No estarás solo. Nosotros te preparamos y te brindamos todo el conocimiento necesario para que domines el sistema. Te daremos las herramientas para que puedas demostrar con confianza cómo EntityX soluciona los problemas de cualquier entidad.",
+      "Te brindamos todo el conocimiento y herramientas para que domines el sistema y demuestres su valor.",
     "partners.list2.title": "Dashboard Exclusivo para el Vendedor",
     "partners.list2.desc":
-      "Al unirte, recibirás acceso a tu propio panel de control profesional. Tendrás herramientas dedicadas dentro de la aplicación para gestionar tu actividad comercial de forma organizada y eficiente.",
+      "Accede a un panel profesional para gestionar tu actividad comercial de forma organizada.",
     "partners.list3.title": "Gestión Inteligente de Prospectos",
     "partners.list3.desc":
-      "Registra a tus posibles clientes directamente en el sistema. Podrás anotar detalles clave sobre ellos, sus necesidades específicas y, lo más importante, marcar en qué punto exacto se encuentra la negociación (interesado, en demostración, pendiente de pago o cierre completado).",
+      "Registra clientes, anota detalles y sigue el estado de cada negociación en tiempo real.",
     "partners.list4.title": "Transparencia Total en tus Ganancias",
     "partners.list4.desc":
-      "Tendrás visibilidad completa de tus beneficios. En tu dashboard podrás ver el registro de tus ventas realizadas, las comisiones acumuladas y el estado de tus pagos. Sin cuentas ocultas ni confusiones.",
+      "Visualiza tus ventas, comisiones y pagos con total claridad desde tu dashboard.",
     "partners.list5.title": "Control de tu Cartera de Clientes",
     "partners.list5.desc":
-      "Podrás ver qué entidades han contratado el servicio gracias a tu gestión y conocer el estado actual de cada una (si están activas o por renovar). Esto te permite mantener una relación profesional con tus clientes y asegurar tu éxito a largo plazo.",
+      "Monitorea el estado de tus clientes para asegurar su fidelidad y tus ingresos a largo plazo.",
     "partners.badge": "Aliados EntityX",
     "partners.cta.title": "¿Estás listo para ser parte de EntityX?",
     "partners.cta.button": "Unirme al Programa",
@@ -157,6 +161,8 @@ export const ui = {
     "pricing.table.capacity": "Capacidad de Socios Activos",
     "pricing.table.monthly": "Mensual",
     "pricing.table.yearly": "Anual (Ahorras 2 meses)",
+    "pricing.p0.name": "Plan Gratuito",
+    "pricing.p0.cap": "Hasta 25 clientes",
     "pricing.p1.name": "Plan Inicial",
     "pricing.p1.cap": "Hasta 50 clientes",
     "pricing.p2.name": "Plan Crecimiento",
@@ -198,17 +204,20 @@ export const ui = {
       "Mediante la aplicación podrás ver todos tus pagos que realizaste por el uso de la aplicación, esto para mantener la credibilidad de nuestros servicios.",
 
     "footer.copyright":
-      "© 2026 EntityX - Xion Labs. Todos los derechos reservados.",
+      "© 2026 EntityX - Aaron Fabricio Santa Cruz Valdez (AaronCode). Todos los derechos reservados.",
   },
   en: {
     "nav.home": "Home",
     "nav.features": "Features",
     "nav.pricing": "Pricing",
     "nav.login": "Login",
-    "hero.title": "EntityX",
+    "nav.terms_conditions": "Terms and Conditions",
+    "hero.title": "The smart platform for membership-based businesses",
     "hero.subtitle":
-      "Control your clients and their memberships, manage your employees, and track your business sales. Ideal for gyms, academies, clubs, and more.",
-    "hero.cta": "Discover More",
+      "From gyms and academies to clubs and wellness centers. Manage clients, payments, and access in one place",
+    "hero.cta": "Request Demo Access",
+    "hero.whatsapp_message":
+      "Hello Aaron, I'm coming from the EntityX website. I'm interested in trying the platform for my [Gym/Academy/Club]. My name is...",
     "hero.cta_pricing": "See Pricing",
 
     // SEO
@@ -233,7 +242,7 @@ export const ui = {
 
     "feat.whatis.title": "WHAT IS ENTITYX?",
     "feat.whatis.desc":
-      "EntityX is the perfect tool for **businesses with members or students**: Gyms, Academies, Clubs, Spas, or Coworking spaces. If you charge monthly fees, packages, or for access, EntityX is for you.",
+      "EntityX is the perfect tool for **businesses with members or students**: Gyms, Academies, Clubs, Spas, or Coworking spaces. If your business relies on memberships, packages, or recurring revenue, EntityX is your best ally.",
     "feat.whatis.p1":
       "More than just software, it is an operating brain that automates the management of **plans, subscriptions, and memberships** of all types. It eliminates administrative chaos and professionalizes your operation, allowing you to scale any recurring business model without friction.",
     "feat.whatis.list1.title": "Total Revenue Control",
@@ -303,22 +312,22 @@ export const ui = {
     "partners.hero.title":
       "PARTNER PROGRAM: BECOME AN ENTITYX COMMERCIAL ADVISOR",
     "partners.hero.desc":
-      "At EntityX, we look to expand with you. If you are a tech promoter, business consultant, or someone with great persuasion skills, our commercial program is designed for you to generate significant income while helping modernize businesses.",
+      "EntityX grows with you. If you are a consultant or promoter, earn recurring revenue by modernizing businesses.",
     "partners.list1.title": "Training and Preparation",
     "partners.list1.desc":
-      "You won't be alone. We prepare you and provide all the necessary knowledge to master the system. We give you the tools to confidently demonstrate how EntityX solves problems for any entity.",
+      "We provide all the knowledge and tools you need to master the system and demonstrate its value.",
     "partners.list2.title": "Exclusive Seller Dashboard",
     "partners.list2.desc":
-      "Upon joining, you get access to your own professional control panel. You will have dedicated tools within the app to manage your commercial activity in an organized and efficient way.",
+      "Access a professional dashboard to manage your sales activity efficiently.",
     "partners.list3.title": "Smart Lead Management",
     "partners.list3.desc":
-      "Register your potential clients directly in the system. You can note key details, specific needs, and most importantly, mark exactly where the negotiation stands (interested, demo, pending payment, or closed).",
+      "Register leads, track details, and monitor negotiation status in real-time.",
     "partners.list4.title": "Total Earnings Transparency",
     "partners.list4.desc":
-      "You will have full visibility of your benefits. In your dashboard, you can see your sales registry, accumulated commissions, and payment status. No hidden accounts or confusion.",
+      "View your sales, commissions, and payment status with total clarity.",
     "partners.list5.title": "Client Portfolio Control",
     "partners.list5.desc":
-      "You can see which entities have subscribed thanks to your management and know their current status (active or renewal due). This allows you to maintain a professional relationship with clients and ensure long-term success.",
+      "Monitor your client portfolio status to ensure retention and long-term success.",
     "partners.badge": "EntityX Partners",
     "partners.cta.title": "Are you ready to be part of EntityX?",
     "partners.cta.button": "Join the Program",
@@ -344,6 +353,8 @@ export const ui = {
     "pricing.table.capacity": "Active Member Capacity",
     "pricing.table.monthly": "Monthly",
     "pricing.table.yearly": "Yearly (Save 2 months)",
+    "pricing.p0.name": "Free Plan",
+    "pricing.p0.cap": "Up to 25 clients",
     "pricing.p1.name": "Starter Plan",
     "pricing.p1.cap": "Up to 50 clients",
     "pricing.p2.name": "Growth Plan",
@@ -384,6 +395,7 @@ export const ui = {
     "pricing.transparency.desc":
       "Through the app, you can see all payments made for using the system, ensuring the credibility of our services.",
 
-    "footer.copyright": "© 2026 EntityX - Xion Labs. All rights reserved.",
+    "footer.copyright":
+      "© 2026 EntityX - Aaron Fabricio Santa Cruz Valdez (AaronCode). All rights reserved.",
   },
 } as const;

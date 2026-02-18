@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { useTranslations } from '../i18n/utils';
+
+const lang = 'es';
+const t = useTranslations(lang);
+---
+
+<Layout 
+  title="Términos y Condiciones - EntityX"
+  description="Términos y condiciones de uso de la plataforma EntityX."
+>
+    <Navbar />
+    
+    <main class="pt-5 mt-5 container">
+        <h1 class="text-neon mb-4">Términos y Condiciones</h1>
+        <div class="text-light">
+            <p>Bienvenido a EntityX. Al acceder y utilizar nuestra plataforma, aceptas cumplir con los siguientes términos y condiciones:</p>
+            
+            <h3>1. Uso del Servicio</h3>
+            <p>EntityX proporciona herramientas para la gestión de negocios basados en membresías. El uso indebido de la plataforma está prohibido.</p>
+
+            <h3>2. Cuentas y Seguridad</h3>
+            <p>Eres responsable de mantener la confidencialidad de tu cuenta y contraseña.</p>
+
+            <h3>3. Pagos y Suscripciones</h3>
+            <p>El servicio se factura según el plan seleccionado. Los pagos no son reembolsables.</p>
+
+            <h3>4. Propiedad Intelectual</h3>
+            <p>Todo el contenido y software es propiedad de EntityX y sus licenciantes.</p>
+
+            <h3>5. Modificaciones</h3>
+            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento.</p>
+
+            <p class="mt-4">Para más detalles, contáctanos a través de nuestros canales oficiales.</p>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
