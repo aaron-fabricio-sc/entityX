@@ -1,160 +1,263 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import { useTranslations } from '../i18n/utils';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { useTranslations } from "../i18n/utils";
 
-const lang = 'es';
+const lang = "es";
 const t = useTranslations(lang);
 
 const plans = [
-    { name: t('pricing.p0.name'), cap: t('pricing.p0.cap'), monthly: '0 BOB', yearly: '0 BOB' },
-    { name: t('pricing.p1.name'), cap: t('pricing.p1.cap'), monthly: '200 BOB', yearly: '2.000 BOB' },
-    { name: t('pricing.p2.name'), cap: t('pricing.p2.cap'), monthly: '350 BOB', yearly: '3.500 BOB' },
-    { name: t('pricing.p3.name'), cap: t('pricing.p3.cap'), monthly: '500 BOB', yearly: '5.000 BOB', featured: true },
-    { name: t('pricing.p4.name'), cap: t('pricing.p4.cap'), monthly: '700 BOB', yearly: '7.000 BOB' },
-    { name: t('pricing.p5.name'), cap: t('pricing.p5.cap'), monthly: '1.000 BOB', yearly: '10.000 BOB' },
+  {
+    name: t("pricing.p0.name"),
+    cap: t("pricing.p0.cap"),
+    monthly: "0 BOB",
+    yearly: "0 BOB",
+  },
+  {
+    name: t("pricing.p1.name"),
+    cap: t("pricing.p1.cap"),
+    monthly: "200 BOB",
+    yearly: "2.000 BOB",
+  },
+  {
+    name: t("pricing.p2.name"),
+    cap: t("pricing.p2.cap"),
+    monthly: "350 BOB",
+    yearly: "3.500 BOB",
+  },
+  {
+    name: t("pricing.p3.name"),
+    cap: t("pricing.p3.cap"),
+    monthly: "500 BOB",
+    yearly: "5.000 BOB",
+    featured: true,
+  },
+  {
+    name: t("pricing.p4.name"),
+    cap: t("pricing.p4.cap"),
+    monthly: "700 BOB",
+    yearly: "7.000 BOB",
+  },
+  {
+    name: t("pricing.p5.name"),
+    cap: t("pricing.p5.cap"),
+    monthly: "1.000 BOB",
+    yearly: "10.000 BOB",
+  },
 ];
 
 const features = [
-    { icon: 'bi-card-checklist', title: t('pricing.inc1.title'), desc: t('pricing.inc1.desc') },
-    { icon: 'bi-stoplights', title: t('pricing.inc2.title'), desc: t('pricing.inc2.desc') },
-    { icon: 'bi-person-badge', title: t('pricing.inc3.title'), desc: t('pricing.inc3.desc') },
-    { icon: 'bi-cart-plus', title: t('pricing.inc4.title'), desc: t('pricing.inc4.desc') },
-    { icon: 'bi-clock-history', title: t('pricing.inc5.title'), desc: t('pricing.inc5.desc') },
-    { icon: 'bi-shield-lock', title: t('pricing.inc6.title'), desc: t('pricing.inc6.desc') },
+  {
+    icon: "bi-card-checklist",
+    title: t("pricing.inc1.title"),
+    desc: t("pricing.inc1.desc"),
+  },
+  {
+    icon: "bi-stoplights",
+    title: t("pricing.inc2.title"),
+    desc: t("pricing.inc2.desc"),
+  },
+  {
+    icon: "bi-person-badge",
+    title: t("pricing.inc3.title"),
+    desc: t("pricing.inc3.desc"),
+  },
+  {
+    icon: "bi-cart-plus",
+    title: t("pricing.inc4.title"),
+    desc: t("pricing.inc4.desc"),
+  },
+  {
+    icon: "bi-clock-history",
+    title: t("pricing.inc5.title"),
+    desc: t("pricing.inc5.desc"),
+  },
+  {
+    icon: "bi-shield-lock",
+    title: t("pricing.inc6.title"),
+    desc: t("pricing.inc6.desc"),
+  },
 ];
 ---
 
-<Layout 
-  title={t('seo.pricing.title')}
-  description={t('seo.pricing.desc')}
-  keywords={t('seo.pricing.keywords')}
+<Layout
+  title={t("seo.pricing.title")}
+  description={t("seo.pricing.desc")}
+  keywords={t("seo.pricing.keywords")}
 >
-    <Navbar />
-    
-    <main class="pt-5 mt-5">
-        <!-- Hero Section -->
-        <section class="py-5 bg-dark-teal text-light text-center">
-            <div class="container">
-                <h1 class="text-neon mb-4 responsive-title">{t('pricing.title')}</h1>
-                <p class="text-light mx-auto mb-4 responsive-desc" style="max-width: 800px;">{t('pricing.desc')}</p>
-                
-                <div class="alert alert-info bg-sidebar border-info text-info mx-auto" style="max-width: 700px;">
-                    <i class="bi bi-info-circle-fill me-2"></i> {t('pricing.note')}
+  <Navbar />
+
+  <main class="pt-5 mt-5">
+    <!-- Hero Section -->
+    <section class="py-5 bg-dark-teal text-light text-center">
+      <div class="container">
+        <h1 class="text-neon mb-4 responsive-title fw-bold">
+          {t("pricing.title")}
+        </h1>
+        <p
+          class="text-light mx-auto mb-4 responsive-desc"
+          style="max-width: 800px;"
+        >
+          {t("pricing.desc")}
+        </p>
+
+        <div
+          class="alert alert-info bg-sidebar border-info text-info mx-auto"
+          style="max-width: 700px;"
+        >
+          <i class="bi bi-info-circle-fill me-2"></i>
+          {t("pricing.note")}
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="py-5 bg-body">
+      <div class="container">
+        <h2 class="text-center mb-5">{t("pricing.subtitle")}</h2>
+
+        <div class="row g-4 justify-content-center">
+          {
+            plans.map((plan) => (
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class={`card h-100 bg-sidebar border-0 shadow-sm text-center feature-card ${plan.featured ? "border-primary" : ""}`}
+                >
+                  <div class="card-header bg-transparent border-0 pt-4">
+                    {plan.featured && (
+                      <span class="badge bg-primary mb-2">
+                        {t("pricing.badge.popular")}
+                      </span>
+                    )}
+                    <h4 class="text-neon">{plan.name}</h4>
+                    <p class="text-light small">{plan.cap}</p>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title display-6 fw-bold text-white mb-0">
+                      {plan.monthly}
+                    </h2>
+                    <p class="text-secondary small mb-3">
+                      {t("pricing.table.monthly")}
+                    </p>
+
+                    <h3 class="card-title h4 text-neon mb-0">{plan.yearly}</h3>
+                    <p class="text-secondary small">
+                      {t("pricing.table.yearly")}
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0 pb-4">
+                    <a
+                      href={`https://wa.me/59170668135?text=Hola!%20%F0%9F%91%8B%20estoy%20interesado%20en%20el%20${plan.name}%20%F0%9F%9A%80`}
+                      target="_blank"
+                      class={`btn w-100 ${plan.featured ? "btn-primary" : "btn-outline-primary"}`}
+                    >
+                      <i class="bi bi-whatsapp me-2" />{" "}
+                      {t("pricing.cta.choose")}
+                    </a>
+                  </div>
                 </div>
-            </div>
-        </section>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
-        <!-- Pricing Table -->
-        <section class="py-5 bg-body">
-            <div class="container">
-                <h2 class="text-center mb-5">{t('pricing.subtitle')}</h2>
-                
-                <div class="row g-4 justify-content-center">
-                    {plans.map(plan => (
-                        <div class="col-md-6 col-lg-4">
-                             <div class={`card h-100 bg-sidebar border-0 shadow-sm text-center feature-card ${plan.featured ? 'border-primary' : ''}`}>
-                                <div class="card-header bg-transparent border-0 pt-4">
-                                     {plan.featured && <span class="badge bg-primary mb-2">{t('pricing.badge.popular')}</span>}
-                                    <h4 class="text-neon">{plan.name}</h4>
-                                    <p class="text-light small">{plan.cap}</p>
-                                </div>
-                                <div class="card-body">
-                                    <h2 class="card-title display-6 fw-bold text-white mb-0">{plan.monthly}</h2>
-                                    <p class="text-secondary small mb-3">{t('pricing.table.monthly')}</p>
-                                    
-                                     <h3 class="card-title h4 text-neon mb-0">{plan.yearly}</h3>
-                                     <p class="text-secondary small">{t('pricing.table.yearly')}</p>
-                                </div>
-                                <div class="card-footer bg-transparent border-0 pb-4">
-                                     <a href={`https://wa.me/59170668135?text=Hola!%20%F0%9F%91%8B%20estoy%20interesado%20en%20el%20${plan.name}%20%F0%9F%9A%80`} target="_blank" class={`btn w-100 ${plan.featured ? 'btn-primary' : 'btn-outline-primary'}`}>
-                                        <i class="bi bi-whatsapp me-2"></i> {t('pricing.cta.choose')}
-                                     </a>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+    <!-- What includes -->
+    <section class="py-5 bg-dark-teal text-light">
+      <div class="container">
+        <h2 class="text-center text-gradient mb-5">
+          {t("pricing.includes.title")}
+        </h2>
+        <div class="row g-4">
+          {
+            features.map((f) => (
+              <div class="col-md-6 col-lg-4">
+                <div class="d-flex align-items-start p-4 border border-secondary rounded-4 h-100 bg-sidebar hover-scale">
+                  <i class={`bi ${f.icon} fs-2 text-neon me-3`} />
+                  <div>
+                    <h5 class="text-white mb-2">{f.title}</h5>
+                    <p class="text-secondary small mb-0">{f.desc}</p>
+                  </div>
                 </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Annual & Flexibility -->
+    <section class="py-5 bg-body">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div
+              class="p-5 bg-sidebar rounded-4 shadow-sm border border-success h-100"
+            >
+              <h3 class="text-success mb-4">
+                <i class="bi bi-calendar-check me-2"></i>
+                {t("pricing.annual.title")}
+              </h3>
+              <p class="text-light">{t("pricing.annual.desc")}</p>
             </div>
-        </section>
-
-        <!-- What includes -->
-        <section class="py-5 bg-dark-teal text-light">
-            <div class="container">
-                <h2 class="text-center text-gradient mb-5">{t('pricing.includes.title')}</h2>
-                <div class="row g-4">
-                    {features.map(f => (
-                        <div class="col-md-6 col-lg-4">
-                            <div class="d-flex align-items-start p-4 border border-secondary rounded-4 h-100 bg-sidebar hover-scale">
-                                <i class={`bi ${f.icon} fs-2 text-neon me-3`}></i>
-                                <div>
-                                    <h5 class="text-white mb-2">{f.title}</h5>
-                                    <p class="text-secondary small mb-0">{f.desc}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+          </div>
+          <div class="col-lg-4">
+            <div
+              class="p-5 bg-sidebar rounded-4 shadow-sm border border-primary h-100"
+            >
+              <h3 class="text-primary mb-4">
+                <i class="bi bi-arrows-expand me-2"></i>
+                {t("pricing.flex.title")}
+              </h3>
+              <p class="text-light">{t("pricing.flex.desc")}</p>
             </div>
-        </section>
-
-        <!-- Why Annual & Flexibility -->
-        <section class="py-5 bg-body">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-4">
-                        <div class="p-5 bg-sidebar rounded-4 shadow-sm border border-success h-100">
-                             <h3 class="text-success mb-4"><i class="bi bi-calendar-check me-2"></i> {t('pricing.annual.title')}</h3>
-                             <p class="text-light">{t('pricing.annual.desc')}</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                         <div class="p-5 bg-sidebar rounded-4 shadow-sm border border-primary h-100">
-                             <h3 class="text-primary mb-4"><i class="bi bi-arrows-expand me-2"></i> {t('pricing.flex.title')}</h3>
-                             <p class="text-light">{t('pricing.flex.desc')}</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="p-5 bg-sidebar rounded-4 shadow-sm border border-info h-100">
-                            <h3 class="text-info mb-4"><i class="bi bi-eye me-2"></i> {t('pricing.transparency.title')}</h3>
-                            <p class="text-light">{t('pricing.transparency.desc')}</p>
-                       </div>
-                   </div>
-                </div>
+          </div>
+          <div class="col-lg-4">
+            <div
+              class="p-5 bg-sidebar rounded-4 shadow-sm border border-info h-100"
+            >
+              <h3 class="text-info mb-4">
+                <i class="bi bi-eye me-2"></i>
+                {t("pricing.transparency.title")}
+              </h3>
+              <p class="text-light">{t("pricing.transparency.desc")}</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    </main>
-
-    <Footer />
+  <Footer />
 </Layout>
 
 <style>
+  .responsive-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .responsive-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
     .responsive-title {
-        font-size: 1.8rem;
-        font-weight: 700;
+      font-size: 3.5rem;
+      font-weight: 300;
     }
     .responsive-desc {
-        font-size: 1rem;
-        line-height: 1.5;
+      font-size: 1.5rem;
     }
-    
-    @media (min-width: 768px) {
-        .responsive-title {
-            font-size: 3.5rem;
-            font-weight: 300;
-        }
-        .responsive-desc {
-            font-size: 1.25rem;
-        }
-    }
+  }
 
-    .hover-scale {
-        transition: transform 0.3s ease;
-    }
-    .hover-scale:hover {
-        transform: translateY(-5px);
-        border-color: var(--neon-cyan) !important;
-    }
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan) !important;
+  }
 </style>

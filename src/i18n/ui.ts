@@ -118,7 +118,7 @@ export const ui = {
 
     // Partners Page
     "partners.hero.title":
-      "PROGRAMA DE ALIADOS: CONVIÉRTETE EN UN ASESOR COMERCIAL DE ENTITYX",
+      "Programa de Aliados: Conviértete en un Asesor Comercial de EntityX",
     "partners.hero.desc":
       "EntityX crece contigo. Si eres consultor o promotor, genera ingresos recurrentes modernizando negocios.",
     "partners.list1.title": "Capacitación y Preparación",
@@ -151,7 +151,7 @@ export const ui = {
     "biz.deportes": "Escuelas de Deportes",
 
     // Pricing Page
-    "pricing.title": "INVERSIÓN: PLANES QUE CRECEN CONTIGO",
+    "pricing.title": "Inversión: Planes que Crecen Contigo",
     "pricing.desc":
       "En EntityX, pagas según el tamaño de tu negocio. No te limitamos las herramientas; todos nuestros planes incluyen el sistema completo. La única diferencia es la cantidad de clientes activos que puedes tener.",
     "pricing.note":
@@ -310,7 +310,7 @@ export const ui = {
 
     // Partners Page
     "partners.hero.title":
-      "PARTNER PROGRAM: BECOME AN ENTITYX COMMERCIAL ADVISOR",
+      "Partner Program: Become an EntityX Commercial Advisor",
     "partners.hero.desc":
       "EntityX grows with you. If you are a consultant or promoter, earn recurring revenue by modernizing businesses.",
     "partners.list1.title": "Training and Preparation",
@@ -343,7 +343,7 @@ export const ui = {
     "biz.deportes": "Sports Schools",
 
     // Pricing Page
-    "pricing.title": "INVESTMENT: PLANS THAT GROW WITH YOU",
+    "pricing.title": "Investment: Plans That Grow With You",
     "pricing.desc":
       "At EntityX, you pay based on the size of your business. We don't limit your tools; all our plans include the full system. The only difference is the number of active clients you can have.",
     "pricing.note":

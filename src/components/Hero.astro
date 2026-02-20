@@ -1,95 +1,118 @@
 ---
-import { getLangFromUrl, useTranslations, getPathForLang } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, getPathForLang } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="home" class="hero-section d-flex align-items-center justify-content-center text-center position-relative text-white">
-    <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
-    <div class="container position-relative z-1">
-        <h1 class="responsive-hero-title fw-bold text-gradient mb-4 fade-in-up">{t('hero.title')}</h1>
-        <p class="responsive-hero-subtitle text-light mb-5 fade-in-up delay-1">{t('hero.subtitle')}</p>
-        <div class="d-flex justify-content-center gap-3 fade-in-up delay-2">
-            <a href={`https://wa.me/59170668135?text=${encodeURIComponent(t('hero.whatsapp_message'))}`} target="_blank" class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow-lg">{t('hero.cta')}</a>
-            <a href={getPathForLang(lang) + '/pricing'} class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill shadow-lg hover-scale">{t('hero.cta_pricing')}</a>
-           
-        </div>
+<section
+  id="home"
+  class="hero-section d-flex align-items-center justify-content-center text-center position-relative text-white"
+>
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+  <div class="container position-relative z-1">
+    <h1 class="responsive-hero-title fw-bold text-gradient mb-4 fade-in-up">
+      {t("hero.title")}
+    </h1>
+    <p class="responsive-hero-subtitle text-light mb-5 fade-in-up delay-1">
+      {t("hero.subtitle")}
+    </p>
+    <div class="d-flex justify-content-center gap-3 fade-in-up delay-2">
+      <a
+        href={`https://wa.me/59170668135?text=${encodeURIComponent(t("hero.whatsapp_message"))}`}
+        target="_blank"
+        class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow-lg"
+        >{t("hero.cta")}</a
+      >
+      <a
+        href={getPathForLang(lang) + "/pricing"}
+        class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill shadow-lg hover-scale"
+        >{t("hero.cta_pricing")}</a
+      >
     </div>
-    <!-- Abstract Background Decoration -->
-    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at 50% 50%, #00ffc8 0%, transparent 50%);"></div>
+  </div>
+  <!-- Abstract Background Decoration -->
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100 opacity-25"
+    style="background: radial-gradient(circle at 50% 50%, #00ffc8 0%, transparent 50%);"
+  >
+  </div>
 </section>
 
 <style>
+  .responsive-hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .responsive-hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
     .responsive-hero-title {
-        font-size: 2.5rem;
-        line-height: 1.2;
+      font-size: 3.5rem; /* Equivalent to display-1 */
     }
-    
     .responsive-hero-subtitle {
-        font-size: 1.25rem;
-        line-height: 1.5;
+      font-size: 1.5rem; /* Equivalent to fs-2 */
     }
+  }
 
-    @media (min-width: 768px) {
-        .responsive-hero-title {
-            font-size: 5rem; /* Equivalent to display-1 */
-        }
-        .responsive-hero-subtitle {
-            font-size: 2rem; /* Equivalent to fs-2 */
-        }
+  .fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.2s;
+  }
+  .delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
     }
-
-    .fade-in-up {
-        opacity: 0;
-        animation: fadeInUp 0.8s ease-out forwards;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+  }
 </style>
 <style lang="scss">
-    @use "../styles/variables" as vars;
+  @use "../styles/variables" as vars;
 
-    .hero-section {
-        min-height: 100vh;
-        background-image: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop');
-        background-size: cover;
-        background-position: center;
-        
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(vars.$nav-color, 0.85); // Dark overlay from variables
-        }
-    }
-    
-    .text-gradient {
-        background: linear-gradient(to right, vars.$active-color, vars.$text-light);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+  .hero-section {
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
 
-    .hover-scale {
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: translateY(-5px);
-        }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(vars.$nav-color, 0.85); // Dark overlay from variables
     }
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, vars.$active-color, vars.$text-light);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-scale {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
 </style>
