@@ -23,23 +23,23 @@ export const ui = {
 
     // SEO
     "seo.home.title":
-      "EntityX - Software de Gestión para Gimnasios y Negocios Recurrentes",
+      "EntityX - Software de Gestión para Negocios de Membresías y Suscripciones",
     "seo.home.desc":
-      "Automatiza la gestión de tu gimnasio, academia o club. Control de acceso, membresías, cobros recurrentes y app para socios. Prueba EntityX hoy.",
+      "Gestiona cualquier modelo de negocio basado en membresías. Control de asistencias, pagos recurrentes y una App exclusiva para que tus clientes consulten su estado.",
     "seo.home.keywords":
-      "software gimnasio, sistema control acceso, app gimnasio, gestion academias, cobros recurrentes, software club deportivo",
+      "software gimnasio, sistema control acceso, app gimnasio, gestion academias, cobros recurrentes, software club deportivo, crm fitness, control acceso qr, gestion academia baile, app socios gimnasio, software administrativo deportivo, sistema de cobros recurrentes, gestion de membresias",
 
     "seo.pricing.title": "Precios y Planes - EntityX",
     "seo.pricing.desc":
       "Planes accesibles que crecen contigo. Desde 200 BOB/mes. Sin costos ocultos. Gestión completa para tu negocio.",
     "seo.pricing.keywords":
-      "precios software gimnasio, planes entityx, costo sistema gimnasio",
+      "precios software gimnasio, planes entityx, costo sistema gimnasio, cuanto cuesta software gimnasio, precios sistema gestion academias, planes software deportivo",
 
     "seo.partners.title": "Programa de Aliados - EntityX",
     "seo.partners.desc":
       "Conviértete en aliado comercial de EntityX. Genera ingresos recurrentes digitalizando negocios deportivos y educativos.",
     "seo.partners.keywords":
-      "programa aliados software, revendedor software gimnasio, comisiones ventas software",
+      "programa aliados software, revendedor software gimnasio, comisiones ventas software, ser partner software, ganar dinero vendiendo software, programa de referidos software",
 
     // Section 1
     "feat.whatis.title": "¿QUÉ ES ENTITYX?",
@@ -222,23 +222,23 @@ export const ui = {
 
     // SEO
     "seo.home.title":
-      "EntityX - Management Software for Gyms and Recurring Businesses",
+      "EntityX - Management Software for Membership & Subscription Businesses",
     "seo.home.desc":
-      "Automate your gym, academy, or club management. Access control, memberships, recurring payments, and member app. Try EntityX today.",
+      "Manage any membership-based business model. Attendance control, recurring payments, and an exclusive App for your clients to check their status.",
     "seo.home.keywords":
-      "gym software, access control system, gym app, academy management, recurring billing, sports club software",
+      "gym software, access control system, gym app, academy management, recurring billing, sports club software, fitness crm, qr access control, dance academy management, gym member app, sports management software, recurring payment system, membership management",
 
     "seo.pricing.title": "Pricing and Plans - EntityX",
     "seo.pricing.desc":
       "Affordable plans that grow with you. Starting at 200 BOB/mo. No hidden costs. Complete management for your business.",
     "seo.pricing.keywords":
-      "gym software pricing, entityx plans, gym system cost",
+      "gym software pricing, entityx plans, gym system cost, how much does gym software cost, academy management system pricing, sports software plans",
 
     "seo.partners.title": "Partner Program - EntityX",
     "seo.partners.desc":
       "Become an EntityX commercial partner. Generate recurring revenue by digitizing sports and educational businesses.",
     "seo.partners.keywords":
-      "software partner program, gym software reseller, software sales commissions",
+      "software partner program, gym software reseller, software sales commissions, become a software partner, make money selling software, software referral program",
 
     "feat.whatis.title": "WHAT IS ENTITYX?",
     "feat.whatis.desc":
