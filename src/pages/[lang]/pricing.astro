@@ -14,11 +14,12 @@ const { lang } = Astro.params;
 const t = useTranslations(lang as 'es' | 'en');
 
 const plans = [
-    { name: t('pricing.p1.name'), cap: t('pricing.p1.cap'), monthly: '200 BOB', yearly: '2.000 BOB' },
-    { name: t('pricing.p2.name'), cap: t('pricing.p2.cap'), monthly: '350 BOB', yearly: '3.500 BOB' },
-    { name: t('pricing.p3.name'), cap: t('pricing.p3.cap'), monthly: '500 BOB', yearly: '5.000 BOB', featured: true },
-    { name: t('pricing.p4.name'), cap: t('pricing.p4.cap'), monthly: '700 BOB', yearly: '7.000 BOB' },
-    { name: t('pricing.p5.name'), cap: t('pricing.p5.cap'), monthly: '1.000 BOB', yearly: '10.000 BOB' },
+    { name: t('pricing.p0.name'), clients: 15,   monthly: '0 BOB',       yearly: '0 BOB'        },
+    { name: t('pricing.p1.name'), clients: 50,   monthly: '200 BOB',     yearly: '2.000 BOB'    },
+    { name: t('pricing.p2.name'), clients: 125,  monthly: '400 BOB',     yearly: '4.000 BOB'    },
+    { name: t('pricing.p3.name'), clients: 250,  monthly: '600 BOB',     yearly: '6.000 BOB',   featured: true },
+    { name: t('pricing.p4.name'), clients: 500,  monthly: '850 BOB',     yearly: '8.500 BOB'    },
+    { name: t('pricing.p5.name'), clients: 1000, monthly: '1.200 BOB',   yearly: '12.000 BOB'   },
 ];
 
 const features = [
@@ -63,7 +64,7 @@ const features = [
                                 <div class="card-header bg-transparent border-0 pt-4">
                                      {plan.featured && <span class="badge bg-primary mb-2">Popular</span>}
                                     <h4 class="text-neon">{plan.name}</h4>
-                                    <p class="text-light small">{plan.cap}</p>
+                                    <p class="text-light small">{t('pricing.clients_up_to')} {plan.clients} {t('pricing.clients_label')}</p>
                                 </div>
                                 <div class="card-body">
                                     <h2 class="card-title display-6 fw-bold text-white mb-0">{plan.monthly}</h2>

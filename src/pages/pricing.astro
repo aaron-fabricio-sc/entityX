@@ -10,38 +10,38 @@ const t = useTranslations(lang);
 const plans = [
   {
     name: t("pricing.p0.name"),
-    cap: t("pricing.p0.cap"),
+    clients: 15,
     monthly: "0 BOB",
     yearly: "0 BOB",
   },
   {
     name: t("pricing.p1.name"),
-    cap: t("pricing.p1.cap"),
+    clients: 50,
     monthly: "200 BOB",
     yearly: "2.000 BOB",
   },
   {
     name: t("pricing.p2.name"),
-    cap: t("pricing.p2.cap"),
+    clients: 125,
     monthly: "400 BOB",
     yearly: "4.000 BOB",
   },
   {
     name: t("pricing.p3.name"),
-    cap: t("pricing.p3.cap"),
+    clients: 250,
     monthly: "600 BOB",
     yearly: "6.000 BOB",
     featured: true,
   },
   {
     name: t("pricing.p4.name"),
-    cap: t("pricing.p4.cap"),
+    clients: 500,
     monthly: "850 BOB",
     yearly: "8.500 BOB",
   },
   {
     name: t("pricing.p5.name"),
-    cap: t("pricing.p5.cap"),
+    clients: 1000,
     monthly: "1.200 BOB",
     yearly: "12.000 BOB",
   },
@@ -131,7 +131,7 @@ const features = [
                       </span>
                     )}
                     <h4 class="text-neon">{plan.name}</h4>
-                    <p class="text-light small">{plan.cap}</p>
+                    <p class="text-light small">{t("pricing.clients_up_to")} {plan.clients} {t("pricing.clients_label")}</p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title display-6 fw-bold text-white mb-0">
