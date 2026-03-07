@@ -13,34 +13,17 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const t = useTranslations(lang as 'es' | 'en');
 
-let plans: any[] = [];
+// Fallback translating for skeleton using lang checking since `pricing.loading` isn't in en/es dictionaries
+const loadingText = lang === 'en' ? 'Loading...' : 'Cargando...';
 
-const API_URL = "https://api.entityx.tech/api";
-
-try {
-  const response = await fetch(`${API_URL}/plans/public?currency=BOB`);
-  if (response.ok) {
-    const data = await response.json();
-    if (Array.isArray(data) && data.length > 0) {
-      plans = data.map((d: any) => {
-        const formatNumber = (num: number) => {
-          if (!num) return "0";
-          return num.toLocaleString('es-BO').replace(',', '.');
-        };
-        
-        return {
-          name: d.name,
-          clients: d.max_clients,
-          monthly: `${formatNumber(Number(d.price_monthly))} ${d.currency}`,
-          yearly: `${formatNumber(Number(d.price_yearly))} ${d.currency}`,
-          featured: d.max_clients === 250,
-        };
-      });
-    }
-  }
-} catch (error) {
-  console.error("Error fetching plans from API. Using fallback data.", error);
-}
+let plans: any[] = [
+  { name: loadingText, clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-0" },
+  { name: loadingText, clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-1" },
+  { name: loadingText, clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-2" },
+  { name: loadingText, clients: "...", monthly: "...", yearly: "...", featured: true,  id: "plan-3" },
+  { name: loadingText, clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-4" },
+  { name: loadingText, clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-5" }
+];
 
 const features = [
     { icon: 'bi-card-checklist', title: t('pricing.inc1.title'), desc: t('pricing.inc1.desc') },
@@ -78,23 +61,23 @@ const features = [
                 <h2 class="text-center mb-5">{t('pricing.subtitle')}</h2>
                 
                 <div class="row g-4 justify-content-center">
-                    {plans.map(plan => (
-                        <div class="col-md-6 col-lg-4">
-                             <div class={`card h-100 bg-sidebar border-0 shadow-sm text-center feature-card ${plan.featured ? 'border-primary' : ''}`}>
+                    {plans.map((plan, index) => (
+                        <div class="col-md-6 col-lg-4" data-plan-index={index}>
+                             <div class={`card h-100 bg-sidebar border-0 shadow-sm text-center feature-card plan-card ${plan.featured ? 'border-primary' : ''}`}>
                                 <div class="card-header bg-transparent border-0 pt-4">
-                                     {plan.featured && <span class="badge bg-primary mb-2">Popular</span>}
-                                    <h4 class="text-neon">{plan.name}</h4>
-                                    <p class="text-light small">{t('pricing.clients_up_to')} {plan.clients} {t('pricing.clients_label')}</p>
+                                     {plan.featured && <span class="badge bg-primary mb-2 plan-badge">Popular</span>}
+                                    <h4 class="text-neon plan-name">{plan.name || "..."}</h4>
+                                    <p class="text-light small">{t('pricing.clients_up_to')} <span class="plan-clients">{plan.clients}</span> {t('pricing.clients_label')}</p>
                                 </div>
                                 <div class="card-body">
-                                    <h2 class="card-title display-6 fw-bold text-white mb-0">{plan.monthly}</h2>
+                                    <h2 class="card-title display-6 fw-bold text-white mb-0 plan-monthly">{plan.monthly}</h2>
                                     <p class="text-secondary small mb-3">{t('pricing.table.monthly')}</p>
                                     
-                                     <h3 class="card-title h4 text-success mb-0">{plan.yearly}</h3>
+                                     <h3 class="card-title h4 text-success mb-0 plan-yearly">{plan.yearly}</h3>
                                      <p class="text-secondary small">{t('pricing.table.yearly')}</p>
                                 </div>
                                 <div class="card-footer bg-transparent border-0 pb-4">
-                                     <a href={`https://wa.me/59170668135?text=Hola,%20estoy%20interesado%20en%20el%20${plan.name}`} target="_blank" class={`btn w-100 ${plan.featured ? 'btn-primary' : 'btn-outline-primary'}`}>
+                                     <a href="#" target="_blank" class={`btn w-100 plan-cta ${plan.featured ? 'btn-primary' : 'btn-outline-primary'}`}>
                                         <i class="bi bi-whatsapp me-2"></i> Elegir Plan
                                      </a>
                                 </div>
@@ -185,4 +168,96 @@ const features = [
         transform: translateY(-5px);
         border-color: var(--neon-cyan) !important;
     }
+
+    /* Skeleton loading animation */
+    .skeleton-text {
+        display: inline-block;
+        min-height: 1em;
+        min-width: 50%;
+        background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+        border-radius: 4px;
+        color: transparent !important;
+    }
+
+    @keyframes loading {
+        0% {
+            background-position: 200% 0;
+        }
+        100% {
+            background-position: -200% 0;
+        }
+    }
 </style>
+
+<script>
+  const API_URL = "https://api.entityx.tech/api";
+
+  async function fetchPlans() {
+    try {
+      // Add skeleton classes to placeholders while fetching
+      const placeholders = document.querySelectorAll('.plan-name, .plan-clients, .plan-monthly, .plan-yearly');
+      placeholders.forEach(el => {
+        if (el.textContent === "...") el.classList.add('skeleton-text');
+      });
+
+      const response = await fetch(`${API_URL}/plans/public?currency=BOB`);
+      if (response.ok) {
+        const data = await response.json();
+        
+        if (Array.isArray(data) && data.length > 0) {
+          data.forEach((d: any, index: number) => {
+            const formatNumber = (num: number) => {
+              if (!num) return "0";
+              return num.toLocaleString('es-BO').replace(',', '.');
+            };
+
+            const isFeatured = d.max_clients === 250;
+            const container = document.querySelector(`[data-plan-index="${index}"]`);
+            
+            if (container) {
+              // Update content structure
+              const nameEl = container.querySelector('.plan-name');
+              const clientsEl = container.querySelector('.plan-clients');
+              const monthlyEl = container.querySelector('.plan-monthly');
+              const yearlyEl = container.querySelector('.plan-yearly');
+              const ctaEl = container.querySelector('.plan-cta') as HTMLAnchorElement;
+              const cardEl = container.querySelector('.plan-card');
+
+              if (nameEl) {
+                nameEl.textContent = d.name;
+                nameEl.classList.remove('skeleton-text');
+              }
+              if (clientsEl) {
+                clientsEl.textContent = d.max_clients;
+                clientsEl.classList.remove('skeleton-text');
+              }
+              if (monthlyEl) {
+                monthlyEl.textContent = `${formatNumber(Number(d.price_monthly))} ${d.currency}`;
+                monthlyEl.classList.remove('skeleton-text');
+              }
+              if (yearlyEl) {
+                yearlyEl.textContent = `${formatNumber(Number(d.price_yearly))} ${d.currency}`;
+                yearlyEl.classList.remove('skeleton-text');
+              }
+              
+              if (ctaEl) {
+                ctaEl.href = `https://wa.me/59170668135?text=Hola,%20estoy%20interesado%20en%20el%20${encodeURIComponent(d.name)}`;
+              }
+
+              if (cardEl && isFeatured) {
+                cardEl.classList.add('border-primary');
+              }
+            }
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching plans from API:", error);
+    }
+  }
+
+  // Fetch plans on initial load
+  document.addEventListener('DOMContentLoaded', fetchPlans);
+</script>
