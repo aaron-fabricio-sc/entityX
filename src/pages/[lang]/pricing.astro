@@ -13,14 +13,34 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const t = useTranslations(lang as 'es' | 'en');
 
-const plans = [
-    { name: t('pricing.p0.name'), clients: 15,   monthly: '0 BOB',       yearly: '0 BOB'        },
-    { name: t('pricing.p1.name'), clients: 50,   monthly: '200 BOB',     yearly: '2.000 BOB'    },
-    { name: t('pricing.p2.name'), clients: 125,  monthly: '400 BOB',     yearly: '4.000 BOB'    },
-    { name: t('pricing.p3.name'), clients: 250,  monthly: '600 BOB',     yearly: '6.000 BOB',   featured: true },
-    { name: t('pricing.p4.name'), clients: 500,  monthly: '850 BOB',     yearly: '8.500 BOB'    },
-    { name: t('pricing.p5.name'), clients: 1000, monthly: '1.200 BOB',   yearly: '12.000 BOB'   },
-];
+let plans: any[] = [];
+
+const API_URL = "https://api.entityx.tech/api";
+
+try {
+  const response = await fetch(`${API_URL}/plans/public?currency=BOB`);
+  if (response.ok) {
+    const data = await response.json();
+    if (Array.isArray(data) && data.length > 0) {
+      plans = data.map((d: any) => {
+        const formatNumber = (num: number) => {
+          if (!num) return "0";
+          return num.toLocaleString('es-BO').replace(',', '.');
+        };
+        
+        return {
+          name: d.name,
+          clients: d.max_clients,
+          monthly: `${formatNumber(Number(d.price_monthly))} ${d.currency}`,
+          yearly: `${formatNumber(Number(d.price_yearly))} ${d.currency}`,
+          featured: d.max_clients === 250,
+        };
+      });
+    }
+  }
+} catch (error) {
+  console.error("Error fetching plans from API. Using fallback data.", error);
+}
 
 const features = [
     { icon: 'bi-card-checklist', title: t('pricing.inc1.title'), desc: t('pricing.inc1.desc') },
