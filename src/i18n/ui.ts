@@ -44,9 +44,9 @@ export const ui = {
     // Section 1
     "feat.whatis.title": "¿QUÉ ES ENTITYX?",
     "feat.whatis.desc":
-      "EntityX es la herramienta perfecta para **negocios con clientes o alumnos**: Gimnasios, Academias, Clubes, Spas o Coworkings. Si tu negocio vive de membresías, paquetes o ingresos recurrentes, EntityX es tu mejor aliado.",
+      "EntityX es la herramienta perfecta para negocios con clientes o alumnos: Gimnasios, Academias, Clubes, Spas o Coworkings. Si tu negocio vive de membresías, paquetes o ingresos recurrentes, EntityX es tu mejor aliado.",
     "feat.whatis.p1":
-      "Más que un simple software, es un cerebro operativo que automatiza la gestión de **membresías** de todo tipo. Elimina el caos administrativo y profesionaliza tu operación, permitiéndote escalar cualquier modelo de negocio recurrente sin fricción.",
+      "Más que un simple software, es un cerebro operativo que automatiza la gestión de membresías de todo tipo. Elimina el caos administrativo y profesionaliza tu operación, permitiéndote escalar cualquier modelo de negocio recurrente sin fricción.",
     "feat.whatis.list1.title": "Control Total de Ingresos",
     "feat.whatis.list1.desc":
       'Se acabaron las "entradas por cortesía" o descuidos en recepción. Si no hay una membresía activa, el sistema bloquea el acceso. Cada centavo queda auditado.',
@@ -244,9 +244,9 @@ export const ui = {
 
     "feat.whatis.title": "WHAT IS ENTITYX?",
     "feat.whatis.desc":
-      "EntityX is the perfect tool for **businesses with members or students**: Gyms, Academies, Clubs, Spas, or Coworking spaces. If your business relies on memberships, packages, or recurring revenue, EntityX is your best ally.",
+      "EntityX is the perfect tool for businesses with members or students: Gyms, Academies, Clubs, Spas, or Coworking spaces. If your business relies on memberships, packages, or recurring revenue, EntityX is your best ally.",
     "feat.whatis.p1":
-      "More than just software, it is an operating brain that automates the management of **plans, subscriptions, and memberships** of all types. It eliminates administrative chaos and professionalizes your operation, allowing you to scale any recurring business model without friction.",
+      "More than just software, it is an operating brain that automates the management of plans, subscriptions, and memberships of all types. It eliminates administrative chaos and professionalizes your operation, allowing you to scale any recurring business model without friction.",
     "feat.whatis.list1.title": "Total Revenue Control",
     "feat.whatis.list1.desc":
       'No more "courtesy entries" or reception oversights. If there is no active payment, the system blocks access. Every penny is audited.',
