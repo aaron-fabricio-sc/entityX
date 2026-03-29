@@ -8,12 +8,12 @@ const lang = "es";
 const t = useTranslations(lang);
 
 let plans: any[] = [
-  { name: "Cargando...", clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-0" },
-  { name: "Cargando...", clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-1" },
-  { name: "Cargando...", clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-2" },
-  { name: "Cargando...", clients: "...", monthly: "...", yearly: "...", featured: true,  id: "plan-3" },
-  { name: "Cargando...", clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-4" },
-  { name: "Cargando...", clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-5" }
+  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-0" },
+  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-1" },
+  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-2" },
+  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: true,  id: "plan-3" },
+  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-4" },
+  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-5" }
 ];
 
 const features = [
@@ -100,8 +100,9 @@ const features = [
                       </span>
                     )}
                     <h4 class="text-neon plan-name">{plan.name || "..."}</h4>
-                    <p class="text-light small">
-                      {t("pricing.clients_up_to")} <span class="plan-clients">{plan.clients}</span> {t("pricing.clients_label")}
+
+                    <p class="text-light small mb-0" >
+                      <span class="plan-description">{plan.description}</span>
                     </p>
                   </div>
                   <div class="card-body">
@@ -260,7 +261,7 @@ const features = [
   async function fetchPlans() {
     try {
       // Add skeleton classes to placeholders while fetching
-      const placeholders = document.querySelectorAll('.plan-name, .plan-clients, .plan-monthly, .plan-yearly');
+      const placeholders = document.querySelectorAll('.plan-name, .plan-description, .plan-monthly, .plan-yearly');
       placeholders.forEach(el => {
         if (el.textContent === "...") el.classList.add('skeleton-text');
       });
@@ -282,7 +283,7 @@ const features = [
             if (container) {
               // Update content structure
               const nameEl = container.querySelector('.plan-name');
-              const clientsEl = container.querySelector('.plan-clients');
+              const descriptionEl = container.querySelector('.plan-description');
               const monthlyEl = container.querySelector('.plan-monthly');
               const yearlyEl = container.querySelector('.plan-yearly');
               const ctaEl = container.querySelector('.plan-cta') as HTMLAnchorElement;
@@ -292,9 +293,9 @@ const features = [
                 nameEl.textContent = d.name;
                 nameEl.classList.remove('skeleton-text');
               }
-              if (clientsEl) {
-                clientsEl.textContent = d.max_clients;
-                clientsEl.classList.remove('skeleton-text');
+              if (descriptionEl) {
+                descriptionEl.textContent = d.description;
+                descriptionEl.classList.remove('skeleton-text');
               }
               if (monthlyEl) {
                 monthlyEl.textContent = `${formatNumber(Number(d.price_monthly))} ${d.currency}`;
