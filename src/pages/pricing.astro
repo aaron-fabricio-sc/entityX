@@ -82,16 +82,16 @@ const features = [
     </section>
 
     <!-- Pricing Table -->
-    <section class="py-5 bg-body">
+    <section class="py-5 bg-dark-teal">
       <div class="container">
-        <h2 class="text-center mb-5">{t("pricing.subtitle")}</h2>
+        <h2 class="text-center text-neon mb-5 fw-bold">{t("pricing.subtitle")}</h2>
 
         <div class="row g-4 justify-content-center">
           {
             plans.map((plan, index) => (
               <div class="col-md-6 col-lg-4" data-plan-index={index}>
                 <div
-                  class={`card h-100 bg-sidebar border-0 shadow-sm text-center feature-card plan-card ${plan.featured ? "border-primary" : ""}`}
+                  class={`card h-100 card-neon-animated border-0 text-center feature-card plan-card ${plan.featured ? "border-primary" : ""}`}
                 >
                   <div class="card-header bg-transparent border-0 pt-4">
                     {plan.featured && (
@@ -146,7 +146,7 @@ const features = [
           {
             features.map((f) => (
               <div class="col-md-6 col-lg-4">
-                <div class="d-flex align-items-start p-4 border border-secondary rounded-4 h-100 bg-sidebar hover-scale">
+                <div class="card h-100 card-neon-animated p-4 border-0 d-flex flex-row align-items-start">
                   <i class={`bi ${f.icon} fs-2 text-neon me-3`} />
                   <div>
                     <h5 class="text-white mb-2">{f.title}</h5>
@@ -161,40 +161,34 @@ const features = [
     </section>
 
     <!-- Why Annual & Flexibility -->
-    <section class="py-5 bg-body">
+    <section class="py-5 bg-dark-teal">
       <div class="container">
         <div class="row g-5">
           <div class="col-lg-4">
-            <div
-              class="p-5 bg-sidebar rounded-4 shadow-sm border border-success h-100"
-            >
-              <h3 class="text-success mb-4">
+            <div class="card p-5 border-0 rounded-4 h-100 card-neon-animated">
+              <h3 class="text-neon fw-bold mb-4">
                 <i class="bi bi-calendar-check me-2"></i>
                 {t("pricing.annual.title")}
               </h3>
-              <p class="text-light">{t("pricing.annual.desc")}</p>
+              <p class="text-light mb-0">{t("pricing.annual.desc")}</p>
             </div>
           </div>
           <div class="col-lg-4">
-            <div
-              class="p-5 bg-sidebar rounded-4 shadow-sm border border-primary h-100"
-            >
-              <h3 class="text-primary mb-4">
+            <div class="card p-5 border-0 rounded-4 h-100 card-neon-animated">
+              <h3 class="text-neon fw-bold mb-4">
                 <i class="bi bi-arrows-expand me-2"></i>
                 {t("pricing.flex.title")}
               </h3>
-              <p class="text-light">{t("pricing.flex.desc")}</p>
+              <p class="text-light mb-0">{t("pricing.flex.desc")}</p>
             </div>
           </div>
           <div class="col-lg-4">
-            <div
-              class="p-5 bg-sidebar rounded-4 shadow-sm border border-info h-100"
-            >
-              <h3 class="text-info mb-4">
+            <div class="card p-5 border-0 rounded-4 h-100 card-neon-animated">
+              <h3 class="text-neon fw-bold mb-4">
                 <i class="bi bi-eye me-2"></i>
                 {t("pricing.transparency.title")}
               </h3>
-              <p class="text-light">{t("pricing.transparency.desc")}</p>
+              <p class="text-light mb-0">{t("pricing.transparency.desc")}</p>
             </div>
           </div>
         </div>
