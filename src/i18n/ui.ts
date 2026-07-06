@@ -72,7 +72,7 @@ export const ui = {
     "feat.sol.5.desc": "Genera reportes centralizados de membresías, clientes, ventas y empleados con un solo clic.",
 
     // Section 2
-    "feat.membership.title": "LOS MÓDULOS DEL SISTEMA",
+    "feat.membership.title": "TODO EL PODER EN UNA SOLA PLATAFORMA",
     "feat.membership.subtitle": "Control Total, 0% Fricción",
     "feat.membership.desc":
       "Un sistema en la nube accesible desde cualquier dispositivo (PC y Móvil) con todo lo que necesitas para operar financieramente al 100%.",
@@ -85,6 +85,12 @@ export const ui = {
     "feat.membership.list3.title": "Gestión de Roles y RRHH",
     "feat.membership.list3.desc":
       "Control de asistencia diaria del personal y permisos granulares de acceso a la información.",
+    "feat.membership.list4.title": "Base de Datos (CRM)",
+    "feat.membership.list4.desc":
+      "Ten a la mano el registro e historial completo de todos tus clientes y empleados para tomar decisiones estratégicas basadas en datos reales.",
+    "feat.membership.list5.title": "Cronograma de Actividades",
+    "feat.membership.list5.desc":
+      "Registra y gestiona la grilla de horarios de tus clases. Tus clientes podrán visualizar fácilmente las actividades disponibles del día.",
 
     // Section 3
     "feat.agnostic.title": "EL SISTEMA MULTI-NICHO",
@@ -155,10 +161,13 @@ export const ui = {
 
     // Business Types
     "biz.gym": "Gimnasios y Crossfit",
-    "biz.spa": "Espacios Coworking",
-    "biz.school": "Danza, Yoga y Pilates",
-    "biz.club": "Clubes Privados",
-    "biz.deportes": "Academias e Idiomas",
+    "biz.yoga": "Yoga y Pilates",
+    "biz.deportes": "Escuelas Deportivas",
+    "biz.martial": "Artes Marciales",
+    "biz.danza": "Danza y Música",
+    "biz.education": "Institutos Educativos",
+    "biz.spa": "Spas y Estética",
+    "biz.coworking": "Coworking y Clubes",
 
     // Pricing Page
     "pricing.title": "Inversión: Planes que Crecen Contigo",
@@ -280,7 +289,7 @@ export const ui = {
     "feat.sol.5.title": "Instant PDF Reports",
     "feat.sol.5.desc": "Generate centralized reports of memberships, clients, sales, and employees with one click.",
 
-    "feat.membership.title": "SYSTEM MODULES",
+    "feat.membership.title": "ALL THE POWER IN ONE PLATFORM",
     "feat.membership.subtitle": "Total Control, 0% Friction",
     "feat.membership.desc":
       "A cloud-based system accessible from any device (PC and Mobile) with everything you need to operate financially at 100%.",
@@ -293,6 +302,12 @@ export const ui = {
     "feat.membership.list3.title": "Role & HR Management",
     "feat.membership.list3.desc":
       "Daily staff attendance tracking and granular information access permissions.",
+    "feat.membership.list4.title": "Smart Database (CRM)",
+    "feat.membership.list4.desc":
+      "Keep the complete registry and history of all your clients and employees at hand to make data-driven strategic decisions.",
+    "feat.membership.list5.title": "Activity Scheduling",
+    "feat.membership.list5.desc":
+      "Register and manage your class schedules. Your clients will easily view the available activities for the day.",
 
     "feat.agnostic.title": "THE MULTI-NICHE ERP",
     "feat.agnostic.desc":
@@ -359,10 +374,13 @@ export const ui = {
 
     // Business Types
     "biz.gym": "Gyms & Crossfit",
-    "biz.spa": "Coworking Spaces",
-    "biz.school": "Dance, Yoga & Pilates",
-    "biz.club": "Private Clubs",
-    "biz.deportes": "Academies & Languages",
+    "biz.yoga": "Yoga & Pilates",
+    "biz.deportes": "Sports Schools",
+    "biz.martial": "Martial Arts",
+    "biz.danza": "Dance & Music",
+    "biz.education": "Educational Institutes",
+    "biz.spa": "Spas & Aesthetics",
+    "biz.coworking": "Coworking & Clubs",
 
     // Pricing Page
     "pricing.title": "Investment: Plans That Grow With You",

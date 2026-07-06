@@ -16,77 +16,131 @@ const t = useTranslations(lang);
             </div>
         </div>
         
-        <div class="row g-4 justify-content-center">
-            <!-- Problem -->
-            <div class="col-md-6 col-lg-5">
-                <div class="card card-neon-animated border-0 h-100 rounded-4">
-                    <div class="card-body p-5">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-x-circle fs-3 text-danger me-3"></i>
-                            <h4 class="card-title text-white fw-bold mb-0">{t('feat.prob.1.title')}</h4>
-                        </div>
-                        <p class="card-text text-light small mb-4">{t('feat.prob.1.desc')}</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card card-neon-animated border-0 rounded-4">
+                    <div class="card-body p-4 p-md-5">
                         
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-x-circle fs-5 text-danger me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.prob.2.title')}</h5>
-                        </div>
-                        <p class="small text-light mb-4">{t('feat.prob.2.desc')}</p>
+                        <!-- Item 1 -->
+                        <div class="row align-items-center mb-4 pb-4 border-bottom border-secondary border-opacity-25">
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-x-circle fs-5 text-danger me-2"></i>
+                                    <h5 class="text-white fw-bold mb-0">{t('feat.prob.1.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.prob.1.desc')}</p>
+                            </div>
+                            
+                            <div class="col-md-2 text-center mb-3 mb-md-0">
+                                <i class="bi bi-arrow-right fs-4 text-secondary opacity-50 d-none d-md-inline-block"></i>
+                                <i class="bi bi-arrow-down fs-4 text-secondary opacity-50 d-inline-block d-md-none"></i>
+                            </div>
 
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-x-circle fs-5 text-danger me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.prob.3.title')}</h5>
+                            <div class="col-md-5">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle fs-5 text-neon me-2"></i>
+                                    <h5 class="text-neon fw-bold mb-0">{t('feat.sol.1.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.sol.1.desc')}</p>
+                            </div>
                         </div>
-                        <p class="small text-light mb-4">{t('feat.prob.3.desc')}</p>
 
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-x-circle fs-5 text-danger me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.prob.4.title')}</h5>
-                        </div>
-                        <p class="small text-light mb-4">{t('feat.prob.4.desc')}</p>
+                        <!-- Item 2 -->
+                        <div class="row align-items-center mb-4 pb-4 border-bottom border-secondary border-opacity-25">
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-x-circle fs-5 text-danger me-2"></i>
+                                    <h5 class="text-white fw-bold mb-0">{t('feat.prob.2.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.prob.2.desc')}</p>
+                            </div>
+                            
+                            <div class="col-md-2 text-center mb-3 mb-md-0">
+                                <i class="bi bi-arrow-right fs-4 text-secondary opacity-50 d-none d-md-inline-block"></i>
+                                <i class="bi bi-arrow-down fs-4 text-secondary opacity-50 d-inline-block d-md-none"></i>
+                            </div>
 
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-x-circle fs-5 text-danger me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.prob.5.title')}</h5>
+                            <div class="col-md-5">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle fs-5 text-neon me-2"></i>
+                                    <h5 class="text-neon fw-bold mb-0">{t('feat.sol.2.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.sol.2.desc')}</p>
+                            </div>
                         </div>
-                        <p class="small text-light m-0">{t('feat.prob.5.desc')}</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Solution -->
-            <div class="col-md-6 col-lg-5">
-                <div class="card card-neon-animated h-100 rounded-4">
-                    <div class="card-body p-5">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-check-circle fs-3 text-neon me-3"></i>
-                            <h4 class="card-title text-neon fw-bold mb-0">{t('feat.sol.1.title')}</h4>
-                        </div>
-                        <p class="card-text text-light small mb-4">{t('feat.sol.1.desc')}</p>
-                        
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check-circle fs-5 text-neon me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.sol.2.title')}</h5>
-                        </div>
-                        <p class="small text-light mb-4">{t('feat.sol.2.desc')}</p>
-                        
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check-circle fs-5 text-neon me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.sol.3.title')}</h5>
-                        </div>
-                        <p class="small text-light mb-4">{t('feat.sol.3.desc')}</p>
 
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check-circle fs-5 text-neon me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.sol.4.title')}</h5>
-                        </div>
-                        <p class="small text-light mb-4">{t('feat.sol.4.desc')}</p>
+                        <!-- Item 3 -->
+                        <div class="row align-items-center mb-4 pb-4 border-bottom border-secondary border-opacity-25">
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-x-circle fs-5 text-danger me-2"></i>
+                                    <h5 class="text-white fw-bold mb-0">{t('feat.prob.3.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.prob.3.desc')}</p>
+                            </div>
+                            
+                            <div class="col-md-2 text-center mb-3 mb-md-0">
+                                <i class="bi bi-arrow-right fs-4 text-secondary opacity-50 d-none d-md-inline-block"></i>
+                                <i class="bi bi-arrow-down fs-4 text-secondary opacity-50 d-inline-block d-md-none"></i>
+                            </div>
 
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check-circle fs-5 text-neon me-3"></i>
-                            <h5 class="text-white fw-bold mb-0">{t('feat.sol.5.title')}</h5>
+                            <div class="col-md-5">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle fs-5 text-neon me-2"></i>
+                                    <h5 class="text-neon fw-bold mb-0">{t('feat.sol.3.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.sol.3.desc')}</p>
+                            </div>
                         </div>
-                        <p class="small text-light m-0">{t('feat.sol.5.desc')}</p>
+
+                        <!-- Item 4 -->
+                        <div class="row align-items-center mb-4 pb-4 border-bottom border-secondary border-opacity-25">
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-x-circle fs-5 text-danger me-2"></i>
+                                    <h5 class="text-white fw-bold mb-0">{t('feat.prob.4.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.prob.4.desc')}</p>
+                            </div>
+                            
+                            <div class="col-md-2 text-center mb-3 mb-md-0">
+                                <i class="bi bi-arrow-right fs-4 text-secondary opacity-50 d-none d-md-inline-block"></i>
+                                <i class="bi bi-arrow-down fs-4 text-secondary opacity-50 d-inline-block d-md-none"></i>
+                            </div>
+
+                            <div class="col-md-5">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle fs-5 text-neon me-2"></i>
+                                    <h5 class="text-neon fw-bold mb-0">{t('feat.sol.4.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.sol.4.desc')}</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="row align-items-center">
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-x-circle fs-5 text-danger me-2"></i>
+                                    <h5 class="text-white fw-bold mb-0">{t('feat.prob.5.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.prob.5.desc')}</p>
+                            </div>
+                            
+                            <div class="col-md-2 text-center mb-3 mb-md-0">
+                                <i class="bi bi-arrow-right fs-4 text-secondary opacity-50 d-none d-md-inline-block"></i>
+                                <i class="bi bi-arrow-down fs-4 text-secondary opacity-50 d-inline-block d-md-none"></i>
+                            </div>
+
+                            <div class="col-md-5">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle fs-5 text-neon me-2"></i>
+                                    <h5 class="text-neon fw-bold mb-0">{t('feat.sol.5.title')}</h5>
+                                </div>
+                                <p class="small text-light mb-0 ps-4 ms-1">{t('feat.sol.5.desc')}</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -103,29 +157,49 @@ const t = useTranslations(lang);
             <p class="lead text-light mx-auto" style="max-width: 700px;">{t('feat.membership.desc')}</p>
         </div>
         
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
+        <div class="row g-4 justify-content-center">
+            <!-- 1. Membresias -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card border-0 rounded-4 h-100 p-4 card-neon-animated">
                     <i class="bi bi-card-checklist fs-1 text-neon mb-3"></i>
                     <h5 class="text-white fw-bold">{t('feat.membership.list1.title')}</h5>
                     <p class="text-light small mb-0">{t('feat.membership.list1.desc')}</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <!-- 2. Base de Datos / CRM -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 rounded-4 h-100 p-4 card-neon-animated">
+                    <i class="bi bi-person-lines-fill fs-1 text-neon mb-3"></i>
+                    <h5 class="text-white fw-bold">{t('feat.membership.list4.title')}</h5>
+                    <p class="text-light small mb-0">{t('feat.membership.list4.desc')}</p>
+                </div>
+            </div>
+            <!-- 3. Cronograma -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 rounded-4 h-100 p-4 card-neon-animated">
+                    <i class="bi bi-calendar3 fs-1 text-neon mb-3"></i>
+                    <h5 class="text-white fw-bold">{t('feat.membership.list5.title')}</h5>
+                    <p class="text-light small mb-0">{t('feat.membership.list5.desc')}</p>
+                </div>
+            </div>
+            <!-- 4. Ventas -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card border-0 rounded-4 h-100 p-4 card-neon-animated">
                     <i class="bi bi-cart-check fs-1 text-neon mb-3"></i>
                     <h5 class="text-white fw-bold">{t('feat.membership.list2.title')}</h5>
                     <p class="text-light small mb-0">{t('feat.membership.list2.desc')}</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <!-- 5. RRHH -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card border-0 rounded-4 h-100 p-4 card-neon-animated">
                     <i class="bi bi-people fs-1 text-neon mb-3"></i>
                     <h5 class="text-white fw-bold">{t('feat.membership.list3.title')}</h5>
                     <p class="text-light small mb-0">{t('feat.membership.list3.desc')}</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <!-- 6. Portal -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card border-0 rounded-4 h-100 p-4 card-neon-animated">
                     <i class="bi bi-phone fs-1 text-neon mb-3"></i>
                     <h5 class="text-white fw-bold">{t('feat.access.title')}</h5>
@@ -139,45 +213,74 @@ const t = useTranslations(lang);
 <!-- Section 3: Target Niches (For Who) -->
 <section class="py-5 bg-dark-teal">
     <div class="container py-5">
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold text-neon mb-4">{t('feat.agnostic.title')}</h2>
-                <p class="lead text-light mb-4">{t('feat.agnostic.desc')}</p>
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-neon mb-3">{t('feat.agnostic.title')}</h2>
+            <p class="lead text-light mx-auto mb-4" style="max-width: 800px;">{t('feat.agnostic.desc')}</p>
+        </div>
+        
+        <!-- Niches Grid -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/gyms.jpeg'} class="w-100 h-100 object-fit-cover" alt="Gym" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-bicycle me-2 text-neon"></i>{t('biz.gym')}</h5>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <!-- Niches Grid -->
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
-                            <img src={import.meta.env.BASE_URL + 'imagenes/image.png'} class="w-100 h-100 object-fit-cover" alt="Gym" style="min-height: 200px;">
-                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
-                                <h5 class="text-white mb-0 fs-5"><i class="bi bi-bicycle me-2"></i>{t('biz.gym')}</h5>
-                            </div>
-                        </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Yoga_Pilates_color_scheme_202607060947.jpeg'} class="w-100 h-100 object-fit-cover" alt="Yoga" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-flower1 me-2 text-neon"></i>{t('biz.yoga')}</h5>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
-                            <img src={import.meta.env.BASE_URL + 'imagenes/image(3).png'} class="w-100 h-100 object-fit-cover" alt="Academy" style="min-height: 200px;">
-                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
-                                <h5 class="text-white mb-0 fs-5"><i class="bi bi-music-note-beamed me-2"></i>{t('biz.school')}</h5>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Imagen_quita_fondo_pone_deporte_202607061122.jpeg'} class="w-100 h-100 object-fit-cover" alt="Sports" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-trophy me-2 text-neon"></i>{t('biz.deportes')}</h5>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
-                            <img src={import.meta.env.BASE_URL + 'imagenes/image(4).png'} class="w-100 h-100 object-fit-cover" alt="Sports" style="min-height: 200px;">
-                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
-                                <h5 class="text-white mb-0 fs-5"><i class="bi bi-trophy me-2"></i>{t('biz.deportes')}</h5>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Mejora_imagen_quita_líneas_negras_202607061114.jpeg'} class="w-100 h-100 object-fit-cover" alt="Martial Arts" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-yin-yang me-2 text-neon"></i>{t('biz.martial')}</h5>
                     </div>
-                   <div class="col-sm-6">
-                        <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card">
-                            <img src={import.meta.env.BASE_URL + 'imagenes/image(2).png'} class="w-100 h-100 object-fit-cover" alt="Coworking" style="min-height: 200px;">
-                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
-                                <h5 class="text-white mb-0 fs-5"><i class="bi bi-building me-2"></i>{t('biz.spa')}</h5>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Colores_neon_y_EntityX_fondo_202607061004.jpeg'} class="w-100 h-100 object-fit-cover" alt="Dance" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-music-note-beamed me-2 text-neon"></i>{t('biz.danza')}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/mejora_la_calida_esa_imagen_202607061126.jpeg'} class="w-100 h-100 object-fit-cover" alt="Education" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-book me-2 text-neon"></i>{t('biz.education')}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Mejora_calidad_de_imagen_202607061128.jpeg'} class="w-100 h-100 object-fit-cover" alt="Spa" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-heart me-2 text-neon"></i>{t('biz.spa')}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Generate_other_images_neon_202607061007.jpeg'} class="w-100 h-100 object-fit-cover" alt="Coworking" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                        <h5 class="text-white mb-0 fs-5"><i class="bi bi-laptop me-2 text-neon"></i>{t('biz.coworking')}</h5>
                     </div>
                 </div>
             </div>
