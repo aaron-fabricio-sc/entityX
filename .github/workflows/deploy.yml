@@ -32,6 +32,25 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify build output
+        run: |
+          echo "Dist contents:"
+          ls -la ./dist || { echo "dist folder not found"; exit 1; }
+          echo "Size:"
+          du -sh ./dist || true
+          echo "Find top files (skip node_modules):"
+          find ./dist -maxdepth 2 -type f -printf "%s\t%p\n" | sort -nr | head -n 20 || true
+          # Ensure there is an index.html at the root of the artifact
+          if [ ! -f ./dist/index.html ]; then
+            echo "ERROR: ./dist/index.html not found — Pages needs an entry file at the root"
+            exit 1
+          fi
+          # If you use a custom domain and commit a CNAME file in dist, show it
+          if [ -f ./dist/CNAME ]; then
+            echo "CNAME file contents:"
+            cat ./dist/CNAME
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
