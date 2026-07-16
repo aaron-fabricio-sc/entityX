@@ -8,12 +8,11 @@ const lang = "es";
 const t = useTranslations(lang);
 
 let plans: any[] = [
-  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-0" },
-  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-1" },
-  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-2" },
-  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: true,  id: "plan-3" },
-  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-4" },
-  { name: "Cargando...", description: "...", monthly: "...", yearly: "...", featured: false, id: "plan-5" }
+  { name: "Cargando...", description: "...", max_clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-0" },
+  { name: "Cargando...", description: "...", max_clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-1" },
+  { name: "Cargando...", description: "...", max_clients: "...", monthly: "...", yearly: "...", featured: true,  id: "plan-2" },
+  { name: "Cargando...", description: "...", max_clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-3" },
+  { name: "Cargando...", description: "...", max_clients: "...", monthly: "...", yearly: "...", featured: false, id: "plan-4" }
 ];
 
 const features = [
@@ -101,9 +100,14 @@ const features = [
                     )}
                     <h4 class="text-neon plan-name">{plan.name || "..."}</h4>
 
-                    <p class="text-light small mb-0" >
+                    <p class="text-light mb-3" style="font-size: 1.05rem;">
                       <span class="plan-description">{plan.description}</span>
                     </p>
+                    <div class="mb-3">
+                      <span class="badge bg-transparent border border-primary text-neon plan-max-clients px-3 py-2 fw-medium fs-6">
+                        <i class="bi bi-people-fill me-1"></i> {plan.max_clients}
+                      </span>
+                    </div>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title display-6 fw-bold text-white mb-0 plan-monthly">
@@ -255,9 +259,9 @@ const features = [
   async function fetchPlans() {
     try {
       // Add skeleton classes to placeholders while fetching
-      const placeholders = document.querySelectorAll('.plan-name, .plan-description, .plan-monthly, .plan-yearly');
+      const placeholders = document.querySelectorAll('.plan-name, .plan-description, .plan-max-clients, .plan-monthly, .plan-yearly');
       placeholders.forEach(el => {
-        if (el.textContent === "...") el.classList.add('skeleton-text');
+        if (el.textContent && el.textContent.includes("...")) el.classList.add('skeleton-text');
       });
 
       const response = await fetch(`${API_URL}/plans/public?currency=BOB`);
@@ -278,6 +282,7 @@ const features = [
               // Update content structure
               const nameEl = container.querySelector('.plan-name');
               const descriptionEl = container.querySelector('.plan-description');
+              const maxClientsEl = container.querySelector('.plan-max-clients');
               const monthlyEl = container.querySelector('.plan-monthly');
               const yearlyEl = container.querySelector('.plan-yearly');
               const ctaEl = container.querySelector('.plan-cta') as HTMLAnchorElement;
@@ -290,6 +295,14 @@ const features = [
               if (descriptionEl) {
                 descriptionEl.textContent = d.description;
                 descriptionEl.classList.remove('skeleton-text');
+              }
+              if (maxClientsEl) {
+                if (d.max_clients === null) {
+                  maxClientsEl.innerHTML = `<i class="bi bi-people-fill me-1"></i> Ilimitados`;
+                } else {
+                  maxClientsEl.innerHTML = `<i class="bi bi-people-fill me-1"></i> Hasta ${d.max_clients} clientes`;
+                }
+                maxClientsEl.classList.remove('skeleton-text');
               }
               if (monthlyEl) {
                 monthlyEl.textContent = `${formatNumber(Number(d.price_monthly))} ${d.currency}`;
@@ -312,6 +325,15 @@ const features = [
               }
             }
           });
+
+          // Hide any extra placeholder cards if API returned fewer plans
+          const allCards = document.querySelectorAll('.col-md-6.col-lg-4[data-plan-index]');
+          if (data.length < allCards.length) {
+            for (let i = data.length; i < allCards.length; i++) {
+              const extraCard = document.querySelector(`[data-plan-index="${i}"]`) as HTMLElement;
+              if (extraCard) extraCard.style.display = 'none';
+            }
+          }
         }
       }
     } catch (error) {
