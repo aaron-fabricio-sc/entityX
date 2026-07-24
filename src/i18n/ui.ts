@@ -58,6 +58,26 @@ export const ui = {
     "feat.prob.4.desc": "No hay registro claro de horarios de entrada/salida ni del historial de pagos a tus empleados.",
     "feat.prob.5.title": "Información Dispersa",
     "feat.prob.5.desc": "Datos desordenados que no te permiten ver la salud financiera real del negocio.",
+    "feat.prob.6.title": "Cobros No Registrados",
+    "feat.prob.6.desc": "¿Sufres pérdidas de dinero por cobros no registrados, anotaciones informales o ingresos que no quedan asentados?",
+    "feat.prob.7.title": "Rendimiento Poco Claro",
+    "feat.prob.7.desc": "¿Tienes incertidumbre sobre el rendimiento real de tu negocio, las ganancias del mes o tus productos más vendidos?",
+    "feat.prob.8.title": "Accesos con Pagos Vencidos",
+    "feat.prob.8.desc": "¿Ingresan a tus instalaciones clientes con membresías o cuotas vencidas sin que el personal se dé cuenta?",
+    "feat.prob.9.title": "Planes Difíciles de Adaptar",
+    "feat.prob.9.desc": "¿Se te complica diseñar planes de pago personalizados, paquetes por clases o promociones especiales?",
+    "feat.prob.10.title": "Consultas Repetitivas en Recepción",
+    "feat.prob.10.desc": "¿Tu recepción pierde demasiado tiempo respondiendo consultas sobre fechas de vencimiento o saldos pendientes?",
+    "feat.prob.11.title": "Puntualidad sin Control",
+    "feat.prob.11.desc": "¿Tienes falta de control sobre la puntualidad, los horarios de llegada o el cumplimiento de turnos de tu personal?",
+    "feat.prob.12.title": "Accesos Internos Desordenados",
+    "feat.prob.12.desc": "¿Necesitas que cada miembro de tu equipo tenga su propio acceso sin interferir en la configuración o información de otras áreas?",
+    "feat.prob.13.title": "Pagos al Personal sin Historial",
+    "feat.prob.13.desc": "¿Llegas a fin de mes con descontrol sobre los pagos, adelantos o sueldos entregados a tu personal?",
+    "feat.prob.14.title": "Demasiadas Consultas por Clases",
+    "feat.prob.14.desc": "¿Inviertes demasiado tiempo respondiendo mensajes sobre horarios, costos o disponibilidad de tus clases?",
+    "feat.prob.15.title": "Administración en Papel",
+    "feat.prob.15.desc": "¿Dependes de cuadernos o archivos físicos propensos a perderse, deteriorarse o desordenar tu administración?",
     
     // Soluciones (Tarjeta Derecha)
     "feat.sol.1.title": "Control Inflexible",
@@ -70,6 +90,26 @@ export const ui = {
     "feat.sol.4.desc": "Controla asistencia, horarios y el registro de pagos de todo tu equipo de trabajo.",
     "feat.sol.5.title": "Reportes PDF al Instante",
     "feat.sol.5.desc": "Genera reportes centralizados de membresías, clientes, ventas y empleados con un solo clic.",
+    "feat.sol.6.title": "Ingresos en Tiempo Real",
+    "feat.sol.6.desc": "Registro de ingresos y ventas en tiempo real para asentar de forma exacta cada cobro de servicios, membresías o productos.",
+    "feat.sol.7.title": "Indicadores del Negocio",
+    "feat.sol.7.desc": "Reportes e indicadores al instante para analizar ingresos, crecimiento y estabilidad financiera.",
+    "feat.sol.8.title": "Verificación Automática",
+    "feat.sol.8.desc": "Identifica de inmediato quién está al día y quién tiene un pago pendiente antes de permitir el acceso.",
+    "feat.sol.9.title": "Membresías Configurables",
+    "feat.sol.9.desc": "Adapta condiciones de cobro, paquetes por clase y promociones según el modelo exacto de tu negocio.",
+    "feat.sol.10.title": "Autogestión del Cliente",
+    "feat.sol.10.desc": "Cada usuario puede consultar su estado de cuenta, consumos y vencimientos desde su propio portal.",
+    "feat.sol.11.title": "Asistencia de Empleados",
+    "feat.sol.11.desc": "Supervisa horarios, llegadas y jornada laboral de todo tu equipo desde un registro centralizado.",
+    "feat.sol.12.title": "Roles y Permisos",
+    "feat.sol.12.desc": "Cada trabajador ingresa con su propio usuario y accede únicamente a los módulos necesarios para su trabajo.",
+    "feat.sol.13.title": "Pagos a Empleados",
+    "feat.sol.13.desc": "Lleva un historial transparente de pagos, adelantos y egresos por concepto de personal.",
+    "feat.sol.14.title": "Cartelera Digital",
+    "feat.sol.14.desc": "Tus clientes consultan de forma autónoma horarios, precios y detalles de cada clase.",
+    "feat.sol.15.title": "Sistema en la Nube",
+    "feat.sol.15.desc": "Gestiona la operación de tu negocio de forma segura y accesible desde cualquier dispositivo.",
 
     // Section 2
     "feat.membership.title": "TODO EL PODER EN UNA SOLA PLATAFORMA",
@@ -79,9 +119,9 @@ export const ui = {
     "feat.membership.list1.title": "Gestión Inteligente de Membresías",
     "feat.membership.list1.desc":
       "El corazón del sistema. Configura planes de pago recurrentes con reglas estrictas de días permitidos, horarios y servicios incluidos.",
-    "feat.membership.list2.title": "Registro de Ventas Extra",
+    "feat.membership.list2.title": "Registro de Ventas",
     "feat.membership.list2.desc":
-      "Registra de forma ágil la venta de productos o servicios adicionales, asegurando el control estricto sin errores en caja chica.",
+      "Registra de forma ágil la venta de productos, servicios y pagos, asegurando el control estricto sin errores en caja chica.",
     "feat.membership.list3.title": "Gestión de Roles y RRHH",
     "feat.membership.list3.desc":
       "Control de asistencia diaria del personal y permisos granulares de acceso a la información.",
@@ -91,6 +131,18 @@ export const ui = {
     "feat.membership.list5.title": "Cronograma de Actividades",
     "feat.membership.list5.desc":
       "Registra y gestiona la grilla de horarios de tus clases. Tus clientes podrán visualizar fácilmente las actividades disponibles del día.",
+    "feat.membership.list6.title": "Reportes e Indicadores",
+    "feat.membership.list6.desc":
+      "Consulta ingresos, ventas, membresías, asistencia y crecimiento con datos listos para tomar decisiones.",
+    "feat.membership.list7.title": "Asistencia del Personal",
+    "feat.membership.list7.desc":
+      "Registra entradas, salidas, puntualidad y cumplimiento de turnos para ordenar la gestión diaria de tu equipo.",
+    "feat.membership.list8.title": "Pagos a Empleados",
+    "feat.membership.list8.desc":
+      "Centraliza pagos, adelantos y sueldos para mantener un historial claro de los egresos de personal.",
+    "feat.membership.list9.title": "Operación en la Nube",
+    "feat.membership.list9.desc":
+      "Toda la información queda centralizada, protegida y disponible desde PC, tablet o móvil.",
 
     // Section 3
     "feat.agnostic.title": "EL SISTEMA MULTI-NICHO",
@@ -111,6 +163,8 @@ export const ui = {
       "Consultar la vigencia y detalles de su plan actual.",
     "feat.access.list2":
       "Ver la grilla de horarios de actividades, clases disponibles y anuncios importantes del negocio.",
+    "feat.access.card_desc":
+      "Tus clientes consultan vigencia, pagos, consumos, vencimientos, horarios y anuncios desde su propio panel.",
 
     // Section 5 (Portal - Merged to Access in text, keeping key for fallback)
     "feat.portal.title": "PANEL PERSONAL PARA EL SOCIO",
@@ -127,7 +181,7 @@ export const ui = {
       "Accede desde cualquier dispositivo (PC, tablet o smartphone) con seguridad y rapidez garantizada.",
     "feat.staff.title": "Reportes Financieros",
     "feat.staff.desc":
-      "Toma decisiones basadas en datos reales sobre tus ingresos por membresías y ventas adicionales.",
+      "Toma decisiones basadas en datos reales sobre tus ingresos por membresías y ventas.",
     "feat.partners.title": "Programa de Asociados",
     "feat.partners.desc":
       "Conviértete en un agente comercial de EntityX y genera ingresos recomendando el sistema.",
@@ -276,6 +330,26 @@ export const ui = {
     "feat.prob.4.desc": "No clear record of entry/exit times or payment history for your employees.",
     "feat.prob.5.title": "Scattered Information",
     "feat.prob.5.desc": "Disorganized data that prevents you from seeing the real financial health of the business.",
+    "feat.prob.6.title": "Unregistered Payments",
+    "feat.prob.6.desc": "Do you lose money because of unregistered charges, informal notes, or income that is never properly recorded?",
+    "feat.prob.7.title": "Unclear Business Performance",
+    "feat.prob.7.desc": "Are you uncertain about your real business performance, monthly profit, or best-selling products?",
+    "feat.prob.8.title": "Access with Overdue Payments",
+    "feat.prob.8.desc": "Do clients with expired memberships or overdue fees enter your facilities without staff noticing?",
+    "feat.prob.9.title": "Rigid Payment Plans",
+    "feat.prob.9.desc": "Is it hard to design custom payment plans, class packages, or special promotions?",
+    "feat.prob.10.title": "Repeated Front Desk Questions",
+    "feat.prob.10.desc": "Does reception spend too much time answering questions about due dates or pending balances?",
+    "feat.prob.11.title": "No Staff Punctuality Control",
+    "feat.prob.11.desc": "Do you lack control over arrival times, punctuality, or shift compliance for your staff?",
+    "feat.prob.12.title": "Disorganized Internal Access",
+    "feat.prob.12.desc": "Do you need each team member to have their own access without interfering with settings or other areas?",
+    "feat.prob.13.title": "No Payroll Payment History",
+    "feat.prob.13.desc": "Do you end the month without clear control over staff payments, advances, or salaries?",
+    "feat.prob.14.title": "Too Many Class Questions",
+    "feat.prob.14.desc": "Do you spend too much time answering messages about schedules, prices, or class availability?",
+    "feat.prob.15.title": "Paper-Based Administration",
+    "feat.prob.15.desc": "Do you depend on notebooks or physical files that can get lost, damaged, or disorganize your operations?",
     
     // Soluciones (Tarjeta Derecha)
     "feat.sol.1.title": "Inflexible Control",
@@ -288,6 +362,26 @@ export const ui = {
     "feat.sol.4.desc": "Control attendance, schedules, and payment records for your entire team.",
     "feat.sol.5.title": "Instant PDF Reports",
     "feat.sol.5.desc": "Generate centralized reports of memberships, clients, sales, and employees with one click.",
+    "feat.sol.6.title": "Real-Time Income Records",
+    "feat.sol.6.desc": "Record income and sales in real time so every service, membership, or product payment is accurately logged.",
+    "feat.sol.7.title": "Business Indicators",
+    "feat.sol.7.desc": "Instant reports and indicators help you analyze revenue, growth, and financial stability.",
+    "feat.sol.8.title": "Automatic Access Check",
+    "feat.sol.8.desc": "Identify immediately who is up to date and who has a pending payment before access is allowed.",
+    "feat.sol.9.title": "Configurable Memberships",
+    "feat.sol.9.desc": "Adapt payment conditions, class packages, and promotions to your exact business model.",
+    "feat.sol.10.title": "Client Self-Service",
+    "feat.sol.10.desc": "Each user can check account status, usage, and due dates from their own portal.",
+    "feat.sol.11.title": "Employee Attendance",
+    "feat.sol.11.desc": "Monitor schedules, arrivals, and workdays for your entire team from a centralized record.",
+    "feat.sol.12.title": "Roles and Permissions",
+    "feat.sol.12.desc": "Each worker logs in with their own user and only accesses the modules required for their job.",
+    "feat.sol.13.title": "Employee Payments",
+    "feat.sol.13.desc": "Keep a transparent history of payments, advances, and personnel expenses.",
+    "feat.sol.14.title": "Digital Activity Board",
+    "feat.sol.14.desc": "Clients independently check schedules, prices, and details for each class.",
+    "feat.sol.15.title": "Cloud-Based System",
+    "feat.sol.15.desc": "Manage your business operations securely from any device with centralized cloud access.",
 
     "feat.membership.title": "ALL THE POWER IN ONE PLATFORM",
     "feat.membership.subtitle": "Total Control, 0% Friction",
@@ -308,6 +402,18 @@ export const ui = {
     "feat.membership.list5.title": "Activity Scheduling",
     "feat.membership.list5.desc":
       "Register and manage your class schedules. Your clients will easily view the available activities for the day.",
+    "feat.membership.list6.title": "Reports and Indicators",
+    "feat.membership.list6.desc":
+      "View income, sales, memberships, attendance, and growth with data ready for decision-making.",
+    "feat.membership.list7.title": "Staff Attendance",
+    "feat.membership.list7.desc":
+      "Record check-ins, check-outs, punctuality, and shift compliance to organize daily team management.",
+    "feat.membership.list8.title": "Employee Payments",
+    "feat.membership.list8.desc":
+      "Centralize payments, advances, and salaries to keep a clear history of personnel expenses.",
+    "feat.membership.list9.title": "Cloud Operations",
+    "feat.membership.list9.desc":
+      "All your information stays centralized, protected, and available from desktop, tablet, or mobile.",
 
     "feat.agnostic.title": "THE MULTI-NICHE ERP",
     "feat.agnostic.desc":
@@ -326,6 +432,8 @@ export const ui = {
       "Check the validity and details of their current plan.",
     "feat.access.list2":
       "View the activity schedule, available classes, and important business announcements.",
+    "feat.access.card_desc":
+      "Clients check status, payments, usage, due dates, schedules, and announcements from their own panel.",
 
     "feat.portal.title": "PERSONAL MEMBER PORTAL",
     "feat.portal.desc":

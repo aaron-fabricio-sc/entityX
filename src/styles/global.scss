@@ -174,3 +174,136 @@ h6 {
     background-position: 0% 50%;
   }
 }
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section.py-5,
+  footer.pt-5 {
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  .container.py-5 {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  .mt-5 {
+    margin-top: 2rem !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  .display-5 {
+    font-size: clamp(1.75rem, 8vw, 2.35rem) !important;
+    line-height: 1.12;
+  }
+
+  .lead {
+    font-size: 1rem !important;
+    line-height: 1.45;
+  }
+
+  .card {
+    border-radius: 12px !important;
+  }
+
+  .card.p-4,
+  .card-body.p-4,
+  .card-body.p-md-5 {
+    padding: 1rem !important;
+  }
+
+  .row.g-4 {
+    --bs-gutter-x: 0.9rem;
+    --bs-gutter-y: 0.9rem;
+  }
+
+  .btn-lg {
+    padding: 0.72rem 1rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 5.25rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+
+  .hero-section .container {
+    padding-top: 0 !important;
+  }
+
+  .hero-section .d-flex.gap-3 {
+    flex-direction: column;
+    gap: 0.75rem !important;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-section .btn {
+    width: 100%;
+  }
+
+  .responsive-hero-title {
+    font-size: clamp(2rem, 10vw, 2.65rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .responsive-hero-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .navbar {
+    min-height: 56px !important;
+  }
+
+  .navbar-brand img {
+    height: 46px !important;
+  }
+
+  .navbar-collapse {
+    padding: 0.75rem 0 1rem;
+  }
+
+  .navbar .d-flex.align-items-center.gap-3 {
+    align-items: stretch !important;
+    gap: 0.6rem !important;
+    margin-top: 0.75rem;
+  }
+
+  .card-neon:hover,
+  .card-neon-animated:hover,
+  .hover-scale:hover {
+    transform: none;
+  }
+
+  footer .row.g-4 {
+    --bs-gutter-y: 1.25rem;
+  }
+
+  footer .fs-1 {
+    font-size: 1.75rem !important;
+  }
+}
