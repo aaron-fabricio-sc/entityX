@@ -13,7 +13,7 @@ export const ui = {
     "nav.login": "Iniciar Sesión",
     "nav.terms_conditions": "Términos y Condiciones",
     "hero.title":
-      "El sistema de gestión definitivo para gimnasios, academias y clubes",
+      "El sistema de gestión definitivo para Centros Deportivos, academias y clubes",
     "hero.subtitle":
       "Automatiza inscripciones, controla accesos, evita fugas de dinero y lleva tu registro de ventas en una sola plataforma.",
     "hero.cta": "Solicitar Demo Gratuita",
@@ -23,11 +23,11 @@ export const ui = {
 
     // SEO
     "seo.home.title":
-      "EntityX | Software para Automatizar tu Negocio",
+      "EntityX | Aplicación para Gestionar Centros Deportivos, Academias y Clubes",
     "seo.home.desc":
-      "Automatiza pagos, asistencias y accesos en un solo lugar. La plataforma definitiva para administrar tu centro.",
+      "Gestiona clientes, cobros, membresías, accesos, ventas y recursos humanos desde una sola aplicación en la nube.",
     "seo.home.keywords":
-      "ERP gimnasio, software punto de venta gimnasio, control acceso qr, app clientes gimnasio, software academias, gestion de membresias, evitar fugas de dinero",
+      "aplicación para centros deportivos, software para centros deportivos, sistema para centros deportivos, ERP para centros deportivos, ERP deportivo, ERP ligero, ERP en la nube, sistema administrativo en la nube, software administrativo, aplicación administrativa, software de gestión, sistema de gestión, sistema de gestión deportiva, software para gimnasios, sistema para gimnasios, aplicación para gimnasios, software para academias, sistema para academias, software para clubes, sistema para clubes, software para escuelas deportivas, gestión de membresías, control de membresías, administración de membresías, control de pagos, registro de pagos, cobros en tiempo real, control de cuotas, cuotas vencidas, control de clientes, portal de clientes, autogestión de clientes, control de accesos, verificación de accesos, control de ingresos, registro de ventas, punto de venta, POS para gimnasios, ventas de productos, reportes financieros, indicadores de negocio, reportes de ingresos, control financiero, evitar fugas de dinero, reducir pérdidas de dinero, recursos humanos, gestión de empleados, asistencia de empleados, control de personal, pagos a empleados, cartelera de actividades, horarios de clases, gestión de clases, negocios por membresía, SaaS para negocios deportivos, aplicación web en la nube",
 
     "seo.pricing.title": "Precios y Planes - EntityX",
     "seo.pricing.desc":
@@ -43,9 +43,9 @@ export const ui = {
 
     "feat.whatis.title": "DI ADIÓS AL CAOS ADMINISTRATIVO",
     "feat.whatis.desc":
-      "EntityX es la plataforma digital integral diseñada para erradicar las complejas planillas de Excel y los cuadernos manuales en tu negocio.",
+      "Gestiona clientes, cobros, membresías, accesos, ventas y recursos humanos desde una sola aplicación en la nube.",
     "feat.whatis.p1":
-      "Si gestionas un centro de bienestar (gimnasios, crossfit, yoga), un centro formativo (academias, idiomas) o un espacio compartido (coworking, clubes), este sistema es tu solución definitiva.",
+      "Ideal para centros deportivos, academias y clubes que quieren ordenar su operación diaria.",
     
     // Problemas (Tarjeta Izquierda)
     "feat.prob.1.title": "Fugas de Dinero",
@@ -71,11 +71,11 @@ export const ui = {
     "feat.prob.11.title": "Puntualidad sin Control",
     "feat.prob.11.desc": "¿Tienes falta de control sobre la puntualidad, los horarios de llegada o el cumplimiento de turnos de tu personal?",
     "feat.prob.12.title": "Accesos Internos Desordenados",
-    "feat.prob.12.desc": "¿Necesitas que cada miembro de tu equipo tenga su propio acceso sin interferir en la configuración o información de otras áreas?",
+    "feat.prob.12.desc": "¿Necesitas que cada miembro de tu equipo tenga su propio acceso al sistema sin que interfiera en la configuración o información de otras áreas?",
     "feat.prob.13.title": "Pagos al Personal sin Historial",
     "feat.prob.13.desc": "¿Llegas a fin de mes con descontrol sobre los pagos, adelantos o sueldos entregados a tu personal?",
     "feat.prob.14.title": "Demasiadas Consultas por Clases",
-    "feat.prob.14.desc": "¿Inviertes demasiado tiempo respondiendo mensajes sobre horarios, costos o disponibilidad de tus clases?",
+    "feat.prob.14.desc": "¿Inviertes demasiado tiempo respondiendo mensajes sobre los horarios, costos o disponibilidad de tus clases?",
     "feat.prob.15.title": "Administración en Papel",
     "feat.prob.15.desc": "¿Dependes de cuadernos o archivos físicos propensos a perderse, deteriorarse o desordenar tu administración?",
     
@@ -93,56 +93,56 @@ export const ui = {
     "feat.sol.6.title": "Ingresos en Tiempo Real",
     "feat.sol.6.desc": "Registro de ingresos y ventas en tiempo real para asentar de forma exacta cada cobro de servicios, membresías o productos.",
     "feat.sol.7.title": "Indicadores del Negocio",
-    "feat.sol.7.desc": "Reportes e indicadores al instante para analizar ingresos, crecimiento y estabilidad financiera.",
+    "feat.sol.7.desc": "Reportes e indicadores al instante para analizar los ingresos, el crecimiento y la estabilidad financiera de tu negocio.",
     "feat.sol.8.title": "Verificación Automática",
-    "feat.sol.8.desc": "Identifica de inmediato quién está al día y quién tiene un pago pendiente antes de permitir el acceso.",
+    "feat.sol.8.desc": "Verificación automática de accesos para identificar de inmediato quién está al día y quién tiene un pago pendiente.",
     "feat.sol.9.title": "Membresías Configurables",
-    "feat.sol.9.desc": "Adapta condiciones de cobro, paquetes por clase y promociones según el modelo exacto de tu negocio.",
+    "feat.sol.9.desc": "Membresías configurables que te permiten adaptar las condiciones de cobro según el modelo exacto de tu negocio.",
     "feat.sol.10.title": "Autogestión del Cliente",
-    "feat.sol.10.desc": "Cada usuario puede consultar su estado de cuenta, consumos y vencimientos desde su propio portal.",
+    "feat.sol.10.desc": "Portal de autogestión para clientes donde cada usuario puede consultar su estado de cuenta, consumos y vencimientos.",
     "feat.sol.11.title": "Asistencia de Empleados",
-    "feat.sol.11.desc": "Supervisa horarios, llegadas y jornada laboral de todo tu equipo desde un registro centralizado.",
+    "feat.sol.11.desc": "Registro de asistencia de empleados para supervisar los horarios y la jornada laboral de todo tu equipo.",
     "feat.sol.12.title": "Roles y Permisos",
-    "feat.sol.12.desc": "Cada trabajador ingresa con su propio usuario y accede únicamente a los módulos necesarios para su trabajo.",
+    "feat.sol.12.desc": "Accesos por roles para que cada trabajador ingrese con su propio usuario y acceda de forma ordenada únicamente a los módulos necesarios para su trabajo.",
     "feat.sol.13.title": "Pagos a Empleados",
-    "feat.sol.13.desc": "Lleva un historial transparente de pagos, adelantos y egresos por concepto de personal.",
+    "feat.sol.13.desc": "Registro centralizado de pago a empleados para llevar un historial transparente de los egresos por concepto de personal.",
     "feat.sol.14.title": "Cartelera Digital",
-    "feat.sol.14.desc": "Tus clientes consultan de forma autónoma horarios, precios y detalles de cada clase.",
+    "feat.sol.14.desc": "Cartelera digital de actividades donde los clientes consultan de forma autónoma los horarios, precios y detalles de cada clase.",
     "feat.sol.15.title": "Sistema en la Nube",
-    "feat.sol.15.desc": "Gestiona la operación de tu negocio de forma segura y accesible desde cualquier dispositivo.",
+    "feat.sol.15.desc": "Sistema centralizado en la nube para gestionar la operación de tu negocio de forma segura y accesible desde cualquier dispositivo.",
 
     // Section 2
-    "feat.membership.title": "TODO EL PODER EN UNA SOLA PLATAFORMA",
-    "feat.membership.subtitle": "Control Total, 0% Fricción",
+    "feat.membership.title": "BENEFICIOS CLAVE PARA TU NEGOCIO",
+    "feat.membership.subtitle": "Más control, menos desorden",
     "feat.membership.desc":
-      "Un sistema en la nube accesible desde cualquier dispositivo (PC y Móvil) con todo lo que necesitas para operar financieramente al 100%.",
-    "feat.membership.list1.title": "Gestión Inteligente de Membresías",
+      "EntityX reúne las herramientas esenciales para controlar ingresos, accesos, clientes, empleados y actividades desde un solo lugar.",
+    "feat.membership.list1.title": "Cobros y membresías ordenadas",
     "feat.membership.list1.desc":
-      "El corazón del sistema. Configura planes de pago recurrentes con reglas estrictas de días permitidos, horarios y servicios incluidos.",
-    "feat.membership.list2.title": "Registro de Ventas",
+      "Crea planes, paquetes y promociones con condiciones claras para cobrar de acuerdo al modelo de tu negocio.",
+    "feat.membership.list2.title": "Ingresos registrados al instante",
     "feat.membership.list2.desc":
-      "Registra de forma ágil la venta de productos, servicios y pagos, asegurando el control estricto sin errores en caja chica.",
-    "feat.membership.list3.title": "Gestión de Roles y RRHH",
+      "Registra pagos, ventas de productos y servicios en tiempo real para evitar cobros olvidados o anotaciones informales.",
+    "feat.membership.list3.title": "Equipo con accesos por rol",
     "feat.membership.list3.desc":
-      "Control de asistencia diaria del personal y permisos granulares de acceso a la información.",
-    "feat.membership.list4.title": "Base de Datos (CRM)",
+      "Cada trabajador ingresa con su propio usuario y ve solo los módulos que necesita para realizar su trabajo.",
+    "feat.membership.list4.title": "Clientes mejor organizados",
     "feat.membership.list4.desc":
-      "Ten a la mano el registro e historial completo de todos tus clientes y empleados para tomar decisiones estratégicas basadas en datos reales.",
-    "feat.membership.list5.title": "Cronograma de Actividades",
+      "Mantén el historial de clientes, membresías, vencimientos, consumos y datos importantes en una base centralizada.",
+    "feat.membership.list5.title": "Actividades visibles para todos",
     "feat.membership.list5.desc":
-      "Registra y gestiona la grilla de horarios de tus clases. Tus clientes podrán visualizar fácilmente las actividades disponibles del día.",
-    "feat.membership.list6.title": "Reportes e Indicadores",
+      "Publica horarios, precios y detalles de clases para reducir consultas repetitivas en recepción o mensajes.",
+    "feat.membership.list6.title": "Reportes para decidir mejor",
     "feat.membership.list6.desc":
-      "Consulta ingresos, ventas, membresías, asistencia y crecimiento con datos listos para tomar decisiones.",
-    "feat.membership.list7.title": "Asistencia del Personal",
+      "Consulta ingresos, ganancias, ventas y crecimiento con indicadores claros para entender cómo va tu negocio.",
+    "feat.membership.list7.title": "Asistencia del personal",
     "feat.membership.list7.desc":
-      "Registra entradas, salidas, puntualidad y cumplimiento de turnos para ordenar la gestión diaria de tu equipo.",
-    "feat.membership.list8.title": "Pagos a Empleados",
+      "Controla horarios de llegada, turnos y jornada laboral para supervisar mejor la puntualidad de tu equipo.",
+    "feat.membership.list8.title": "Pagos a empleados controlados",
     "feat.membership.list8.desc":
-      "Centraliza pagos, adelantos y sueldos para mantener un historial claro de los egresos de personal.",
-    "feat.membership.list9.title": "Operación en la Nube",
+      "Registra sueldos, adelantos y pagos al personal para tener un historial claro de tus egresos.",
+    "feat.membership.list9.title": "Información segura en la nube",
     "feat.membership.list9.desc":
-      "Toda la información queda centralizada, protegida y disponible desde PC, tablet o móvil.",
+      "Gestiona tu operación desde cualquier dispositivo sin depender de cuadernos, archivos físicos o planillas dispersas.",
 
     // Section 3
     "feat.agnostic.title": "EL SISTEMA MULTI-NICHO",
@@ -231,7 +231,7 @@ export const ui = {
       "Nota Clave: El límite aplica solo a SOCIOS ACTIVOS. Tu base de datos histórica es ilimitada; cobramos por quienes tienen un plan vigente hoy.",
     "pricing.subtitle": "Nuestros Planes (BOB)",
     "pricing.table.plan": "Plan",
-    "pricing.table.capacity": "Capacidad de Socios Activos",
+    "pricing.table.capacity": "Capacidad de Clientes Activos",
     "pricing.table.monthly": "Mensual",
     "pricing.table.yearly": "Anual (Ahorras 2 meses)",
     "pricing.p0.name": "Plan Gratuito",
@@ -251,23 +251,18 @@ export const ui = {
     "pricing.badge.popular": "Popular",
     "pricing.cta.choose": "Adquirir Sistema",
     "pricing.includes.title": "Todos los planes incluyen:",
-    "pricing.inc1.title": "Módulo de Membresías",
-    "pricing.inc1.desc":
-      "Diseño de planes flexibles con control automático de accesos y vigencias.",
-    "pricing.inc2.title": "Registro de Ventas",
-    "pricing.inc2.desc": "Sistema integrado para venta de productos e inventario.",
-    "pricing.inc3.title": "Portal de Autogestión",
-    "pricing.inc3.desc":
-      "Dashboard privado para que tu cliente vea horarios, vencimientos y anuncios.",
-    "pricing.inc4.title": "Gestión de Personal y Roles",
-    "pricing.inc4.desc":
-      "Asistencia de personal y permisos limitados por perfiles (Admin, Recepción).",
-    "pricing.inc5.title": "Soporte Técnico",
-    "pricing.inc5.desc":
-      "Asistencia técnica especializada para asegurar que tu negocio nunca pare.",
-    "pricing.inc6.title": "Reportes y PDF al Instante",
-    "pricing.inc6.desc":
-      "Genera reportes de tus ingresos, ventas y asistencias en segundos.",
+    "pricing.inc1.title": "Cobros, membresías y planes personalizados para tu negocio",
+    "pricing.inc1.desc": "",
+    "pricing.inc2.title": "Ingresos, ventas y pagos registrados en tiempo real",
+    "pricing.inc2.desc": "",
+    "pricing.inc3.title": "Portal para que tus clientes consulten vencimientos, consumos y estado de cuenta",
+    "pricing.inc3.desc": "",
+    "pricing.inc4.title": "Accesos por roles, asistencia y control de recursos humanos",
+    "pricing.inc4.desc": "",
+    "pricing.inc5.title": "Cartelera digital de actividades, horarios, precios y clases disponibles",
+    "pricing.inc5.desc": "",
+    "pricing.inc6.title": "Reportes e indicadores para conocer ingresos, crecimiento y estabilidad",
+    "pricing.inc6.desc": "",
     "pricing.annual.title": "¿Por qué elegir el pago Anual?",
     "pricing.annual.desc":
       "Te regalamos 2 meses de servicio. Asegura el control operativo de tu negocio por todo un año al mejor costo.",

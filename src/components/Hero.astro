@@ -46,12 +46,12 @@ const t = useTranslations(lang);
 
 <style>
   .responsive-hero-title {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 2.25rem;
+    line-height: 1.15;
   }
 
   .responsive-hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     line-height: 1.5;
   }
 
@@ -62,10 +62,30 @@ const t = useTranslations(lang);
 
   @media (min-width: 768px) {
     .responsive-hero-title {
-      font-size: 3.5rem; /* Equivalent to display-1 */
+      font-size: 3.25rem;
     }
     .responsive-hero-subtitle {
-      font-size: 1.5rem; /* Equivalent to fs-2 */
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .responsive-hero-title {
+      font-size: 3.75rem;
+    }
+    .responsive-hero-subtitle {
+      font-size: 1.35rem;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .responsive-hero-title {
+      font-size: 1.95rem;
+      line-height: 1.18;
+    }
+    .responsive-hero-subtitle {
+      font-size: 0.95rem;
+      line-height: 1.45;
     }
   }
 

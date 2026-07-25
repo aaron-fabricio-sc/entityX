@@ -3,6 +3,7 @@ import { getLangFromUrl, useTranslations, getPathForLang } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const linkedInUrl = 'https://www.linkedin.com/in/aaron-fabricio-santa-cruz-valdez/';
 ---
 
 
@@ -45,9 +46,14 @@ const t = useTranslations(lang);
              <!-- Social/Contact -->
              <div class="col-lg-3 col-6">
                 <h6 class="text-neon mb-3 fw-bold">{t('common.contact')}</h6>
-                 <a href="https://wa.me/59170668135?text=Hola!%20%F0%9F%91%8B%20Estoy%20muy%20interesado%20en%20el%20sistema%20EntityX%20%F0%9F%9A%80%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%F0%9F%98%83" target="_blank" class="text-light hover-neon text-decoration-none">
-                    <i class="bi bi-whatsapp fs-1"></i>
-                 </a>
+                 <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/59170668135?text=Hola!%20%F0%9F%91%8B%20Estoy%20muy%20interesado%20en%20el%20sistema%20EntityX%20%F0%9F%9A%80%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%F0%9F%98%83" target="_blank" rel="noopener noreferrer" class="text-light hover-neon text-decoration-none" aria-label="Contactar por WhatsApp">
+                        <i class="bi bi-whatsapp fs-1"></i>
+                    </a>
+                    <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" class="text-light hover-neon text-decoration-none" aria-label="Contactar por LinkedIn">
+                        <i class="bi bi-linkedin fs-1"></i>
+                    </a>
+                 </div>
              </div>
         </div>
 
@@ -55,7 +61,15 @@ const t = useTranslations(lang);
 
         <div class="row align-items-center">
              <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0 text-muted-teal small"><small> {t('footer.copyright')}</small></p>
+                <p class="mb-0 text-muted-teal small">
+                    <small>
+                        © 2026 EntityX -
+                        <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" class="footer-author-link">
+                            Aaron Fabricio Santa Cruz Valdez (AaronCode)
+                        </a>.
+                        {lang === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}
+                    </small>
+                </p>
              </div>
         </div>
     </div>
@@ -68,5 +82,12 @@ const t = useTranslations(lang);
     }
     .text-muted-teal {
         color: #8daab1; 
+    }
+    .footer-author-link {
+        color: #0a66c2;
+        transition: color 0.3s ease;
+    }
+    .footer-author-link:hover {
+        color: var(--neon-cyan);
     }
 </style>

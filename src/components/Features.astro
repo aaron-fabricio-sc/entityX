@@ -3,7 +3,7 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const problemSolutionItems = Array.from({ length: 15 }, (_, index) => index + 1);
+const problemSolutionItems = Array.from({ length: 10 }, (_, index) => index + 6);
 const moduleCards = [
     { icon: 'bi-card-checklist', title: 'feat.membership.list1.title', desc: 'feat.membership.list1.desc' },
     { icon: 'bi-person-lines-fill', title: 'feat.membership.list4.title', desc: 'feat.membership.list4.desc' },
@@ -96,7 +96,7 @@ const moduleCards = [
         <div class="row g-4 justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/gyms.jpeg'} class="w-100 h-100 object-fit-cover" alt="Gym" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/gyms.jpeg'} class="w-100 h-100 object-fit-cover" alt="Software de gestión para gimnasios, crossfit y centros deportivos" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-bicycle me-2 text-neon"></i>{t('biz.gym')}</h5>
                     </div>
@@ -104,7 +104,7 @@ const moduleCards = [
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/Yoga_Pilates_color_scheme_202607060947.jpeg'} class="w-100 h-100 object-fit-cover" alt="Yoga" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Yoga_Pilates_color_scheme_202607060947.jpeg'} class="w-100 h-100 object-fit-cover" alt="Aplicación para gestionar centros de yoga y pilates" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-flower1 me-2 text-neon"></i>{t('biz.yoga')}</h5>
                     </div>
@@ -112,7 +112,7 @@ const moduleCards = [
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/Imagen_quita_fondo_pone_deporte_202607061122.jpeg'} class="w-100 h-100 object-fit-cover" alt="Sports" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Imagen_quita_fondo_pone_deporte_202607061122.jpeg'} class="w-100 h-100 object-fit-cover" alt="Sistema administrativo para escuelas deportivas y clases por membresía" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-trophy me-2 text-neon"></i>{t('biz.deportes')}</h5>
                     </div>
@@ -120,7 +120,7 @@ const moduleCards = [
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/Mejora_imagen_quita_lineas_negras_202607061114.jpeg'} class="w-100 h-100 object-fit-cover" alt="Martial Arts" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Mejora_imagen_quita_lineas_negras_202607061114.jpeg'} class="w-100 h-100 object-fit-cover" alt="ERP ligero para academias de artes marciales y control de alumnos" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-yin-yang me-2 text-neon"></i>{t('biz.martial')}</h5>
                     </div>
@@ -128,7 +128,7 @@ const moduleCards = [
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/Colores_neon_y_EntityX_fondo_202607061004.jpeg'} class="w-100 h-100 object-fit-cover" alt="Dance" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Colores_neon_y_EntityX_fondo_202607061004.jpeg'} class="w-100 h-100 object-fit-cover" alt="Software para academias de danza, música y gestión de horarios de clases" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-music-note-beamed me-2 text-neon"></i>{t('biz.danza')}</h5>
                     </div>
@@ -136,7 +136,7 @@ const moduleCards = [
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/mejora_la_calida_esa_imagen_202607061126.jpeg'} class="w-100 h-100 object-fit-cover" alt="Education" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/mejora_la_calida_esa_imagen_202607061126.jpeg'} class="w-100 h-100 object-fit-cover" alt="Sistema de gestión para institutos educativos, academias y cursos" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-book me-2 text-neon"></i>{t('biz.education')}</h5>
                     </div>
@@ -144,7 +144,7 @@ const moduleCards = [
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/Mejora_calidad_de_imagen_202607061128.jpeg'} class="w-100 h-100 object-fit-cover" alt="Spa" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Mejora_calidad_de_imagen_202607061128.jpeg'} class="w-100 h-100 object-fit-cover" alt="Aplicación en la nube para spas, estética y negocios por reservas" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-heart me-2 text-neon"></i>{t('biz.spa')}</h5>
                     </div>
@@ -152,7 +152,7 @@ const moduleCards = [
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="position-relative rounded-4 overflow-hidden shadow-sm h-100 biz-card border border-secondary border-opacity-10">
-                    <img src={import.meta.env.BASE_URL + 'imagenes/Generate_other_images_neon_202607061007.jpeg'} class="w-100 h-100 object-fit-cover" alt="Coworking" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
+                    <img src={import.meta.env.BASE_URL + 'imagenes/Generate_other_images_neon_202607061007.jpeg'} class="w-100 h-100 object-fit-cover" alt="Sistema para coworking, clubes y espacios compartidos con membresías" loading="lazy" decoding="async" style="min-height: 200px; background-color: rgba(2, 16, 20, 0.5);">
                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
                         <h5 class="text-white mb-0 fs-5"><i class="bi bi-laptop me-2 text-neon"></i>{t('biz.coworking')}</h5>
                     </div>
@@ -178,6 +178,36 @@ const moduleCards = [
     }
     .feature-card:hover {
         background-color: rgba(5, 25, 33, 0.8) !important;
+    }
+    #features h2,
+    section.bg-sidebar h2,
+    section.bg-dark-teal h2 {
+        font-size: 2.35rem !important;
+        line-height: 1.18;
+    }
+    #features .lead,
+    section.bg-sidebar .lead,
+    section.bg-dark-teal .lead {
+        font-size: 1.08rem;
+        line-height: 1.5;
+    }
+    #features p,
+    section.bg-sidebar p,
+    section.bg-dark-teal p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    section.bg-sidebar .card h5 {
+        font-size: 1.05rem;
+        line-height: 1.3;
+    }
+    section.bg-sidebar .card p.small {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+    .biz-card h5 {
+        font-size: 1.05rem !important;
+        line-height: 1.25;
     }
     .problem-grid {
         display: grid;
@@ -213,16 +243,71 @@ const moduleCards = [
     }
     .compact-heading h5 {
         margin: 0;
-        font-size: 0.95rem;
+        font-size: 1.05rem;
         font-weight: 700;
         line-height: 1.2;
     }
     .problem-solution-card p {
         margin: 0;
-        font-size: 0.82rem;
-        line-height: 1.35;
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+    @media (max-width: 1199.98px) {
+        #features h2,
+        section.bg-sidebar h2,
+        section.bg-dark-teal h2 {
+            font-size: 2rem !important;
+        }
+        #features .lead,
+        section.bg-sidebar .lead,
+        section.bg-dark-teal .lead {
+            font-size: 1rem;
+        }
+        #features p,
+        section.bg-sidebar p,
+        section.bg-dark-teal p {
+            font-size: 0.94rem;
+        }
+        section.bg-sidebar .card h5,
+        .compact-heading h5,
+        .biz-card h5 {
+            font-size: 0.98rem !important;
+        }
+        section.bg-sidebar .card p.small,
+        .problem-solution-card p {
+            font-size: 0.88rem;
+        }
     }
     @media (max-width: 767.98px) {
+        #features h2,
+        section.bg-sidebar h2,
+        section.bg-dark-teal h2 {
+            font-size: 1.55rem !important;
+            line-height: 1.2;
+        }
+        #features .lead,
+        section.bg-sidebar .lead,
+        section.bg-dark-teal .lead {
+            font-size: 0.92rem !important;
+            line-height: 1.45;
+        }
+        #features p,
+        section.bg-sidebar p,
+        section.bg-dark-teal p {
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+        section.bg-sidebar .card h5,
+        .compact-heading h5,
+        .biz-card h5 {
+            font-size: 0.9rem !important;
+            line-height: 1.25;
+        }
+        section.bg-sidebar .card p.small,
+        .problem-solution-card p {
+            font-size: 0.82rem;
+            line-height: 1.35;
+        }
         .problem-grid {
             grid-template-columns: 1fr;
             gap: 0.7rem;
@@ -230,13 +315,6 @@ const moduleCards = [
         .problem-solution-card {
             padding: 0.85rem;
             gap: 0.5rem;
-        }
-        .compact-heading h5 {
-            font-size: 0.9rem;
-        }
-        .problem-solution-card p {
-            font-size: 0.78rem;
-            line-height: 1.3;
         }
     }
     .bg-gradient-dark {
