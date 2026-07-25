@@ -39,7 +39,7 @@ export const ui = {
     "seo.partners.desc":
       "Genera ingresos recurrentes digitalizando negocios deportivos y educativos con EntityX.",
     "seo.partners.keywords":
-      "programa aliados software, revendedor erp, comisiones ventas software",
+      "programa aliados software, revendedor software, comisiones ventas software, aliados entityx",
 
     "feat.whatis.title": "DI ADIÓS AL CAOS ADMINISTRATIVO",
     "feat.whatis.desc":
@@ -167,7 +167,7 @@ export const ui = {
       "Tus clientes consultan vigencia, pagos, consumos, vencimientos, horarios y anuncios desde su propio panel.",
 
     // Section 5 (Portal - Merged to Access in text, keeping key for fallback)
-    "feat.portal.title": "PANEL PERSONAL PARA EL SOCIO",
+    "feat.portal.title": "PANEL PERSONAL PARA EL CLIENTE",
     "feat.portal.desc":
       "Dale a tus clientes el poder de gestionar su propia información, reduciendo consultas administrativas.",
 
@@ -228,7 +228,7 @@ export const ui = {
     "pricing.desc":
       "No limitamos módulos. Obtienes el sistema completo (Membresías, Ventas, RRHH, Portal) en todos los planes. Pagas únicamente según la cantidad de clientes activos.",
     "pricing.note":
-      "Nota Clave: El límite aplica solo a SOCIOS ACTIVOS. Tu base de datos histórica es ilimitada; cobramos por quienes tienen un plan vigente hoy.",
+      "Nota Clave: El límite aplica solo a CLIENTES ACTIVOS. Tu base de datos histórica es ilimitada; cobramos por quienes tienen un plan vigente hoy.",
     "pricing.subtitle": "Nuestros Planes (BOB)",
     "pricing.table.plan": "Plan",
     "pricing.table.capacity": "Capacidad de Clientes Activos",
@@ -268,7 +268,7 @@ export const ui = {
       "Te regalamos 2 meses de servicio. Asegura el control operativo de tu negocio por todo un año al mejor costo.",
     "pricing.flex.title": "Flexibilidad de Escalado",
     "pricing.flex.desc":
-      "A medida que tu comunidad de clientes crece, el ERP escala contigo. Puedes subir de nivel sin interrupciones.",
+      "A medida que tu comunidad de clientes crece, el sistema escala contigo. Puedes subir de nivel sin interrupciones.",
     "pricing.transparency.title": "Transparencia Total",
     "pricing.transparency.desc":
       "Audita cada pago realizado a la plataforma para garantizar la transparencia de nuestros servicios B2B.",
@@ -282,38 +282,38 @@ export const ui = {
     "nav.pricing": "Pricing",
     "nav.login": "Login",
     "nav.terms_conditions": "Terms and Conditions",
-    "hero.title": "The ultimate management system for gyms, academies, and clubs",
+    "hero.title": "The ultimate management system for sports centers, academies, and clubs",
     "hero.subtitle":
       "Automate enrollments, control access, avoid money leaks, and manage your sales in a single platform.",
     "hero.cta": "Request Free Demo",
     "hero.whatsapp_message":
-      "Hello Aaron, I'm coming from the EntityX website. I'm interested in trying the ERP for my business. My name is...",
+      "Hello Aaron, I'm coming from the EntityX website. I'm interested in trying the system for my business. My name is...",
     "hero.cta_pricing": "See Plans",
 
     // SEO
-    "seo.home.title": "EntityX | Software to Automate Your Business",
+    "seo.home.title": "EntityX | App to Manage Sports Centers, Academies, and Clubs",
     "seo.home.desc":
-      "Automate payments, attendance, and access in one place. The ultimate platform to manage your center.",
+      "Manage clients, payments, memberships, access, sales, and human resources from a single cloud-based application.",
     "seo.home.keywords":
-      "gym ERP, gym POS software, qr access control, gym client app, academy software, membership management, prevent money leaks",
+      "sports center app, sports center software, sports management system, sports center ERP, lightweight ERP, cloud ERP, cloud administrative system, management software, membership management, payment control, real-time payments, overdue fees, client management, client portal, access control, sales records, point of sale, POS for gyms, financial reports, business indicators, prevent money leaks, human resources, employee attendance, employee payments, activity board, class schedules, SaaS for sports businesses, cloud web application",
 
     "seo.pricing.title": "Pricing and Plans - EntityX",
     "seo.pricing.desc":
-      "Affordable plans for all business sizes. No hidden costs. Includes Memberships, POS, HR, and Client Portal.",
+      "Accessible plans for sports centers, academies, and clubs. Includes memberships, sales, access, clients, HR, reports, and client portal.",
     "seo.pricing.keywords":
-      "gym erp pricing, entityx plans, sports software cost, academy management pricing",
+      "sports center software pricing, EntityX plans, sports management app cost, academy management pricing, lightweight ERP pricing, membership software pricing",
 
     "seo.partners.title": "Partner Program - EntityX",
     "seo.partners.desc":
       "Generate recurring revenue by digitizing sports and educational businesses with EntityX.",
     "seo.partners.keywords":
-      "software partner program, erp reseller, software sales commissions",
+      "software partner program, software reseller, software sales commissions, EntityX partners",
 
     "feat.whatis.title": "SAY GOODBYE TO ADMINISTRATIVE CHAOS",
     "feat.whatis.desc":
-      "EntityX is the comprehensive B2B SaaS software designed to eradicate complex Excel spreadsheets and manual notebooks from your business.",
+      "Manage clients, payments, memberships, access, sales, and human resources from a single cloud-based application.",
     "feat.whatis.p1":
-      "Whether you run a wellness center (gyms, CrossFit, yoga), a training center (academies, languages), or a shared space (coworking, clubs), this lightweight ERP is your definitive solution.",
+      "Ideal for sports centers, academies, and clubs that want to organize their daily operations.",
     // Problemas (Tarjeta Izquierda)
     "feat.prob.1.title": "Money Leaks",
     "feat.prob.1.desc": "Clients with expired memberships who keep entering due to lack of control.",
@@ -338,7 +338,7 @@ export const ui = {
     "feat.prob.11.title": "No Staff Punctuality Control",
     "feat.prob.11.desc": "Do you lack control over arrival times, punctuality, or shift compliance for your staff?",
     "feat.prob.12.title": "Disorganized Internal Access",
-    "feat.prob.12.desc": "Do you need each team member to have their own access without interfering with settings or other areas?",
+    "feat.prob.12.desc": "Do you need each team member to have their own system access without interfering with settings or information from other areas?",
     "feat.prob.13.title": "No Payroll Payment History",
     "feat.prob.13.desc": "Do you end the month without clear control over staff payments, advances, or salaries?",
     "feat.prob.14.title": "Too Many Class Questions",
@@ -360,57 +360,57 @@ export const ui = {
     "feat.sol.6.title": "Real-Time Income Records",
     "feat.sol.6.desc": "Record income and sales in real time so every service, membership, or product payment is accurately logged.",
     "feat.sol.7.title": "Business Indicators",
-    "feat.sol.7.desc": "Instant reports and indicators help you analyze revenue, growth, and financial stability.",
+    "feat.sol.7.desc": "Instant reports and indicators to analyze your business revenue, growth, and financial stability.",
     "feat.sol.8.title": "Automatic Access Check",
-    "feat.sol.8.desc": "Identify immediately who is up to date and who has a pending payment before access is allowed.",
+    "feat.sol.8.desc": "Automatic access verification to immediately identify who is up to date and who has a pending payment.",
     "feat.sol.9.title": "Configurable Memberships",
-    "feat.sol.9.desc": "Adapt payment conditions, class packages, and promotions to your exact business model.",
+    "feat.sol.9.desc": "Configurable memberships that let you adapt payment conditions to your exact business model.",
     "feat.sol.10.title": "Client Self-Service",
-    "feat.sol.10.desc": "Each user can check account status, usage, and due dates from their own portal.",
+    "feat.sol.10.desc": "Client self-service portal where each user can check account status, usage, and due dates.",
     "feat.sol.11.title": "Employee Attendance",
-    "feat.sol.11.desc": "Monitor schedules, arrivals, and workdays for your entire team from a centralized record.",
+    "feat.sol.11.desc": "Employee attendance records to monitor schedules and workdays for your entire team.",
     "feat.sol.12.title": "Roles and Permissions",
-    "feat.sol.12.desc": "Each worker logs in with their own user and only accesses the modules required for their job.",
+    "feat.sol.12.desc": "Role-based access so each worker logs in with their own user and only accesses the modules needed for their job.",
     "feat.sol.13.title": "Employee Payments",
-    "feat.sol.13.desc": "Keep a transparent history of payments, advances, and personnel expenses.",
+    "feat.sol.13.desc": "Centralized employee payment records to keep a transparent history of personnel expenses.",
     "feat.sol.14.title": "Digital Activity Board",
-    "feat.sol.14.desc": "Clients independently check schedules, prices, and details for each class.",
+    "feat.sol.14.desc": "Digital activity board where clients independently check schedules, prices, and class details.",
     "feat.sol.15.title": "Cloud-Based System",
-    "feat.sol.15.desc": "Manage your business operations securely from any device with centralized cloud access.",
+    "feat.sol.15.desc": "Centralized cloud system to manage your business operations securely from any device.",
 
-    "feat.membership.title": "ALL THE POWER IN ONE PLATFORM",
-    "feat.membership.subtitle": "Total Control, 0% Friction",
+    "feat.membership.title": "KEY BENEFITS FOR YOUR BUSINESS",
+    "feat.membership.subtitle": "More control, less disorder",
     "feat.membership.desc":
-      "A cloud-based system accessible from any device (PC and Mobile) with everything you need to operate financially at 100%.",
-    "feat.membership.list1.title": "Smart Membership Management",
+      "EntityX brings together the essential tools to control income, access, clients, employees, and activities from one place.",
+    "feat.membership.list1.title": "Organized payments and memberships",
     "feat.membership.list1.desc":
-      "The core of the system. Configure recurring payment plans with strict rules for allowed days, schedules, and included services.",
-    "feat.membership.list2.title": "Point of Sale (POS)",
+      "Create plans, packages, and promotions with clear conditions to charge according to your business model.",
+    "feat.membership.list2.title": "Income recorded instantly",
     "feat.membership.list2.desc":
-      "Agile commercial module for selling products and extras, ensuring strict inventory control with no petty cash errors.",
-    "feat.membership.list3.title": "Role & HR Management",
+      "Record payments, product sales, and services in real time to avoid forgotten charges or informal notes.",
+    "feat.membership.list3.title": "Team access by role",
     "feat.membership.list3.desc":
-      "Daily staff attendance tracking and granular information access permissions.",
-    "feat.membership.list4.title": "Smart Database (CRM)",
+      "Each worker logs in with their own user and sees only the modules they need to do their job.",
+    "feat.membership.list4.title": "Better organized clients",
     "feat.membership.list4.desc":
-      "Keep the complete registry and history of all your clients and employees at hand to make data-driven strategic decisions.",
-    "feat.membership.list5.title": "Activity Scheduling",
+      "Keep client history, memberships, due dates, usage, and important data in a centralized database.",
+    "feat.membership.list5.title": "Activities visible to everyone",
     "feat.membership.list5.desc":
-      "Register and manage your class schedules. Your clients will easily view the available activities for the day.",
-    "feat.membership.list6.title": "Reports and Indicators",
+      "Publish class schedules, prices, and details to reduce repeated questions at reception or by message.",
+    "feat.membership.list6.title": "Reports to make better decisions",
     "feat.membership.list6.desc":
-      "View income, sales, memberships, attendance, and growth with data ready for decision-making.",
+      "Check income, profits, sales, and growth with clear indicators to understand how your business is doing.",
     "feat.membership.list7.title": "Staff Attendance",
     "feat.membership.list7.desc":
-      "Record check-ins, check-outs, punctuality, and shift compliance to organize daily team management.",
-    "feat.membership.list8.title": "Employee Payments",
+      "Control arrival times, shifts, and workdays to better supervise your team's punctuality.",
+    "feat.membership.list8.title": "Controlled employee payments",
     "feat.membership.list8.desc":
       "Centralize payments, advances, and salaries to keep a clear history of personnel expenses.",
-    "feat.membership.list9.title": "Cloud Operations",
+    "feat.membership.list9.title": "Secure cloud information",
     "feat.membership.list9.desc":
-      "All your information stays centralized, protected, and available from desktop, tablet, or mobile.",
+      "Manage your operation from any device without depending on notebooks, physical files, or scattered spreadsheets.",
 
-    "feat.agnostic.title": "THE MULTI-NICHE ERP",
+    "feat.agnostic.title": "THE MULTI-NICHE SYSTEM",
     "feat.agnostic.desc":
       "EntityX adapts to the unique rules of any business relying on enrollments or reservations.",
     "feat.agnostic.list1":
@@ -430,7 +430,7 @@ export const ui = {
     "feat.access.card_desc":
       "Clients check status, payments, usage, due dates, schedules, and announcements from their own panel.",
 
-    "feat.portal.title": "PERSONAL MEMBER PORTAL",
+    "feat.portal.title": "PERSONAL CLIENT PORTAL",
     "feat.portal.desc":
       "Empower your clients to manage their own information, reducing administrative inquiries.",
 
@@ -446,13 +446,13 @@ export const ui = {
       "Make decisions based on real data about your membership income and additional sales (POS).",
     "feat.partners.title": "Partner Program",
     "feat.partners.desc":
-      "Become an EntityX commercial agent and generate income by selling the ERP.",
+      "Become an EntityX commercial agent and generate income by recommending the system.",
 
     // Partners Page
     "partners.hero.title":
       "Partner Program: Become a Commercial Advisor",
     "partners.hero.desc":
-      "Generate recurring revenue by helping businesses eliminate notebook chaos through our ERP.",
+      "Generate recurring revenue by helping businesses eliminate notebook chaos through our system.",
     "partners.list1.title": "Comprehensive System Training",
     "partners.list1.desc":
       "Master the modules (Memberships, POS, HR) to demonstrate value to your prospects.",
@@ -467,7 +467,7 @@ export const ui = {
       "Ensure long-term client loyalty by monitoring their status.",
     "partners.list5.title": "Real Impact",
     "partners.list5.desc":
-      "Sell a solution that truly puts an end to businesses' expired debt portfolios.",
+      "Sell a solution that truly helps businesses reduce overdue payments and administrative disorder.",
     "partners.badge": "EntityX Partners",
     "partners.cta.title": "Ready to monetize your network?",
     "partners.cta.button": "Join the Program",
@@ -488,12 +488,12 @@ export const ui = {
     // Pricing Page
     "pricing.title": "Investment: Plans That Grow With You",
     "pricing.desc":
-      "We don't limit modules. You get the full ERP (Memberships, POS, HR, Portal) on all plans. You only pay based on the number of active clients.",
+      "We don't limit modules. You get the full system (memberships, sales, HR, and client portal) on all plans. You only pay based on the number of active clients.",
     "pricing.note":
-      "Key Note: The limit applies only to ACTIVE MEMBERS. Your historical database is unlimited; we charge for those with a valid plan today.",
+      "Key Note: The limit applies only to ACTIVE CLIENTS. Your historical database is unlimited; we charge for those with a valid plan today.",
     "pricing.subtitle": "Our Plans (BOB)",
     "pricing.table.plan": "Plan",
-    "pricing.table.capacity": "Active Member Capacity",
+    "pricing.table.capacity": "Active Client Capacity",
     "pricing.table.monthly": "Monthly",
     "pricing.table.yearly": "Yearly (Save 2 months)",
     "pricing.p0.name": "Free Plan",
@@ -511,31 +511,26 @@ export const ui = {
     "pricing.clients_up_to": "Up to",
     "pricing.clients_label": "clients",
     "pricing.badge.popular": "Popular",
-    "pricing.cta.choose": "Get the ERP",
+    "pricing.cta.choose": "Get the System",
     "pricing.includes.title": "All plans include:",
-    "pricing.inc1.title": "Membership Module",
-    "pricing.inc1.desc":
-      "Design flexible plans with automatic access and expiration control.",
-    "pricing.inc2.title": "Point of Sale (POS)",
-    "pricing.inc2.desc": "Integrated system for product sales and strict inventory.",
-    "pricing.inc3.title": "Self-Management Portal",
-    "pricing.inc3.desc":
-      "Private dashboard for your client to see schedules, expirations, and ads.",
-    "pricing.inc4.title": "Employee & Role Control",
-    "pricing.inc4.desc":
-      "Staff attendance and limited permissions by profiles (Admin, Reception).",
-    "pricing.inc5.title": "Technical Support",
-    "pricing.inc5.desc":
-      "Specialized technical assistance to ensure your business never stops.",
-    "pricing.inc6.title": "Instant PDF Reports",
-    "pricing.inc6.desc":
-      "Generate reports of your income, sales, and attendance in seconds.",
+    "pricing.inc1.title": "Payments, memberships, and custom plans for your business",
+    "pricing.inc1.desc": "",
+    "pricing.inc2.title": "Income, sales, and payments recorded in real time",
+    "pricing.inc2.desc": "",
+    "pricing.inc3.title": "Portal for clients to check due dates, usage, and account status",
+    "pricing.inc3.desc": "",
+    "pricing.inc4.title": "Role-based access, attendance, and human resources control",
+    "pricing.inc4.desc": "",
+    "pricing.inc5.title": "Digital activity board with schedules, prices, and available classes",
+    "pricing.inc5.desc": "",
+    "pricing.inc6.title": "Reports and indicators to understand income, growth, and stability",
+    "pricing.inc6.desc": "",
     "pricing.annual.title": "Why choose Annual payment?",
     "pricing.annual.desc":
       "We gift you 2 months of service. Secure the operational control of your business for a whole year at the best cost.",
     "pricing.flex.title": "Scaling Flexibility",
     "pricing.flex.desc":
-      "As your client community grows, the ERP scales with you. You can level up without interruptions.",
+      "As your client community grows, the system scales with you. You can level up without interruptions.",
     "pricing.transparency.title": "Total Transparency",
     "pricing.transparency.desc":
       "Audit every payment made to the platform to guarantee the transparency of our B2B services.",
