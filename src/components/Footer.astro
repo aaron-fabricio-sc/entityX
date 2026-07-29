@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslations, getPathForLang } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const linkedInUrl = 'https://www.linkedin.com/in/aaron-fabricio-santa-cruz-valdez/';
+const linkPortafolio ='https://aaroncode.vercel.app/'
 ---
 
 
@@ -64,7 +65,7 @@ const linkedInUrl = 'https://www.linkedin.com/in/aaron-fabricio-santa-cruz-valde
                 <p class="mb-0 text-muted-teal small">
                     <small>
                         © 2026 EntityX -
-                        <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" class="footer-author-link">
+                        <a href={linkPortafolio} target="_blank" rel="noopener noreferrer" class="footer-author-link">
                             Aaron Fabricio Santa Cruz Valdez (AaronCode)
                         </a>.
                         {lang === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}
