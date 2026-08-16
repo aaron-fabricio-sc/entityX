@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import DigitalCredential from './DigitalCredential.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -41,7 +42,6 @@ const moduleCards = [
                                             <i class="bi bi-x-circle text-danger"></i>
                                             <h5 class="text-white">{t(`feat.prob.${item}.title`)}</h5>
                                         </div>
-                                        <p class="text-light">{t(`feat.prob.${item}.desc`)}</p>
                                     </div>
 
                                     <div class="solution-line">
@@ -49,7 +49,6 @@ const moduleCards = [
                                             <i class="bi bi-check-circle text-neon"></i>
                                             <h5 class="text-neon">{t(`feat.sol.${item}.title`)}</h5>
                                         </div>
-                                        <p class="text-light">{t(`feat.sol.${item}.desc`)}</p>
                                     </div>
                                 </div>
                             ))}
@@ -83,6 +82,8 @@ const moduleCards = [
         </div>
     </div>
 </section>
+
+<DigitalCredential />
 
 <!-- Section 3: Target Niches (For Who) -->
 <section class="py-5 bg-dark-teal">
