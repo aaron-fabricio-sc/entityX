@@ -1,0 +1,963 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const tabs = [
+  ["nombre", "El nombre"],
+  ["inspiracion", "Inspiración"],
+  ["resumen", "Resumen"],
+  ["entityx", "Qué es"],
+  ["problema", "Problema"],
+  ["solucion", "Solución"],
+  ["roles", "Roles"],
+  ["funcionamiento", "Cómo funciona"],
+  ["flujo", "Flujo"],
+  ["modelo", "Modelo"],
+  ["aliados", "Aliados"],
+  ["diferenciadores", "Diferenciadores"],
+  ["vision", "Visión"],
+  ["resultado", "Resultado"],
+  ["conclusion", "Conclusión"],
+];
+---
+
+<Layout
+  title="EntityX | Documento del proyecto"
+  description="Documento estratégico y técnico del proyecto EntityX."
+>
+  <main class="project-page">
+    <section class="project-hero" aria-labelledby="project-title">
+      <div class="project-hero__glow"></div>
+      <div class="project-shell project-hero__content">
+        <a class="brand" href="/" aria-label="Ir al inicio de EntityX">
+          <img src="/imagenes/logo-entityx.png" alt="" />
+          <span>EntityX</span>
+        </a>
+        <p class="eyebrow">Documento estratégico y técnico</p>
+        <h1 id="project-title">
+          El sistema que ordena los negocios con membresías.
+        </h1>
+        <p class="project-hero__lead">
+          Una plataforma en la nube para gestionar centros deportivos,
+          academias, clubes y otros negocios de inscripción recurrente con
+          control, claridad y capacidad de crecer.
+        </p>
+        <div class="hero-points">
+          <div>
+            <b>Centraliza</b><span
+              >Miembros, cobros, accesos, ventas y personal.</span
+            >
+          </div>
+          <div>
+            <b>Reduce pérdidas</b><span
+              >Con información clara y operación trazable.</span
+            >
+          </div>
+          <div>
+            <b>Escala contigo</b><span
+              >De una sede a múltiples rubros y entidades.</span
+            >
+          </div>
+        </div>
+        <p class="project-meta">Proyecto EntityX · Julio de 2026</p>
+      </div>
+    </section>
+
+    <div class="project-shell project-layout">
+      <aside class="project-nav" aria-label="Índice del documento">
+        <p>Índice</p>
+        <nav>
+          {
+            tabs.map(([id, label], index) => (
+              <a href={`#${id}`} data-section={id}>
+                <small>{String(index + 1).padStart(2, "0")}</small>
+                {label}
+              </a>
+            ))
+          }
+        </nav>
+      </aside>
+
+      <div class="project-content">
+        <section id="nombre" class="project-section is-visible">
+          <p class="section-kicker">01 — Identidad</p><h2>Por qué EntityX</h2>
+          <p class="lead">
+            El nombre EntityX nace de la palabra <strong>entidad</strong>: una
+            organización con identidad y operación propia, como un centro
+            deportivo, una academia, un club o un centro de bienestar.
+          </p>
+          <p>
+            EntityX fue concebida para gestionar estas entidades: negocios que
+            trabajan con miembros, membresías o servicios recurrentes y
+            necesitan ordenar pagos, actividades, personal, ventas y accesos. Su
+            enfoque inicial está en los sectores deportivo, formativo y de
+            bienestar, donde la operación diaria requiere control constante.
+          </p>
+          <p>
+            La <strong>X</strong> aporta el componente tecnológico y moderno del producto.
+            Es un recurso frecuente en el nombre de aplicaciones y plataformas digitales,
+            y representa evolución, innovación y la posibilidad de crecer hacia nuevos
+            usos.
+          </p>
+          <blockquote>
+            <b>El significado.</b> EntityX es tecnología para gestionar entidades:
+            organizaciones con membresías y servicios recurrentes, organizadas, medibles
+            y preparadas para avanzar.
+          </blockquote>
+        </section>
+
+        <section id="inspiracion" class="project-section">
+          <p class="section-kicker">02 — Origen</p><h2>
+            La inspiración detrás de EntityX
+          </h2>
+          <p class="lead">
+            EntityX fue concebida por Aaron Fabricio Santa Cruz Valdez,
+            desarrollador y fundador del proyecto, a partir de una observación
+            directa sobre la gestión diaria de los gimnasios.
+          </p>
+          <p>
+            Vi que muchos negocios registran a sus clientes de forma manual: en
+            tarjetas que entregan a cada persona, cuadernos o archivos de Excel.
+            Otros cuentan con sistemas biométricos instalados por sucursal, pero
+            dependen de una sola computadora; si ese equipo falla, la
+            información y la operación quedan en riesgo.
+          </p>
+          <p>
+            También conocí gimnasios modernos con molinetes de acceso. Son una
+            buena solución, pero su costo es elevado y no siempre está al
+            alcance de los gimnasios pequeños o con menos miembros. Esa realidad
+            me hizo pensar en una herramienta accesible: una aplicación que
+            pudiera ser usada por cualquier gimnasio, desde el más pequeño hasta
+            el más grande, y que centralizara la información de todas sus
+            sucursales.
+          </p>
+          <p>
+            Aunque la idea nació para gimnasios, pronto vi que el mismo problema
+            existe en otros rubros donde las membresías y los miembros son parte
+            central del negocio. Así nació EntityX.
+          </p>
+          <blockquote>
+            <b>La motivación.</b> Hacer que una gestión ordenada y digital esté al
+            alcance de todas las entidades, no solo de las que pueden invertir en
+            infraestructura costosa.
+          </blockquote>
+        </section>
+
+        <section id="resumen" class="project-section is-visible">
+          <p class="section-kicker">03 — Pitch de presentación</p><h2>
+            Resumen ejecutivo
+          </h2>
+          <p class="lead">
+            EntityX es la plataforma en la nube que ayuda a gimnasios,
+            academias, clubes y negocios con membresías a dejar atrás los
+            cuadernos, planillas y mensajes dispersos para operar con orden y
+            control.
+          </p>
+          <p>
+            En un solo lugar, cada entidad puede gestionar sus miembros,
+            membresías, cobros, accesos, ventas, personal y reportes. Así sabe
+            quién está al día, qué ingresos recibió, qué se vendió y cómo está
+            funcionando su operación, sin depender de la memoria del equipo ni
+            de información repartida en varios canales.
+          </p>
+          <p>
+            Para la entidad, esto significa menos pérdidas, procesos más ágiles
+            y decisiones respaldadas por datos. Para sus clientes finales, una
+            experiencia más profesional y transparente. EntityX empieza en el
+            sector deportivo, con una solución flexible que puede adaptarse a
+            otros negocios de servicios recurrentes.
+          </p>
+          <blockquote>
+            <b>En una frase.</b> EntityX convierte la administración diaria de una
+            entidad en una operación ordenada, medible y lista para crecer.
+          </blockquote>
+        </section>
+
+        <section id="entityx" class="project-section">
+          <p class="section-kicker">04 — Producto</p><h2>Qué es EntityX</h2>
+          <p>
+            EntityX es un software de gestión empresarial en la nube para
+            administrar negocios físicos desde un entorno digital. Da a cada
+            Dueño de negocio un punto central para controlar miembros, pagos,
+            planes, actividades, ventas y personal.
+          </p>
+          <p>
+            Para un socio comercial representa un producto con una necesidad
+            clara: muchos negocios cobran todos los días, pero aún trabajan con
+            cuadernos, hojas de cálculo o mensajes sueltos.
+          </p>
+          <div class="cards cards--3">
+            <article>
+              <h3>Servicio en la nube</h3><p>
+                Acceso desde la web, sin instalar ni mantener infraestructura
+                propia.
+              </p>
+            </article><article>
+              <h3>Control por negocio</h3><p>
+                Cada entidad administra sus miembros, empleados, ventas y
+                reportes.
+              </p>
+            </article><article>
+              <h3>Adaptable por rubro</h3><p>
+                Preparado para academias, clubes, spas, escuelas deportivas y
+                más.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="problema" class="project-section">
+          <p class="section-kicker">05 — Oportunidad</p><h2>
+            El problema a resolver
+          </h2>
+          <p>
+            Los negocios basados en membresías suelen crecer más rápido que su
+            administración. Los cuadernos, Excel, chats y la memoria del
+            personal dejan de funcionar cuando aumentan las inscripciones,
+            pagos, horarios, productos y empleados.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead
+                ><tr
+                  ><th>Problema</th><th>Impacto</th><th>Respuesta de EntityX</th
+                  ></tr
+                ></thead
+              ><tbody>
+                <tr
+                  ><td>Mensualidades vencidas que siguen ingresando.</td><td
+                    >Pérdida de ingresos.</td
+                  ><td>Vigencia, estado de cuenta y control de acceso.</td></tr
+                ><tr
+                  ><td>Ventas extra sin registrar.</td><td
+                    >Descuadres y poca trazabilidad.</td
+                  ><td>Módulo de ventas y reportes.</td></tr
+                ><tr
+                  ><td>Datos dispersos en papel o chats.</td><td
+                    >Sin base confiable para decidir.</td
+                  ><td>Base centralizada de miembros y pagos.</td></tr
+                ><tr
+                  ><td>Consultas repetitivas en recepción.</td><td
+                    >Tiempo perdido en tareas administrativas.</td
+                  ><td>Portal del cliente y cartelera digital.</td></tr
+                ><tr
+                  ><td>Sin control de empleados y permisos.</td><td
+                    >Accesos indebidos y egresos opacos.</td
+                  ><td>Roles, asistencia y pagos del personal.</td></tr
+                >
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="solucion" class="project-section">
+          <p class="section-kicker">06 — Propuesta</p><h2>
+            Una operación digital centralizada
+          </h2><p>
+            Cada cobro queda registrado, cada usuario trabaja con su propio
+            acceso, cada miembro tiene un estado claro y el Dueño de negocio
+            controla su operación sin depender de información dispersa.
+          </p>
+          <div class="cards cards--2">
+            <article>
+              <h3>Para Dueños de negocios</h3><ul>
+                <li>Una o varias entidades desde una cuenta.</li><li>
+                  Membresías configurables y límites por plan.
+                </li><li>Reportes de pagos, ventas y asistencia.</li><li>
+                  Empleados y permisos protegidos.
+                </li>
+              </ul>
+            </article><article>
+              <h3>Para la operación diaria</h3><ul>
+                <li>Registro de miembros, pagos y renovaciones.</li><li>
+                  Validación de accesos y vencimientos.
+                </li><li>Ventas y servicios complementarios.</li><li>
+                  Portal de consulta para clientes finales.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="roles" class="project-section">
+          <p class="section-kicker">07 — Personas</p><h2>
+            Usuarios y roles del sistema
+          </h2><p>
+            Cada persona usa EntityX según su responsabilidad: se reducen
+            errores, se protege información sensible y la operación puede crecer
+            con orden.
+          </p><div class="role-list">
+            <article>
+              <b>Equipo de EntityX</b><span
+                >Administra plataforma, planes, activaciones y servicio.</span
+              >
+            </article><article>
+              <b>Dueño o administrador</b><span
+                >Gestiona miembros, empleados, ventas, pagos y reportes.</span
+              >
+            </article><article>
+              <b>Recepción</b><span
+                >Registra, cobra, asigna membresías y controla accesos.</span
+              >
+            </article><article>
+              <b>Cliente final</b><span
+                >Consulta vigencia, consumos, horarios y beneficios.</span
+              >
+            </article>
+          </div>
+        </section>
+
+        <section id="funcionamiento" class="project-section">
+          <p class="section-kicker">08 — Estructura</p><h2>Cómo funciona</h2><p>
+            EntityX atiende distintos rubros sin perder el control sobre la
+            información de cada operación.
+          </p><h3>Gestión de plataforma y crecimiento</h3><div class="chips">
+            <span>Dueños de negocios</span><span>Sedes o entidades</span><span
+              >Planes comerciales</span
+            ><span>Rubros de mercado</span><span>Servicios activables</span
+            ><span>Configuración por Entidad</span>
+          </div><h3>Operación diaria del negocio</h3><div class="chips">
+            <span>Miembros</span><span>Membresías</span><span>Pagos</span><span
+              >Ventas</span
+            ><span>Empleados</span><span>Reportes</span>
+          </div>
+        </section>
+
+        <section id="flujo" class="project-section">
+          <p class="section-kicker">09 — Activación</p><h2>
+            Flujo de uso principal
+          </h2><div class="cards cards--2">
+            <article>
+              <h3>Alta y configuración</h3><ol>
+                <li>Registro del negocio y definición del plan.</li><li>
+                  Carga de rubro y datos comerciales.
+                </li><li>Acceso del administrador.</li><li>
+                  Creación de membresías, empleados y actividades.
+                </li>
+              </ol>
+            </article><article>
+              <h3>Operación diaria</h3><ol>
+                <li>Registro de miembros y membresías.</li><li>
+                  Pagos en efectivo, QR u otros medios.
+                </li><li>Control de vencimientos, accesos y ventas.</li><li>
+                  Revisión de indicadores y reportes.
+                </li>
+              </ol>
+            </article>
+          </div><p>
+            En esta etapa, EntityX registra y controla pagos realizados por los
+            medios habituales del negocio, validando el mercado sin obligarlo a
+            cambiar de inmediato su forma de cobrar.
+          </p>
+        </section>
+
+        <section id="modelo" class="project-section">
+          <p class="section-kicker">10 — Sostenibilidad</p><h2>
+            Modelo de negocio y rentabilidad
+          </h2><p>
+            EntityX funciona como un servicio de suscripción y escala según
+            miembros activos, alineando el precio con el valor operativo que
+            recibe cada negocio.
+          </p><div class="cards cards--3">
+            <article>
+              <h3>Ingresos recurrentes</h3><p>
+                Suscripciones mensuales o anuales.
+              </p>
+            </article><article>
+              <h3>Escalado justo</h3><p>
+                El límite se relaciona con miembros vigentes, no con el
+                historial.
+              </p>
+            </article><article>
+              <h3>Costos controlados</h3><p>
+                Una base tecnológica para múltiples entidades.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="aliados" class="project-section">
+          <p class="section-kicker">11 — Expansión</p><h2>
+            Afiliados y aliados comerciales
+          </h2><p>
+            El programa de aliados permite recomendar el sistema y generar
+            ingresos ayudando a negocios locales a digitalizar su operación.
+          </p><div class="cards cards--2">
+            <article>
+              <h3>Qué ofrece al aliado</h3><ul>
+                <li>Capacitación y material comercial.</li><li>
+                  Panel para prospectos y entidades vinculadas.
+                </li><li>Comisiones transparentes.</li><li>
+                  Control de cartera.
+                </li>
+              </ul>
+            </article><article>
+              <h3>Por qué es atractivo</h3><ul>
+                <li>Resuelve un dolor claro del mercado.</li><li>
+                  Permite vender en nichos conocidos.
+                </li><li>Reduce el costo fijo de crecimiento.</li><li>
+                  Aporta acompañamiento cercano.
+                </li>
+              </ul>
+            </article>
+          </div><blockquote>
+            <b>Valor para socios.</b> Una red de asesores que conoce los problemas
+            del negocio local y acerca una solución concreta.
+          </blockquote>
+        </section>
+
+        <section id="diferenciadores" class="project-section">
+          <p class="section-kicker">12 — Ventaja</p><h2>
+            Diferenciadores de EntityX
+          </h2><div class="role-list">
+            <article>
+              <b>Modularidad real</b><span
+                >Servicios activables para usar solo lo necesario.</span
+              >
+            </article><article>
+              <b>Adaptación por rubro</b><span
+                >Configuración y lenguaje ajustables sin aislar el producto.</span
+              >
+            </article><article>
+              <b>Varias sedes</b><span
+                >Una operación con más de una sucursal desde el diseño base.</span
+              >
+            </article><article>
+              <b>Control financiero</b><span
+                >Pagos, ventas, vencimientos y registros históricos.</span
+              >
+            </article><article>
+              <b>Seguridad por rol</b><span
+                >Funciones críticas protegidas según el perfil.</span
+              >
+            </article><article>
+              <b>Autogestión</b><span
+                >Menos dependencia de recepción para consultas básicas.</span
+              >
+            </article>
+          </div>
+        </section>
+
+        <section id="vision" class="project-section">
+          <p class="section-kicker">13 — Futuro</p><h2>
+            Visión de evolución
+          </h2><p>
+            La plataforma evoluciona de administración a una operación
+            conectada, donde cada actor gestiona su parte desde su propio panel.
+          </p><div class="cards cards--3">
+            <article>
+              <h3>Entrenador de sala</h3><p>
+                Seguimiento de miembros, progreso y asistencia específica.
+              </p>
+            </article><article>
+              <h3>Instructor de clases</h3><p>
+                Actividades, horarios, asistencia y coordinación.
+              </p>
+            </article><article>
+              <h3>Cliente autogestionado</h3><p>
+                Vigencia, consumos, horarios, anuncios y futuras acciones
+                directas.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="resultado" class="project-section">
+          <p class="section-kicker">14 — Impacto</p><h2>
+            Resultado que se quiere lograr
+          </h2><p>
+            Ser una plataforma de referencia para digitalizar negocios físicos
+            de membresía, empezando por centros deportivos y creciendo hacia
+            otros rubros.
+          </p><div class="cards cards--2">
+            <article>
+              <h3>Para el negocio</h3><ul>
+                <li>Menos pérdidas y trabajo manual.</li><li>
+                  Mayor control sobre miembros, ventas y accesos.
+                </li><li>Decisiones respaldadas por indicadores.</li><li>
+                  Una imagen más profesional.
+                </li>
+              </ul>
+            </article><article>
+              <h3>Para EntityX</h3><ul>
+                <li>Ingresos recurrentes en la nube.</li><li>
+                  Producto escalable por rubro.
+                </li><li>Base lista para pagos, reservas y tienda.</li><li>
+                  Marca modular, flexible y accesible.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="conclusion" class="project-section project-section--end">
+          <p class="section-kicker">15 — Cierre</p><h2>
+            Una infraestructura para crecer con control
+          </h2><p class="lead">
+            EntityX resuelve un problema concreto: negocios con ingresos
+            recurrentes que todavía operan con herramientas frágiles.
+          </p><p>
+            Al reunir membresías, miembros, accesos, ventas, empleados, pagos y
+            reportes en una experiencia adaptable, crea una base para que las
+            organizaciones pequeñas y medianas ganen tiempo, control y confianza
+            para crecer.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const links = [...document.querySelectorAll(".project-nav a")];
+      const sections = links
+        .map((link) => document.getElementById(link.dataset.section!))
+        .filter(Boolean);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (!visible) return;
+          links.forEach((link) =>
+            link.classList.toggle(
+              "active",
+              link.dataset.section === visible.target.id,
+            ),
+          );
+        },
+        { rootMargin: "-20% 0px -65% 0px", threshold: [0, 0.1, 0.5] },
+      );
+      sections.forEach((section) => observer.observe(section));
+    </script>
+  </main>
+
+  <style lang="scss">
+    // `hidden` convierte al documento en un contenedor de desplazamiento en algunos
+    // navegadores y evita que `sticky` se ancle al viewport. `clip` conserva el
+    // recorte horizontal sin interferir con el índice.
+    :global(html:has(.project-page)),
+    :global(body:has(.project-page)) {
+      overflow-x: clip;
+    }
+
+    .project-page {
+      --ink: #10242c;
+      --muted: #62777c;
+      --line: #dce8e8;
+      --teal: #00cbb1;
+      --deep: #06191d;
+      background: #fbfdfd;
+      color: var(--ink);
+    }
+    .project-shell {
+      width: min(1180px, calc(100% - 48px));
+      margin: auto;
+    }
+    .project-hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 600px;
+      overflow: hidden;
+      background:
+        linear-gradient(125deg, rgba(2, 17, 21, 0.97), rgba(6, 58, 61, 0.9)),
+        url("/imagenes/Colores_neon_y_EntityX_fondo_202607061004.jpeg")
+          center/cover;
+      color: #fff;
+    }
+    .project-hero__glow {
+      position: absolute;
+      inset: auto -15% -55% auto;
+      width: 600px;
+      aspect-ratio: 1;
+      background: #00cbb1;
+      opacity: 0.2;
+      filter: blur(80px);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    .project-hero__content {
+      display: flex;
+      min-height: 600px;
+      padding: 38px 0 45px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+    .brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+    .eyebrow,
+    .section-kicker {
+      margin: clamp(3.5rem, 10vh, 7rem) 0 13px;
+      color: var(--teal);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+    }
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      color: white;
+      font-size: clamp(2.6rem, 6vw, 5.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+    .project-hero__lead {
+      max-width: 650px;
+      margin: 25px 0 0;
+      color: #d2e8e6;
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      line-height: 1.55;
+    }
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: auto;
+      width: 100%;
+    }
+    .hero-points div {
+      border: 1px solid #ffffff2b;
+      background: #ffffff0b;
+      padding: 14px 15px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-points b,
+    .hero-points span {
+      display: block;
+    }
+    .hero-points b {
+      font-size: 0.9rem;
+    }
+    .hero-points span {
+      font-size: 0.78rem;
+      color: #cae0df;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .project-meta {
+      margin: 25px 0 0;
+      color: #aec7c7;
+      font-size: 0.76rem;
+    }
+    .project-layout {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: clamp(35px, 7vw, 95px);
+      padding: 65px 0 100px;
+      align-items: start;
+    }
+    .project-nav {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+      height: calc(100dvh - 48px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-right: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: #b9cdcc transparent;
+    }
+    .project-nav p {
+      margin: 0 0 12px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 800;
+      color: var(--muted);
+    }
+    .project-nav nav {
+      border-left: 1px solid var(--line);
+    }
+    .project-nav a {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      padding: 7px 12px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      margin-left: -1px;
+      transition: 0.2s;
+    }
+    .project-nav small {
+      font-size: 0.62rem;
+      color: #9aacaf;
+    }
+    .project-nav a:hover,
+    .project-nav a.active {
+      color: var(--ink);
+      border-left-color: var(--teal);
+      font-weight: 700;
+    }
+    .project-nav a.active small {
+      color: #009c8b;
+    }
+    .project-content {
+      min-width: 0;
+    }
+    .project-section {
+      scroll-margin-top: 32px;
+      padding: 0 0 65px;
+      margin-bottom: 65px;
+      border-bottom: 1px solid var(--line);
+    }
+    .project-section--end {
+      border: 0;
+      margin: 0;
+      padding-bottom: 0;
+    }
+    .section-kicker {
+      margin: 0 0 11px;
+    }
+    .project-section h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.05em;
+      line-height: 1.04;
+      margin: 0 0 22px;
+      color: var(--deep);
+    }
+    .project-section h3 {
+      font-size: 1rem;
+      margin: 0 0 10px;
+      color: var(--deep);
+    }
+    .project-section p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #385057;
+      margin: 0 0 16px;
+    }
+    .project-section .lead {
+      font-size: 1.17rem;
+      line-height: 1.65;
+      color: #203940;
+    }
+    .project-section ul,
+    .project-section ol {
+      padding-left: 19px;
+      margin: 0;
+      color: #40565b;
+      line-height: 1.7;
+      font-size: 0.92rem;
+    }
+    .project-section li + li {
+      margin-top: 5px;
+    }
+    blockquote {
+      margin: 28px 0 0;
+      padding: 19px 22px;
+      border-left: 3px solid var(--teal);
+      background: #eaf9f6;
+      color: #18554e;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    blockquote b {
+      color: #087b6d;
+    }
+    .cards {
+      display: grid;
+      gap: 12px;
+      margin-top: 25px;
+    }
+    .cards--2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .cards--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .cards article,
+    .role-list article {
+      padding: 19px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .cards p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .role-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .role-list article {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+    .role-list b {
+      font-size: 0.95rem;
+    }
+    .role-list span {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 28px;
+    }
+    .chips span {
+      background: #edf7f6;
+      color: #24645e;
+      padding: 8px 10px;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .table-wrap {
+      margin-top: 22px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 650px;
+      font-size: 0.83rem;
+    }
+    th {
+      background: var(--deep);
+      color: white;
+      text-align: left;
+      padding: 12px;
+      font-size: 0.8rem;
+    }
+    td {
+      padding: 12px;
+      border-top: 1px solid var(--line);
+      vertical-align: top;
+      color: #42575c;
+      line-height: 1.5;
+    }
+    tr:nth-child(even) {
+      background: #f6faf9;
+    }
+    .project-cta {
+      display: inline-flex;
+      gap: 30px;
+      align-items: center;
+      margin-top: 13px;
+      padding: 14px 19px;
+      background: var(--deep);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .project-cta span {
+      color: var(--teal);
+      font-size: 1.35rem;
+    }
+    @media (max-width: 760px) {
+      .project-shell {
+        width: min(100% - 32px, 1180px);
+      }
+      .project-hero,
+      .project-hero__content {
+        min-height: 620px;
+      }
+      .project-hero__content {
+        padding-top: 24px;
+      }
+      .eyebrow {
+        margin-top: 5rem;
+      }
+      .hero-points {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin-top: 35px;
+      }
+      .hero-points div {
+        padding: 10px 12px;
+      }
+      .project-layout {
+        display: block;
+        padding-top: 0;
+      }
+      .project-nav {
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        width: auto;
+        height: auto;
+        margin: 0 calc((100vw - 100%) / -2);
+        padding: 13px 16px 10px;
+        background: #fbfdfdf2;
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+      }
+      .project-nav::-webkit-scrollbar {
+        display: none;
+      }
+      .project-nav p {
+        display: none;
+      }
+      .project-nav nav {
+        display: flex;
+        width: max-content;
+        border: 0;
+      }
+      .project-nav a {
+        white-space: nowrap;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        margin: 0;
+        padding: 7px 10px;
+      }
+      .project-nav a.active {
+        border-color: var(--teal);
+      }
+      .project-content {
+        padding-top: 45px;
+      }
+      .project-section {
+        padding-bottom: 48px;
+        margin-bottom: 48px;
+      }
+      .cards--2,
+      .cards--3,
+      .role-list {
+        grid-template-columns: 1fr;
+      }
+      .project-section h2 {
+        font-size: 2.2rem;
+      }
+      .project-section .lead {
+        font-size: 1.05rem;
+      }
+    }
+    @media (min-width: 761px) and (max-width: 1000px) {
+      .project-layout {
+        grid-template-columns: 160px minmax(0, 1fr);
+        gap: 36px;
+      }
+      .project-nav a {
+        font-size: 0.75rem;
+        padding-left: 8px;
+      }
+      .cards--3 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-points {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</Layout>
