@@ -24,7 +24,7 @@ const getLocalizedPath = (l: string) => {
           <a class="nav-link text-light fw-bold" href={currentPath === getPathForLang(lang) || currentPath === getPathForLang(lang) + '/' ? '#home' : getPathForLang(lang) + '/#home'}>{t('nav.home')}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light fw-bold" href={getPathForLang(lang) + '/mision'}>{t('nav.mission')}</a>
+          <a class="nav-link text-light fw-bold" href={getPathForLang(lang) + '/mission'}>{t('nav.mission')}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light fw-bold" href={getPathForLang(lang) + '/vision'}>{t('nav.vision')}</a>
