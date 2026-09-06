@@ -1,0 +1,100 @@
+---
+interface Pillar {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  statementLabel: string;
+  statement: string;
+  pillars: Pillar[];
+  pillarsEyebrow: string;
+  pillarsTitle: string;
+  homeLabel: string;
+  homeHref: string;
+  nextLabel: string;
+  nextHref: string;
+}
+
+const { eyebrow, title, description, statementLabel, statement, pillars, pillarsEyebrow, pillarsTitle, homeLabel, homeHref, nextLabel, nextHref } = Astro.props;
+---
+
+<main class="purpose-page">
+  <section class="purpose-hero">
+    <div class="purpose-orb purpose-orb--one"></div>
+    <div class="purpose-orb purpose-orb--two"></div>
+    <div class="container purpose-hero__content">
+      <p class="purpose-eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="purpose-intro">{description}</p>
+    </div>
+  </section>
+
+  <section class="purpose-statement">
+    <div class="container">
+      <div class="purpose-statement__card">
+        <span class="purpose-statement__mark" aria-hidden="true">“</span>
+        <p class="purpose-eyebrow">{statementLabel}</p>
+        <p>{statement}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="purpose-pillars">
+    <div class="container">
+      <div class="purpose-section-heading">
+        <p class="purpose-eyebrow">{pillarsEyebrow}</p>
+        <h2>{pillarsTitle}</h2>
+      </div>
+      <div class="row g-4">
+        {pillars.map((pillar) => (
+          <div class="col-md-4">
+            <article class="purpose-card h-100">
+              <i class={`bi ${pillar.icon}`} aria-hidden="true"></i>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.description}</p>
+            </article>
+          </div>
+        ))}
+      </div>
+      <div class="purpose-actions">
+        <a class="btn btn-primary rounded-pill" href={nextHref}>{nextLabel}<i class="bi bi-arrow-right ms-2"></i></a>
+        <a class="purpose-home-link" href={homeHref}><i class="bi bi-arrow-left"></i> {homeLabel}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style lang="scss">
+  @use '../styles/variables' as vars;
+
+  .purpose-page { background: vars.$nav-color; color: #fff; overflow: hidden; }
+  .purpose-hero { position: relative; isolation: isolate; padding: clamp(8rem, 15vw, 11.5rem) 0 clamp(4.5rem, 9vw, 7rem); background: linear-gradient(135deg, #021014 0%, #06343a 100%); }
+  .purpose-hero__content { position: relative; z-index: 1; max-width: 900px; }
+  .purpose-orb { position: absolute; border-radius: 50%; filter: blur(4px); pointer-events: none; z-index: -1; }
+  .purpose-orb--one { width: min(46vw, 620px); aspect-ratio: 1; top: -28%; right: -10%; background: radial-gradient(circle, rgba(0,255,200,.23), transparent 68%); }
+  .purpose-orb--two { width: min(32vw, 430px); aspect-ratio: 1; bottom: -45%; left: -8%; background: radial-gradient(circle, rgba(0,243,255,.16), transparent 70%); }
+  .purpose-eyebrow { margin: 0 0 1rem; color: vars.$active-color; font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+  h1 { max-width: 790px; margin: 0; color: #fff; font-size: clamp(3rem, 7vw, 5.7rem); font-weight: 800; line-height: .98; letter-spacing: -.055em; }
+  .purpose-intro { max-width: 700px; margin: 1.8rem 0 0; color: #c4dfdf; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.65; }
+  .purpose-statement { padding: clamp(3.5rem, 8vw, 6rem) 0; background: vars.$sidebar-bg; }
+  .purpose-statement__card { position: relative; max-width: 930px; margin: auto; padding: clamp(2rem, 5vw, 4rem); overflow: hidden; border: 1px solid rgba(0,243,255,.19); background: linear-gradient(145deg, rgba(14,61,66,.74), rgba(3,27,32,.8)); box-shadow: 0 0 70px rgba(0,255,200,.06); }
+  .purpose-statement__mark { position: absolute; top: -2.2rem; right: 1rem; color: rgba(0,255,200,.12); font-family: Georgia, serif; font-size: 12rem; line-height: 1; }
+  .purpose-statement__card p:last-child { position: relative; max-width: 790px; margin: 0; color: #f1ffff; font-size: clamp(1.35rem, 3vw, 2.1rem); font-weight: 500; line-height: 1.38; letter-spacing: -.025em; }
+  .purpose-pillars { padding: clamp(4rem, 8vw, 6.5rem) 0; background: #03161a; }
+  .purpose-section-heading { max-width: 580px; margin-bottom: 2.3rem; }
+  h2 { margin: 0; color: #fff; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.045em; }
+  .purpose-card { padding: 1.8rem; border: 1px solid rgba(0,243,255,.13); background: rgba(5,25,33,.9); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .purpose-card:hover { transform: translateY(-5px); border-color: vars.$active-color; box-shadow: 0 12px 30px rgba(0,255,200,.1); }
+  .purpose-card i { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; margin-bottom: 1.35rem; border: 1px solid rgba(0,255,200,.45); border-radius: 50%; color: vars.$active-color; font-size: 1.35rem; }
+  .purpose-card h3 { margin: 0 0 .75rem; color: #fff; font-size: 1.2rem; }
+  .purpose-card p { margin: 0; color: #a7c2c4; font-size: .96rem; line-height: 1.65; }
+  .purpose-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem 2rem; margin-top: 3rem; }
+  .purpose-actions .btn { padding: .8rem 1.5rem; font-weight: 700; }
+  .purpose-home-link { color: #b8d4d5; font-size: .95rem; text-decoration: none; }.purpose-home-link:hover { color: vars.$active-color; }
+  @media (max-width: 767.98px) { .purpose-hero { padding-top: 8rem; } .purpose-statement__card { padding: 2rem 1.45rem; } .purpose-card { padding: 1.45rem; } }
+</style>

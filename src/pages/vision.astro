@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PurposeStatement from '../components/PurposeStatement.astro';
+
+const pillars = [
+  { icon: 'bi-stars', title: 'Referencia para el sector', description: 'Ser una plataforma de confianza para entidades deportivas, formativas y de bienestar que trabajan con membresías o servicios recurrentes.' },
+  { icon: 'bi-diagram-3-fill', title: 'Operación conectada', description: 'Crear un entorno donde administradores, recepción, equipos y miembros tengan la información que necesitan en el momento indicado.' },
+  { icon: 'bi-rocket-takeoff-fill', title: 'Evolución sostenible', description: 'Crecer con las entidades: de la administración diaria hacia autogestión, actividades, reservas, pagos y nuevos servicios conectados.' },
+];
+---
+
+<Layout title="Visión | EntityX" description="La visión de EntityX: convertirse en la plataforma de referencia para entidades con membresías y servicios recurrentes.">
+  <Navbar />
+  <PurposeStatement
+    eyebrow="Horizonte de EntityX"
+    title="Nuestra visión"
+    description="Imaginamos entidades donde cada decisión se toma con claridad, cada equipo trabaja conectado y cada miembro vive una experiencia más simple."
+    statementLabel="Hacia dónde vamos"
+    statement="Ser la plataforma de referencia para digitalizar entidades con membresías y servicios recurrentes, empezando por el sector deportivo y creciendo hacia un ecosistema de operación más conectado, autónomo y medible."
+    pillars={pillars}
+    pillarsEyebrow="Cómo lo hacemos realidad"
+    pillarsTitle="Una dirección con impacto diario."
+    homeLabel="Volver al inicio"
+    homeHref="/"
+    nextLabel="Conoce nuestra misión"
+    nextHref="/mision"
+  />
+  <Footer />
+</Layout>

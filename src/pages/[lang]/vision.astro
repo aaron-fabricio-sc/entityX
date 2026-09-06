@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import PurposeStatement from '../../components/PurposeStatement.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }];
+}
+
+const pillars = [
+  { icon: 'bi-stars', title: 'A sector reference', description: 'Become a trusted platform for sports, educational, and wellness organizations with memberships or recurring services.' },
+  { icon: 'bi-diagram-3-fill', title: 'Connected operations', description: 'Create an environment where administrators, reception teams, staff, and members have the information they need at the right time.' },
+  { icon: 'bi-rocket-takeoff-fill', title: 'Sustainable evolution', description: 'Grow with organizations: from daily administration to self-service, activities, reservations, payments, and connected services.' },
+];
+---
+
+<Layout title="Vision | EntityX" description="EntityX's vision: become the leading platform for organizations with memberships and recurring services.">
+  <Navbar />
+  <PurposeStatement
+    eyebrow="The EntityX horizon"
+    title="Our vision"
+    description="We imagine organizations where every decision is made with clarity, every team works connected, and every member has a simpler experience."
+    statementLabel="Where we are going"
+    statement="To be the leading platform for digitizing organizations with memberships and recurring services, starting in the sports sector and growing into a more connected, autonomous, and measurable operating ecosystem."
+    pillars={pillars}
+    pillarsEyebrow="How we make it real"
+    pillarsTitle="A direction with daily impact."
+    homeLabel="Back to home"
+    homeHref="/en/"
+    nextLabel="Discover our mission"
+    nextHref="/en/mision"
+  />
+  <Footer />
+</Layout>

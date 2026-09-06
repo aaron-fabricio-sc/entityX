@@ -9,6 +9,8 @@ export const ui = {
   es: {
     "nav.home": "Inicio",
     "nav.features": "Módulos",
+    "nav.mission": "Misión",
+    "nav.vision": "Visión",
     "nav.pricing": "Precios",
     "nav.login": "Iniciar Sesión",
     "nav.terms_conditions": "Términos y Condiciones",
@@ -308,6 +310,8 @@ export const ui = {
   en: {
     "nav.home": "Home",
     "nav.features": "Modules",
+    "nav.mission": "Mission",
+    "nav.vision": "Vision",
     "nav.pricing": "Pricing",
     "nav.login": "Login",
     "nav.terms_conditions": "Terms and Conditions",

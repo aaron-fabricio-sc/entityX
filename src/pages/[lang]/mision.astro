@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import PurposeStatement from '../../components/PurposeStatement.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }];
+}
+
+const pillars = [
+  { icon: 'bi-universal-access', title: 'Accessible technology', description: 'Make clear digital management available to organizations of every size, from a small location to a growing operation.' },
+  { icon: 'bi-graph-up-arrow', title: 'Control that drives progress', description: 'Turn members, payments, sales, and daily activity into useful information for better decisions.' },
+  { icon: 'bi-people-fill', title: 'A better experience', description: 'Make work easier for teams and deliver more agile, professional, and transparent service to every member.' },
+];
+---
+
+<Layout title="Mission | EntityX" description="EntityX's mission: make organized, measurable management accessible to membership-based organizations.">
+  <Navbar />
+  <PurposeStatement
+    eyebrow="EntityX purpose"
+    title="Our mission"
+    description="We build useful technology so organizations can focus on growing their community while their operation works in order."
+    statementLabel="Our reason for being"
+    statement="To empower sports centers, academies, clubs, and wellness organizations to manage their memberships and daily operation through an accessible, clear platform built to grow."
+    pillars={pillars}
+    pillarsEyebrow="How we make it real"
+    pillarsTitle="A direction with daily impact."
+    homeLabel="Back to home"
+    homeHref="/en/"
+    nextLabel="Discover our vision"
+    nextHref="/en/vision"
+  />
+  <Footer />
+</Layout>

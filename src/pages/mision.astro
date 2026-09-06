@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PurposeStatement from '../components/PurposeStatement.astro';
+
+const pillars = [
+  { icon: 'bi-universal-access', title: 'Tecnología accesible', description: 'Acercar una gestión digital clara a entidades de todos los tamaños, desde una sede pequeña hasta una operación en crecimiento.' },
+  { icon: 'bi-graph-up-arrow', title: 'Control que impulsa', description: 'Transformar miembros, pagos, ventas y actividad diaria en información útil para tomar mejores decisiones.' },
+  { icon: 'bi-people-fill', title: 'Mejor experiencia', description: 'Facilitar el trabajo del equipo y ofrecer a cada miembro una atención más ágil, profesional y transparente.' },
+];
+---
+
+<Layout title="Misión | EntityX" description="La misión de EntityX: hacer accesible una gestión ordenada y medible para entidades con membresías.">
+  <Navbar />
+  <PurposeStatement
+    eyebrow="Propósito de EntityX"
+    title="Nuestra misión"
+    description="Construimos tecnología útil para que las entidades se concentren en hacer crecer su comunidad, mientras su operación trabaja con orden."
+    statementLabel="Nuestra razón de ser"
+    statement="Impulsar a centros deportivos, academias, clubes y entidades de bienestar a gestionar sus membresías y operación diaria con una plataforma accesible, clara y preparada para crecer."
+    pillars={pillars}
+    pillarsEyebrow="Cómo lo hacemos realidad"
+    pillarsTitle="Una dirección con impacto diario."
+    homeLabel="Volver al inicio"
+    homeHref="/"
+    nextLabel="Conoce nuestra visión"
+    nextHref="/vision"
+  />
+  <Footer />
+</Layout>
