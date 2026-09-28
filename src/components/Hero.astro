@@ -137,6 +137,42 @@ const t = useTranslations(lang);
     }
   }
 
+  @media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+    .hero-section {
+      background-image: url("/imagenes/entityx-hero-operacion-tablet.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-section::before {
+      background: linear-gradient(
+        180deg,
+        rgba(vars.$nav-color, 0.82) 0%,
+        rgba(vars.$nav-color, 0.64) 55%,
+        rgba(vars.$nav-color, 0.42) 100%
+      );
+    }
+  }
+
+  @media (max-width: 991.98px) and (orientation: portrait) {
+    .hero-section {
+      background-image: url("/imagenes/entityx-hero-operacion-mobile.png");
+      background-size: cover;
+      background-position: center;
+      justify-content: flex-start !important;
+      padding-top: 7rem !important;
+    }
+
+    .hero-section::before {
+      background: linear-gradient(
+        180deg,
+        rgba(vars.$nav-color, 0.8) 0%,
+        rgba(vars.$nav-color, 0.56) 56%,
+        rgba(vars.$nav-color, 0.28) 100%
+      );
+    }
+  }
+
   .text-gradient {
     background: linear-gradient(to right, vars.$active-color, vars.$text-light);
     -webkit-background-clip: text;
