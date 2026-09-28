@@ -26,6 +26,12 @@ const nicheCards = [
     { image: 'Mejora_calidad_de_imagen_202607061128.jpeg', alt: 'Sistema de gestión para spas y estética', icon: 'bi-heart', title: 'biz.spa', flow: 'biz.spa.flow' },
     { image: 'Generate_other_images_neon_202607061007.jpeg', alt: 'Sistema de gestión para coworking y clubes', icon: 'bi-laptop', title: 'biz.coworking', flow: 'biz.coworking.flow' },
 ];
+const workflowSteps = [
+    { icon: 'bi-sliders', number: '01', title: 'workflow.step1.title', desc: 'workflow.step1.desc' },
+    { icon: 'bi-clipboard-data', number: '02', title: 'workflow.step2.title', desc: 'workflow.step2.desc' },
+    { icon: 'bi-graph-up-arrow', number: '03', title: 'workflow.step3.title', desc: 'workflow.step3.desc' },
+];
+const faqItems = Array.from({ length: 5 }, (_, index) => index + 1);
 ---
 
 <!-- Core solutions -->
@@ -45,6 +51,29 @@ const nicheCards = [
                         <h5 class="text-white fw-bold">{t(card.title)}</h5>
                         <p class="text-light small mb-0">{t(card.desc)}</p>
                     </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="workflow-section py-5 bg-sidebar">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill bg-primary text-dark px-3 py-2 mb-3">{t('workflow.badge')}</span>
+            <h2 class="display-5 fw-bold text-white mb-3">{t('workflow.title')}</h2>
+            <p class="lead text-light mx-auto" style="max-width: 760px;">{t('workflow.desc')}</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {workflowSteps.map((step) => (
+                <div class="col-md-4">
+                    <article class="workflow-card h-100 rounded-4 p-4">
+                        <span class="workflow-card__number">{step.number}</span>
+                        <i class={`bi ${step.icon} workflow-card__icon`}></i>
+                        <h3 class="h5 text-white fw-bold mt-4 mb-2">{t(step.title)}</h3>
+                        <p class="text-light mb-0">{t(step.desc)}</p>
+                    </article>
                 </div>
             ))}
         </div>
@@ -74,6 +103,38 @@ const nicheCards = [
                 </div>
             ))}
         </div>
+    </div>
+</section>
+
+<!-- Frequently asked questions -->
+<section class="faq-section py-5 bg-sidebar">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-white mb-3">{t('faq.title')}</h2>
+            <p class="lead text-light mx-auto" style="max-width: 720px;">{t('faq.desc')}</p>
+        </div>
+        <div class="faq-list mx-auto">
+            {faqItems.map((item) => (
+                <details class="faq-item">
+                    <summary>{t(`faq.${item}.question`)}<i class="bi bi-plus-lg"></i></summary>
+                    <p>{t(`faq.${item}.answer`)}</p>
+                </details>
+            ))}
+        </div>
+    </div>
+</section>
+
+<!-- Final call to action -->
+<section class="final-cta py-5 bg-dark-teal">
+    <div class="container py-5 text-center">
+        <h2 class="display-5 fw-bold text-neon mb-3">{t('cta.final.title')}</h2>
+        <p class="lead text-light mx-auto mb-4" style="max-width: 700px;">{t('cta.final.desc')}</p>
+        <a
+            href={`https://wa.me/59170668135?text=${encodeURIComponent(t('hero.whatsapp_message'))}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow-lg"
+        >{t('cta.final.button')} <i class="bi bi-arrow-right ms-2"></i></a>
     </div>
 </section>
 
@@ -155,6 +216,58 @@ const nicheCards = [
         transform: translateY(-5px);
         border-color: rgba(0, 255, 200, 0.6) !important;
         box-shadow: 0 12px 28px rgba(0, 243, 255, 0.12);
+    }
+    .workflow-card {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(0, 243, 255, 0.16);
+        background: rgba(2, 16, 20, 0.58);
+    }
+    .workflow-card__number {
+        color: rgba(0, 255, 200, 0.42);
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1;
+    }
+    .workflow-card__icon {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        color: var(--active-color);
+        font-size: 2rem;
+    }
+    .workflow-card p {
+        color: #b7ced1 !important;
+        line-height: 1.55;
+    }
+    .faq-list {
+        max-width: 860px;
+    }
+    .faq-item {
+        margin-bottom: 0.75rem;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 0.8rem;
+        background: rgba(2, 16, 20, 0.48);
+    }
+    .faq-item summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.1rem 1.25rem;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 700;
+        list-style: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary i { color: var(--active-color); transition: transform 0.2s ease; }
+    .faq-item[open] summary i { transform: rotate(45deg); }
+    .faq-item p {
+        margin: 0;
+        padding: 0 1.25rem 1.1rem;
+        color: #b7ced1 !important;
+        line-height: 1.6;
     }
     @media (max-width: 1199.98px) {
         #features h2,
