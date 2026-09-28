@@ -14,22 +14,20 @@ export const ui = {
     "nav.pricing": "Precios",
     "nav.login": "Iniciar Sesión",
     "nav.terms_conditions": "Términos y Condiciones",
-    "hero.title":
-      "El sistema de gestión definitivo para Centros Deportivos, academias y clubes",
+    "hero.title": "Ordena tu operación. Controla el crecimiento de tu empresa.",
     "hero.subtitle":
-      "Automatiza inscripciones, controla accesos, evita fugas de dinero y lleva tu registro de ventas en una sola plataforma.",
-    "hero.cta": "Solicitar Demo Gratuita",
+      "EntityX centraliza clientes, cobros, ventas, personal e información operativa. Además, verifica membresías y accesos para que tomes mejores decisiones con datos confiables.",
+    "hero.cta": "Solicitar una demostración",
     "hero.whatsapp_message":
       "Hola Aaron, vengo de la web de EntityX. Me interesa probar el sistema para mi negocio. Mi nombre es...",
-    "hero.cta_pricing": "Ver Planes",
+    "hero.cta_pricing": "Conocer los planes",
 
     // SEO
-    "seo.home.title":
-      "EntityX | Aplicación para Gestionar Centros Deportivos, Academias y Clubes",
+    "seo.home.title": "EntityX | Software de gestión empresarial en la nube",
     "seo.home.desc":
-      "Gestiona clientes, cobros, membresías, accesos, ventas y recursos humanos desde una sola aplicación en la nube.",
+      "Software de gestión empresarial en la nube para pequeñas y medianas empresas de servicios. Centraliza clientes, cobros, ventas, personal, membresías y accesos.",
     "seo.home.keywords":
-      "aplicación para centros deportivos, software para centros deportivos, sistema para centros deportivos, ERP para centros deportivos, ERP deportivo, ERP ligero, ERP en la nube, sistema administrativo en la nube, software administrativo, aplicación administrativa, software de gestión, sistema de gestión, sistema de gestión deportiva, software para gimnasios, sistema para gimnasios, aplicación para gimnasios, software para academias, sistema para academias, software para clubes, sistema para clubes, software para escuelas deportivas, gestión de membresías, control de membresías, administración de membresías, control de pagos, registro de pagos, cobros en tiempo real, control de cuotas, cuotas vencidas, control de clientes, portal de clientes, autogestión de clientes, control de accesos, verificación de accesos, control de ingresos, registro de ventas, punto de venta, POS para gimnasios, ventas de productos, reportes financieros, indicadores de negocio, reportes de ingresos, control financiero, evitar fugas de dinero, reducir pérdidas de dinero, recursos humanos, gestión de empleados, asistencia de empleados, control de personal, pagos a empleados, cartelera de actividades, horarios de clases, gestión de clases, negocios por membresía, SaaS para negocios deportivos, aplicación web en la nube",
+      "software de gestión empresarial, software de gestión en la nube, sistema administrativo en la nube, software para pequeñas y medianas empresas, gestión de clientes, control de cobros, registro de pagos, gestión de ventas, control de membresías, verificación de membresías, control de accesos, gestión de personal, asistencia de empleados, reportes de negocio, empresas con ingresos recurrentes, software para gimnasios, software para academias, software para clubes, SaaS de gestión empresarial",
 
     "seo.pricing.title": "Precios y Planes - EntityX",
     "seo.pricing.desc":
@@ -43,11 +41,13 @@ export const ui = {
     "seo.partners.keywords":
       "programa aliados software, revendedor software, comisiones ventas software, aliados entityx",
 
-    "feat.whatis.title": "DI ADIÓS AL CAOS ADMINISTRATIVO",
+    "feat.whatis.title": "Controla toda tu operación desde un solo lugar",
     "feat.whatis.desc":
-      "Gestiona clientes, cobros, membresías, accesos, ventas y recursos humanos desde una sola aplicación en la nube.",
+      "EntityX reúne clientes, cobros, ventas, personal e información operativa para que tu empresa trabaje con orden, control y datos confiables.",
     "feat.whatis.p1":
-      "Ideal para centros deportivos, academias y clubes que quieren ordenar su operación diaria.",
+      "Diseñado para pequeñas y medianas empresas de servicios con ingresos recurrentes.",
+    "footer.description":
+      "EntityX es un sistema de gestión en la nube para pequeñas y medianas empresas de servicios con ingresos recurrentes. Ordena la operación, verifica membresías y accesos, y convierte los datos en decisiones confiables.",
     
     // Problemas (Tarjeta Izquierda)
     "feat.prob.1.title": "Clientes vencidos que siguen ingresando",
@@ -115,7 +115,7 @@ export const ui = {
 
     // Section 2
     "feat.membership.title": "BENEFICIOS CLAVE PARA TU NEGOCIO",
-    "feat.membership.subtitle": "Más control, menos desorden",
+    "feat.membership.subtitle": "Una plataforma para tu operación",
     "feat.membership.desc":
       "EntityX reúne las herramientas esenciales para controlar ingresos, accesos, clientes, empleados y actividades desde un solo lugar.",
     "feat.membership.list1.title": "Cobros y membresías ordenadas",
@@ -132,7 +132,7 @@ export const ui = {
       "Mantén el historial de clientes, membresías, vencimientos, consumos y datos importantes en una base centralizada.",
     "feat.membership.list5.title": "Actividades visibles para todos",
     "feat.membership.list5.desc":
-      "Publica horarios, precios y detalles de clases para reducir consultas repetitivas en recepción o mensajes.",
+      "Publica horarios, precios y detalles de tus servicios o actividades para reducir consultas repetitivas en recepción o mensajes.",
     "feat.membership.list6.title": "Reportes para decidir mejor",
     "feat.membership.list6.desc":
       "Consulta ingresos, ganancias, ventas y crecimiento con indicadores claros para entender cómo va tu negocio.",
@@ -176,9 +176,9 @@ export const ui = {
     "credential.verification.document.desc": "Recepción busca al cliente por su documento para consultar su membresía.",
 
     // Section 3
-    "feat.agnostic.title": "EL SISTEMA MULTI-NICHO",
+    "feat.agnostic.title": "Un núcleo adaptable a distintos sectores",
     "feat.agnostic.desc":
-      "EntityX se adapta a las reglas únicas de cualquier negocio que dependa de inscripciones o reservas.",
+      "EntityX comienza con empresas de servicios con membresías o ingresos recurrentes y adapta su núcleo de clientes, cobros, personal y reportes a cada operación.",
     "feat.agnostic.list1":
       "Centros de Salud Física: Gimnasios, CrossFit, Yoga, Pilates y Artes Marciales.",
     "feat.agnostic.list2":
@@ -246,13 +246,21 @@ export const ui = {
 
     // Business Types
     "biz.gym": "Gimnasios y Crossfit",
+    "biz.gym.flow": "Administra planes, renovaciones y vencimientos; recepción verifica el acceso y registra las ventas diarias en el mismo flujo.",
     "biz.yoga": "Yoga y Pilates",
+    "biz.yoga.flow": "Configura paquetes o mensualidades, publica horarios de actividades y mantiene cobros y asistencia ordenados por estudio.",
     "biz.deportes": "Escuelas Deportivas",
+    "biz.deportes.flow": "Centraliza inscripciones, cuotas y actividades deportivas, dando al equipo una vista clara de la asistencia y los pagos.",
     "biz.martial": "Artes Marciales",
+    "biz.martial.flow": "Controla mensualidades y vigencias, valida el ingreso de cada cliente y conserva un historial ordenado de sus movimientos.",
     "biz.danza": "Danza y Música",
+    "biz.danza.flow": "Reúne inscripciones, planes de pago, horarios y actividades para que la coordinación no dependa de mensajes o planillas separadas.",
     "biz.education": "Institutos Educativos",
+    "biz.education.flow": "Ordena alumnos, cuotas, actividades formativas y asistencia, facilitando el seguimiento administrativo de cada periodo.",
     "biz.spa": "Spas y Estética",
+    "biz.spa.flow": "Organiza clientes, paquetes de servicios y pagos recurrentes, con un registro claro de ventas y atención del equipo.",
     "biz.coworking": "Coworking y Clubes",
+    "biz.coworking.flow": "Su núcleo de clientes, planes, cobros y roles aporta una base para adaptar la operación a espacios y beneficios compartidos.",
 
     // Pricing Page
     "pricing.title": "Inversión: Planes que Crecen Contigo",
@@ -315,20 +323,20 @@ export const ui = {
     "nav.pricing": "Pricing",
     "nav.login": "Login",
     "nav.terms_conditions": "Terms and Conditions",
-    "hero.title": "The ultimate management system for sports centers, academies, and clubs",
+    "hero.title": "Organize your operations. Control your company's growth.",
     "hero.subtitle":
-      "Automate enrollments, control access, avoid money leaks, and manage your sales in a single platform.",
-    "hero.cta": "Request Free Demo",
+      "EntityX centralizes customers, payments, sales, staff, and operational information. It also verifies memberships and access so you can make better decisions with reliable data.",
+    "hero.cta": "Request a demo",
     "hero.whatsapp_message":
       "Hello Aaron, I'm coming from the EntityX website. I'm interested in trying the system for my business. My name is...",
-    "hero.cta_pricing": "See Plans",
+    "hero.cta_pricing": "Explore plans",
 
     // SEO
-    "seo.home.title": "EntityX | App to Manage Sports Centers, Academies, and Clubs",
+    "seo.home.title": "EntityX | Cloud business management software",
     "seo.home.desc":
-      "Manage clients, payments, memberships, access, sales, and human resources from a single cloud-based application.",
+      "Cloud business management software for small and medium-sized service companies. Centralize customers, payments, sales, staff, memberships, and access.",
     "seo.home.keywords":
-      "sports center app, sports center software, sports management system, sports center ERP, lightweight ERP, cloud ERP, cloud administrative system, management software, membership management, payment control, real-time payments, overdue fees, client management, client portal, access control, sales records, point of sale, POS for gyms, financial reports, business indicators, prevent money leaks, human resources, employee attendance, employee payments, activity board, class schedules, SaaS for sports businesses, cloud web application",
+      "business management software, cloud management software, cloud administrative system, software for small and medium-sized businesses, customer management, payment tracking, sales management, membership management, membership verification, access control, staff management, employee attendance, business reports, recurring revenue businesses, gym management software, academy management software, club management software, business management SaaS",
 
     "seo.pricing.title": "Pricing and Plans - EntityX",
     "seo.pricing.desc":
@@ -342,11 +350,13 @@ export const ui = {
     "seo.partners.keywords":
       "software partner program, software reseller, software sales commissions, EntityX partners",
 
-    "feat.whatis.title": "SAY GOODBYE TO ADMINISTRATIVE CHAOS",
+    "feat.whatis.title": "Control your entire operation from one place",
     "feat.whatis.desc":
-      "Manage clients, payments, memberships, access, sales, and human resources from a single cloud-based application.",
+      "EntityX brings together customers, payments, sales, staff, and operational information so your company works with order, control, and reliable data.",
     "feat.whatis.p1":
-      "Ideal for sports centers, academies, and clubs that want to organize their daily operations.",
+      "Built for small and medium-sized service companies with recurring revenue.",
+    "footer.description":
+      "EntityX is a cloud management system for small and medium-sized service companies with recurring revenue. It organizes operations, verifies memberships and access, and turns data into reliable decisions.",
     // Problemas (Tarjeta Izquierda)
     "feat.prob.1.title": "Expired clients keep entering",
     "feat.prob.1.desc": "Clients with expired memberships who keep entering due to lack of control.",
@@ -412,7 +422,7 @@ export const ui = {
     "feat.sol.15.desc": "Centralized cloud system to manage your business operations securely from any device.",
 
     "feat.membership.title": "KEY BENEFITS FOR YOUR BUSINESS",
-    "feat.membership.subtitle": "More control, less disorder",
+    "feat.membership.subtitle": "One platform for your operations",
     "feat.membership.desc":
       "EntityX brings together the essential tools to control income, access, clients, employees, and activities from one place.",
     "feat.membership.list1.title": "Organized payments and memberships",
@@ -429,7 +439,7 @@ export const ui = {
       "Keep client history, memberships, due dates, usage, and important data in a centralized database.",
     "feat.membership.list5.title": "Activities visible to everyone",
     "feat.membership.list5.desc":
-      "Publish class schedules, prices, and details to reduce repeated questions at reception or by message.",
+      "Publish schedules, prices, and details of your services or activities to reduce repeated questions at reception or by message.",
     "feat.membership.list6.title": "Reports to make better decisions",
     "feat.membership.list6.desc":
       "Check income, profits, sales, and growth with clear indicators to understand how your business is doing.",
@@ -472,9 +482,9 @@ export const ui = {
     "credential.verification.document.title": "With a document number",
     "credential.verification.document.desc": "Reception looks up the client by document number to check membership.",
 
-    "feat.agnostic.title": "THE MULTI-NICHE SYSTEM",
+    "feat.agnostic.title": "One core, adaptable to different sectors",
     "feat.agnostic.desc":
-      "EntityX adapts to the unique rules of any business relying on enrollments or reservations.",
+      "EntityX starts with service companies that have memberships or recurring revenue and adapts its core of customers, payments, staff, and reporting to each operation.",
     "feat.agnostic.list1":
       "Physical Health Centers: Gyms, CrossFit, Yoga, Pilates, and Martial Arts.",
     "feat.agnostic.list2":
@@ -539,13 +549,21 @@ export const ui = {
 
     // Business Types
     "biz.gym": "Gyms & Crossfit",
+    "biz.gym.flow": "Manage plans, renewals, and due dates; reception verifies access and records daily sales in the same workflow.",
     "biz.yoga": "Yoga & Pilates",
+    "biz.yoga.flow": "Set up packages or monthly plans, publish activity schedules, and keep payments and attendance organized by studio.",
     "biz.deportes": "Sports Schools",
+    "biz.deportes.flow": "Centralize enrollments, fees, and sports activities, giving staff a clear view of attendance and payments.",
     "biz.martial": "Martial Arts",
+    "biz.martial.flow": "Control monthly payments and validity, verify each customer's entry, and keep an organized activity history.",
     "biz.danza": "Dance & Music",
+    "biz.danza.flow": "Bring together registrations, payment plans, schedules, and activities so coordination does not depend on scattered messages or spreadsheets.",
     "biz.education": "Educational Institutes",
+    "biz.education.flow": "Organize students, fees, learning activities, and attendance, making administrative follow-up easier each term.",
     "biz.spa": "Spas & Aesthetics",
+    "biz.spa.flow": "Organize customers, service packages, and recurring payments, with a clear record of sales and staff service.",
     "biz.coworking": "Coworking & Clubs",
+    "biz.coworking.flow": "Its core of customers, plans, payments, and roles provides a base for adapting operations to shared spaces and benefits.",
 
     // Pricing Page
     "pricing.title": "Investment: Plans That Grow With You",
