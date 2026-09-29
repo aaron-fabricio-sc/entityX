@@ -1,24 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import PurposeStatement from '../components/PurposeStatement.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import PurposeStatement from "../components/PurposeStatement.astro";
 
 const pillars = [
-  { icon: 'bi-universal-access', title: 'Tecnología accesible', description: 'Acercar una gestión digital clara a entidades de todos los tamaños, desde una sede pequeña hasta una operación en crecimiento.' },
-  { icon: 'bi-graph-up-arrow', title: 'Control que impulsa', description: 'Transformar miembros, pagos, ventas y actividad diaria en información útil para tomar mejores decisiones.' },
-  { icon: 'bi-people-fill', title: 'Mejor experiencia', description: 'Facilitar el trabajo del equipo y ofrecer a cada miembro una atención más ágil, profesional y transparente.' },
+  { icon: "bi-diagram-3-fill", title: "Centralizar lo esencial", description: "Reunir en un solo lugar la información que suele quedar dispersa entre cuadernos, archivos, recibos y mensajes." },
+  { icon: "bi-clipboard2-check", title: "Facilitar el control diario", description: "Dar a propietarios y equipos una forma simple de registrar, consultar y dar seguimiento a la operación de cada día." },
+  { icon: "bi-bar-chart-line", title: "Decidir con confianza", description: "Convertir los datos de clientes, cobros, ventas y actividad en información útil para actuar a tiempo y crecer con orden." },
 ];
 ---
 
-<Layout title="Misión | EntityX" description="La misión de EntityX: hacer accesible una gestión ordenada y medible para entidades con membresías.">
+<Layout
+  title="Misión | EntityX"
+  description="La misión de EntityX: ayudar a pequeñas y medianas empresas a centralizar y profesionalizar su gestión."
+>
   <Navbar />
   <PurposeStatement
     eyebrow="Propósito de EntityX"
     title="Nuestra misión"
-    description="Construimos tecnología útil para que las entidades se concentren en hacer crecer su comunidad, mientras su operación trabaja con orden."
     statementLabel="Nuestra razón de ser"
-    statement="Impulsar a centros deportivos, academias, clubes y entidades de bienestar a gestionar sus membresías y operación diaria con una plataforma accesible, clara y preparada para crecer."
+    statement="Brindar a las pequeñas y medianas empresas una plataforma práctica para centralizar clientes, cobros, ventas, personal y operación diaria, profesionalizando su gestión con información clara y confiable."
     pillars={pillars}
     pillarsEyebrow="Cómo lo hacemos realidad"
     pillarsTitle="Una dirección con impacto diario."
