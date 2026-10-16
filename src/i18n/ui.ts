@@ -14,9 +14,9 @@ export const ui = {
     "nav.pricing": "Precios",
     "nav.login": "Iniciar Sesión",
     "nav.terms_conditions": "Términos y Condiciones",
-    "hero.title": "Ordena tu operación. Controla el crecimiento de tu empresa.",
+    "hero.title": "El ERP operativo para ordenar y hacer crecer tu empresa.",
     "hero.subtitle":
-      "EntityX centraliza clientes, cobros, ventas, personal e información operativa. Además, verifica membresías y accesos para que tomes mejores decisiones con datos confiables.",
+      "Centraliza clientes, ventas, cobros, productos, inventario por sucursal, personal y reportes. Gestiona la operación diaria con información clara y datos confiables.",
     "hero.cta": "Solicitar una demostración",
     "hero.whatsapp_message":
       "Hola Aaron, vengo de la web de EntityX. Me interesa probar el sistema para mi negocio. Mi nombre es...",
@@ -121,9 +121,9 @@ export const ui = {
     "feat.membership.list1.title": "Cobros y membresías ordenadas",
     "feat.membership.list1.desc":
       "Crea planes, paquetes y promociones con condiciones claras para cobrar de acuerdo al modelo de tu negocio.",
-    "feat.membership.list2.title": "Ingresos registrados al instante",
+    "feat.membership.list2.title": "Ventas con control de productos",
     "feat.membership.list2.desc":
-      "Registra pagos, ventas de productos y servicios en tiempo real para evitar cobros olvidados o anotaciones informales.",
+      "Registra productos, servicios y actividades en una sola venta; las existencias se actualizan según la sucursal elegida.",
     "feat.membership.list3.title": "Equipo con accesos por rol",
     "feat.membership.list3.desc":
       "Cada trabajador ingresa con su propio usuario y ve solo los módulos que necesita para realizar su trabajo.",
@@ -145,6 +145,19 @@ export const ui = {
     "feat.membership.list9.title": "Información segura en la nube",
     "feat.membership.list9.desc":
       "Gestiona tu operación desde cualquier dispositivo sin depender de cuadernos, archivos físicos o planillas dispersas.",
+
+    "inventory.badge": "Ventas de productos",
+    "inventory.title": "Registra tus ventas y mantén el control de tus productos",
+    "inventory.desc": "EntityX reúne en una sola venta los productos, servicios y actividades de cada cliente. Para los productos, el sistema muestra la disponibilidad y actualiza las existencias de la sucursal.",
+    "inventory.highlight": "Tu equipo vende con información clara: conoce qué productos están disponibles, aplica el precio de la sucursal y evita registrar más unidades de las que existen.",
+    "inventory.benefit1.title": "Una venta, varios conceptos",
+    "inventory.benefit1.desc": "Agrega los productos, servicios y actividades que el cliente adquiere en un mismo registro de venta.",
+    "inventory.benefit2.title": "Disponibilidad por sucursal",
+    "inventory.benefit2.desc": "Antes de vender, recepción consulta cuántas unidades están disponibles en la sucursal seleccionada.",
+    "inventory.benefit3.title": "Precios según tu operación",
+    "inventory.benefit3.desc": "Usa el precio de venta configurado para cada sucursal cuando tu negocio trabaja con valores distintos.",
+    "inventory.benefit4.title": "Movimientos que respaldan la venta",
+    "inventory.benefit4.desc": "Cada ingreso, salida, ajuste o transferencia queda registrado para entender por qué cambió la existencia.",
 
     "workflow.badge": "Cómo funciona",
     "workflow.title": "De la configuración al control diario",
@@ -168,6 +181,8 @@ export const ui = {
     "faq.4.answer": "Cada usuario tiene un rol. La empresa define qué información y acciones necesita cada persona para cumplir su responsabilidad.",
     "faq.5.question": "¿Y si mi empresa no trabaja con membresías?",
     "faq.5.answer": "EntityX está orientado a servicios con ingresos recurrentes. El núcleo de clientes, cobros, ventas, personal y reportes puede adaptarse a modelos compatibles; las membresías y accesos se habilitan cuando corresponden al flujo de la empresa.",
+    "faq.6.question": "¿Puedo vender productos, servicios y actividades en una misma venta?",
+    "faq.6.answer": "Sí. EntityX permite registrar varios productos, servicios y actividades en una sola venta. Al incluir productos, el sistema muestra la disponibilidad de la sucursal y actualiza las existencias al completar el registro.",
 
     "cta.final.title": "Ordena la operación de tu empresa con EntityX",
     "cta.final.desc": "Conoce cómo EntityX puede ayudarte a centralizar la información, controlar la operación diaria y crecer con datos confiables.",
@@ -350,9 +365,9 @@ export const ui = {
     "nav.pricing": "Pricing",
     "nav.login": "Login",
     "nav.terms_conditions": "Terms and Conditions",
-    "hero.title": "Organize your operations. Control your company's growth.",
+    "hero.title": "The operational ERP to organize and grow your business.",
     "hero.subtitle":
-      "EntityX centralizes customers, payments, sales, staff, and operational information. It also verifies memberships and access so you can make better decisions with reliable data.",
+      "Centralize customers, sales, payments, products, branch inventory, staff, and reports. Manage daily operations with clear information and reliable data.",
     "hero.cta": "Request a demo",
     "hero.whatsapp_message":
       "Hello Aaron, I'm coming from the EntityX website. I'm interested in trying the system for my business. My name is...",
@@ -455,9 +470,9 @@ export const ui = {
     "feat.membership.list1.title": "Organized payments and memberships",
     "feat.membership.list1.desc":
       "Create plans, packages, and promotions with clear conditions to charge according to your business model.",
-    "feat.membership.list2.title": "Income recorded instantly",
+    "feat.membership.list2.title": "Sales with product control",
     "feat.membership.list2.desc":
-      "Record payments, product sales, and services in real time to avoid forgotten charges or informal notes.",
+      "Record products, services, and activities in one sale; stock is updated for the selected branch.",
     "feat.membership.list3.title": "Team access by role",
     "feat.membership.list3.desc":
       "Each worker logs in with their own user and sees only the modules they need to do their job.",
@@ -479,6 +494,19 @@ export const ui = {
     "feat.membership.list9.title": "Secure cloud information",
     "feat.membership.list9.desc":
       "Manage your operation from any device without depending on notebooks, physical files, or scattered spreadsheets.",
+
+    "inventory.badge": "Product sales",
+    "inventory.title": "Record sales and keep control of your products",
+    "inventory.desc": "EntityX brings each customer's products, services, and activities together in one sale. For products, the system shows availability and updates the stock of the selected branch.",
+    "inventory.highlight": "Your team sells with clear information: it knows which products are available, applies the branch price, and avoids recording more units than are in stock.",
+    "inventory.benefit1.title": "One sale, multiple items",
+    "inventory.benefit1.desc": "Add the products, services, and activities a customer buys in the same sales record.",
+    "inventory.benefit2.title": "Availability by branch",
+    "inventory.benefit2.desc": "Before selling, reception can check how many units are available at the selected branch.",
+    "inventory.benefit3.title": "Prices for your operation",
+    "inventory.benefit3.desc": "Use the selling price configured for each branch when your business works with different prices.",
+    "inventory.benefit4.title": "Movements that support the sale",
+    "inventory.benefit4.desc": "Every entry, exit, adjustment, or transfer is recorded so you understand why stock changed.",
 
     "workflow.badge": "How it works",
     "workflow.title": "From setup to daily control",
@@ -502,6 +530,8 @@ export const ui = {
     "faq.4.answer": "Each user has a role. The company defines the information and actions each person needs to carry out their responsibility.",
     "faq.5.question": "What if my company does not use memberships?",
     "faq.5.answer": "EntityX is aimed at services with recurring revenue. Its core of customers, payments, sales, staff, and reports can adapt to compatible models; memberships and access are enabled when they match the company's workflow.",
+    "faq.6.question": "Can I sell products, services, and activities in one sale?",
+    "faq.6.answer": "Yes. EntityX lets you record several products, services, and activities in one sale. When products are included, the system shows the selected branch's availability and updates stock when the sale is completed.",
 
     "cta.final.title": "Organize your company's operations with EntityX",
     "cta.final.desc": "Learn how EntityX can help you centralize information, control daily operations, and grow with reliable data.",

@@ -8,7 +8,7 @@ const moduleCards = [
     { icon: 'bi-patch-check', title: 'feat.membership.list1.title', desc: 'feat.membership.list1.desc' },
     { icon: 'bi-person-vcard', title: 'feat.membership.list4.title', desc: 'feat.membership.list4.desc' },
     { icon: 'bi-calendar2-week', title: 'feat.membership.list5.title', desc: 'feat.membership.list5.desc' },
-    { icon: 'bi-receipt-cutoff', title: 'feat.membership.list2.title', desc: 'feat.membership.list2.desc' },
+    { icon: 'bi-cart-check', title: 'feat.membership.list2.title', desc: 'feat.membership.list2.desc' },
     { icon: 'bi-shield-lock', title: 'feat.membership.list3.title', desc: 'feat.membership.list3.desc' },
     { icon: 'bi-qr-code-scan', title: 'feat.access.title', desc: 'feat.access.card_desc' },
     { icon: 'bi-bar-chart-line', title: 'feat.membership.list6.title', desc: 'feat.membership.list6.desc' },
@@ -31,7 +31,13 @@ const workflowSteps = [
     { icon: 'bi-clipboard-data', number: '02', title: 'workflow.step2.title', desc: 'workflow.step2.desc' },
     { icon: 'bi-graph-up-arrow', number: '03', title: 'workflow.step3.title', desc: 'workflow.step3.desc' },
 ];
-const faqItems = Array.from({ length: 5 }, (_, index) => index + 1);
+const inventoryBenefits = [
+    { icon: 'bi-box-seam', title: 'inventory.benefit1.title', desc: 'inventory.benefit1.desc' },
+    { icon: 'bi-shop-window', title: 'inventory.benefit2.title', desc: 'inventory.benefit2.desc' },
+    { icon: 'bi-arrow-left-right', title: 'inventory.benefit3.title', desc: 'inventory.benefit3.desc' },
+    { icon: 'bi-receipt', title: 'inventory.benefit4.title', desc: 'inventory.benefit4.desc' },
+];
+const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
 ---
 
 <!-- Core solutions -->
@@ -81,6 +87,36 @@ const faqItems = Array.from({ length: 5 }, (_, index) => index + 1);
 </section>
 
 <DigitalCredential />
+
+<!-- Sales with product control -->
+<section class="inventory-section py-5 bg-sidebar">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <span class="badge rounded-pill bg-primary text-dark px-3 py-2 mb-3">{t('inventory.badge')}</span>
+                <h2 class="display-5 fw-bold text-white mb-3">{t('inventory.title')}</h2>
+                <p class="lead text-light mb-4">{t('inventory.desc')}</p>
+                <div class="inventory-highlight rounded-4 p-4">
+                    <i class="bi bi-cart-check-fill"></i>
+                    <p class="mb-0">{t('inventory.highlight')}</p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-3">
+                    {inventoryBenefits.map((benefit) => (
+                        <div class="col-sm-6">
+                            <article class="inventory-benefit h-100 rounded-4 p-4">
+                                <i class={`bi ${benefit.icon} fs-2 text-neon mb-3`}></i>
+                                <h3 class="h5 text-white fw-bold mb-2">{t(benefit.title)}</h3>
+                                <p class="mb-0">{t(benefit.desc)}</p>
+                            </article>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Compatible sectors -->
 <section class="py-5 bg-dark-teal">
@@ -240,6 +276,39 @@ const faqItems = Array.from({ length: 5 }, (_, index) => index + 1);
         color: #b7ced1 !important;
         line-height: 1.55;
     }
+    .inventory-section {
+        border-top: 1px solid rgba(0, 243, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+    }
+    .inventory-highlight {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        border: 1px solid rgba(0, 255, 200, 0.35);
+        background: rgba(0, 255, 200, 0.08);
+        color: #d9ffef;
+    }
+    .inventory-highlight i {
+        color: var(--active-color);
+        font-size: 1.5rem;
+    }
+    .inventory-highlight p {
+        line-height: 1.55;
+    }
+    .inventory-benefit {
+        border: 1px solid rgba(0, 243, 255, 0.16);
+        background: rgba(2, 16, 20, 0.58);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .inventory-benefit p {
+        color: #b7ced1;
+        line-height: 1.55;
+    }
+    .inventory-benefit:hover {
+        transform: translateY(-4px);
+        border-color: rgba(0, 255, 200, 0.55);
+        box-shadow: 0 10px 24px rgba(0, 243, 255, 0.1);
+    }
     .faq-list {
         max-width: 860px;
     }
@@ -328,6 +397,9 @@ const faqItems = Array.from({ length: 5 }, (_, index) => index + 1);
         }
         .niche-card p {
             font-size: 0.88rem;
+        }
+        .inventory-highlight {
+            padding: 1rem !important;
         }
     }
 </style>
