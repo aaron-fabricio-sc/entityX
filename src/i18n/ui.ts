@@ -14,7 +14,7 @@ export const ui = {
     "nav.pricing": "Precios",
     "nav.login": "Iniciar Sesión",
     "nav.terms_conditions": "Términos y Condiciones",
-    "hero.title": "El ERP operativo para ordenar y hacer crecer tu empresa.",
+    "hero.title": "La aplicación que te ayuda a ordenar y hacer crecer tu empresa.",
     "hero.subtitle":
       "Centraliza clientes, ventas, cobros, productos, inventario por sucursal, personal y reportes. Gestiona la operación diaria con información clara y datos confiables.",
     "hero.cta": "Solicitar una demostración",
@@ -47,7 +47,7 @@ export const ui = {
     "feat.whatis.p1":
       "Diseñado para pequeñas y medianas empresas de servicios con ingresos recurrentes.",
     "footer.description":
-      "EntityX es un sistema de gestión en la nube para pequeñas y medianas empresas de servicios con ingresos recurrentes. Ordena la operación, verifica membresías y accesos, y convierte los datos en decisiones confiables.",
+      "EntityX reúne clientes, cobros, ventas, personal e información operativa para que tu empresa trabaje con orden, control y datos confiables.",
     
     // Problemas (Tarjeta Izquierda)
     "feat.prob.1.title": "Clientes vencidos que siguen ingresando",
@@ -121,15 +121,15 @@ export const ui = {
     "feat.membership.list1.title": "Cobros y membresías ordenadas",
     "feat.membership.list1.desc":
       "Crea planes, paquetes y promociones con condiciones claras para cobrar de acuerdo al modelo de tu negocio.",
-    "feat.membership.list2.title": "Ventas con control de productos",
+    "feat.membership.list2.title": "Ventas y productos bajo control",
     "feat.membership.list2.desc":
-      "Registra productos, servicios y actividades en una sola venta; las existencias se actualizan según la sucursal elegida.",
-    "feat.membership.list3.title": "Equipo con accesos por rol",
+      "Registra tus ventas de productos, servicios y actividades, y conoce cuántas unidades de cada producto quedan disponibles.",
+    "feat.membership.list3.title": "Cada persona ve solo lo que necesita",
     "feat.membership.list3.desc":
-      "Cada trabajador ingresa con su propio usuario y ve solo los módulos que necesita para realizar su trabajo.",
-    "feat.membership.list4.title": "Clientes mejor organizados",
+      "Da a cada integrante de tu equipo un usuario propio y limita la información y acciones según su trabajo.",
+    "feat.membership.list4.title": "Gestión completa de clientes",
     "feat.membership.list4.desc":
-      "Mantén el historial de clientes, membresías, vencimientos, consumos y datos importantes en una base centralizada.",
+      "Consulta los datos de contacto, membresías, pagos, vencimientos y consumos de cada cliente desde un solo lugar.",
     "feat.membership.list5.title": "Actividades visibles para todos",
     "feat.membership.list5.desc":
       "Publica horarios, precios y detalles de tus servicios o actividades para reducir consultas repetitivas en recepción o mensajes.",
@@ -147,8 +147,8 @@ export const ui = {
       "Gestiona tu operación desde cualquier dispositivo sin depender de cuadernos, archivos físicos o planillas dispersas.",
 
     "inventory.badge": "Ventas de productos",
-    "inventory.title": "Registra tus ventas y mantén el control de tus productos",
-    "inventory.desc": "EntityX reúne en una sola venta los productos, servicios y actividades de cada cliente. Para los productos, el sistema muestra la disponibilidad y actualiza las existencias de la sucursal.",
+    "inventory.title": "Registra tus ventas y conoce los productos que te quedan",
+    "inventory.desc": "Registra los productos, servicios y actividades que vendes. Cada vez que vendas un producto, podrás ver cuántas unidades quedan disponibles.",
     "inventory.highlight": "Tu equipo vende con información clara: conoce qué productos están disponibles, aplica el precio de la sucursal y evita registrar más unidades de las que existen.",
     "inventory.benefit1.title": "Una venta, varios conceptos",
     "inventory.benefit1.desc": "Agrega los productos, servicios y actividades que el cliente adquiere en un mismo registro de venta.",
@@ -160,14 +160,16 @@ export const ui = {
     "inventory.benefit4.desc": "Cada ingreso, salida, ajuste o transferencia queda registrado para entender por qué cambió la existencia.",
 
     "workflow.badge": "Cómo funciona",
-    "workflow.title": "De la configuración al control diario",
-    "workflow.desc": "EntityX se integra a la operación de tu empresa en pasos simples, sin depender de infraestructura costosa.",
+    "workflow.title": "Así de fácil es empezar a usar EntityX",
+    "workflow.desc": "Prepara la información de tu empresa, registra lo que ocurre cada día y consulta todo lo que necesitas para tomar mejores decisiones.",
     "workflow.step1.title": "Configura tu empresa",
     "workflow.step1.desc": "Define los datos de tu empresa, usuarios, permisos, planes y servicios según la forma en que trabajas.",
-    "workflow.step2.title": "Registra la operación",
-    "workflow.step2.desc": "El equipo registra clientes, cobros, ventas y actividades; cuando aplica, también consulta vigencias y accesos.",
-    "workflow.step3.title": "Decide con datos",
-    "workflow.step3.desc": "Quien dirige la empresa consulta reportes e indicadores para supervisar resultados y tomar mejores decisiones.",
+    "workflow.step2.title": "Crea tus sucursales",
+    "workflow.step2.desc": "Añade cada lugar donde atiendes a tus clientes para mantener su información organizada.",
+    "workflow.step3.title": "Registra el trabajo diario",
+    "workflow.step3.desc": "Tu equipo registra clientes, cobros, ventas y actividades; también puede consultar membresías y accesos cuando hace falta.",
+    "workflow.step4.title": "Decide con información clara",
+    "workflow.step4.desc": "Quien dirige la empresa consulta los reportes para supervisar resultados y tomar mejores decisiones.",
 
     "faq.title": "Preguntas frecuentes",
     "faq.desc": "Respuestas claras antes de que incorpores EntityX a tu operación.",
@@ -229,7 +231,7 @@ export const ui = {
       "Espacios Compartidos: Coworkings y Clubes recreativos/sociales.",
 
     // Section 4
-    "feat.access.title": "PORTAL DE AUTOGESTIÓN DEL CLIENTE",
+    "feat.access.title": "Un espacio personal para tus clientes",
     "feat.access.desc":
       "Tu cliente recibe sus credenciales para acceder a un dashboard privado donde puede de forma autónoma:",
     "feat.access.list1":
@@ -237,7 +239,7 @@ export const ui = {
     "feat.access.list2":
       "Ver la grilla de horarios de actividades, clases disponibles y anuncios importantes del negocio.",
     "feat.access.card_desc":
-      "Tus clientes consultan vigencia, pagos, consumos, vencimientos, horarios y anuncios desde su propio panel.",
+      "Cada cliente puede ingresar a su cuenta para revisar su membresía, pagos, vencimientos, horarios y avisos.",
 
     // Section 5 (Portal - Merged to Access in text, keeping key for fallback)
     "feat.portal.title": "PANEL PERSONAL PARA EL CLIENTE",
@@ -266,7 +268,7 @@ export const ui = {
       "Genera ingresos recurrentes ayudando a negocios a eliminar el caos de los cuadernos mediante nuestro sistema.",
     "partners.list1.title": "Capacitación Total del Sistema",
     "partners.list1.desc":
-      "Domina los módulos (Membresías, Ventas, RRHH) para demostrar el valor a tus prospectos.",
+      "Aprenderás a usar EntityX para mostrar a otros negocios cómo puede ayudarlos.",
     "partners.list2.title": "Dashboard Exclusivo",
     "partners.list2.desc":
       "Panel para gestionar tu actividad, registrar prospectos y hacerles seguimiento.",
@@ -276,9 +278,9 @@ export const ui = {
     "partners.list4.title": "Control de tu Cartera",
     "partners.list4.desc":
       "Asegura la fidelidad de tus clientes a largo plazo monitoreando su estado.",
-    "partners.list5.title": "Impacto Real",
+    "partners.list5.title": "Una solución que ayuda de verdad",
     "partners.list5.desc":
-      "Vende una solución que realmente acaba con la cartera vencida de los negocios.",
+      "Ofrece a los negocios una forma clara de ordenar sus clientes, pagos, ventas y trabajo diario.",
     "partners.badge": "Aliados EntityX",
     "partners.cta.title": "¿Estás listo para rentabilizar tu red?",
     "partners.cta.button": "Unirme al Programa",
@@ -336,11 +338,11 @@ export const ui = {
     "pricing.inc1.desc": "",
     "pricing.inc2.title": "Ingresos, ventas y pagos registrados en tiempo real",
     "pricing.inc2.desc": "",
-    "pricing.inc3.title": "Portal para que tus clientes consulten vencimientos, consumos y estado de cuenta",
+    "pricing.inc3.title": "Un espacio para que tus clientes revisen pagos, vencimientos y consumos",
     "pricing.inc3.desc": "",
-    "pricing.inc4.title": "Accesos por roles, asistencia y control de recursos humanos",
+    "pricing.inc4.title": "Permisos para el equipo, asistencia y pagos al personal",
     "pricing.inc4.desc": "",
-    "pricing.inc5.title": "Cartelera digital de actividades, horarios, precios y clases disponibles",
+    "pricing.inc5.title": "Publica actividades, horarios, precios y clases disponibles",
     "pricing.inc5.desc": "",
     "pricing.inc6.title": "Reportes e indicadores para conocer ingresos, crecimiento y estabilidad",
     "pricing.inc6.desc": "",
@@ -352,7 +354,7 @@ export const ui = {
       "A medida que tu comunidad de clientes crece, el sistema escala contigo. Puedes subir de nivel sin interrupciones.",
     "pricing.transparency.title": "Transparencia Total",
     "pricing.transparency.desc":
-      "Audita cada pago realizado a la plataforma para garantizar la transparencia de nuestros servicios B2B.",
+      "Consulta los pagos que realizas a EntityX y mantén un historial claro de tu servicio.",
 
     "footer.copyright":
       "© 2026 EntityX - Aaron Fabricio Santa Cruz Valdez (AaronCode). Todos los derechos reservados.",
@@ -513,10 +515,12 @@ export const ui = {
     "workflow.desc": "EntityX fits into your company's operations through simple steps, without relying on costly infrastructure.",
     "workflow.step1.title": "Set up your company",
     "workflow.step1.desc": "Define your company details, users, permissions, plans, and services according to the way you work.",
-    "workflow.step2.title": "Record operations",
-    "workflow.step2.desc": "Your team records customers, payments, sales, and activities; when applicable, it also checks validity and access.",
-    "workflow.step3.title": "Decide with data",
-    "workflow.step3.desc": "Company leaders review reports and indicators to supervise results and make better decisions.",
+    "workflow.step2.title": "Create your branches",
+    "workflow.step2.desc": "Add each location where you serve customers to keep its information organized.",
+    "workflow.step3.title": "Record daily work",
+    "workflow.step3.desc": "Your team records customers, payments, sales, and activities; it can also check memberships and access when needed.",
+    "workflow.step4.title": "Decide with clear information",
+    "workflow.step4.desc": "Company leaders review reports to supervise results and make better decisions.",
 
     "faq.title": "Frequently asked questions",
     "faq.desc": "Clear answers before you bring EntityX into your operations.",

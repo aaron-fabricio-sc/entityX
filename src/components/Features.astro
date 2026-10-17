@@ -28,8 +28,9 @@ const nicheCards = [
 ];
 const workflowSteps = [
     { icon: 'bi-sliders', number: '01', title: 'workflow.step1.title', desc: 'workflow.step1.desc' },
-    { icon: 'bi-clipboard-data', number: '02', title: 'workflow.step2.title', desc: 'workflow.step2.desc' },
-    { icon: 'bi-graph-up-arrow', number: '03', title: 'workflow.step3.title', desc: 'workflow.step3.desc' },
+    { icon: 'bi-shop', number: '02', title: 'workflow.step2.title', desc: 'workflow.step2.desc' },
+    { icon: 'bi-clipboard-data', number: '03', title: 'workflow.step3.title', desc: 'workflow.step3.desc' },
+    { icon: 'bi-graph-up-arrow', number: '04', title: 'workflow.step4.title', desc: 'workflow.step4.desc' },
 ];
 const inventoryBenefits = [
     { icon: 'bi-box-seam', title: 'inventory.benefit1.title', desc: 'inventory.benefit1.desc' },
@@ -73,7 +74,7 @@ const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
         </div>
         <div class="row g-4 justify-content-center">
             {workflowSteps.map((step) => (
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-3">
                     <article class="workflow-card h-100 rounded-4 p-4">
                         <span class="workflow-card__number">{step.number}</span>
                         <i class={`bi ${step.icon} workflow-card__icon`}></i>
