@@ -17,14 +17,14 @@ const moduleCards = [
     { icon: 'bi-cloud-check', title: 'feat.membership.list9.title', desc: 'feat.membership.list9.desc' },
 ];
 const nicheCards = [
-    { image: 'gyms.jpeg', alt: 'Software de gestión para gimnasios y centros deportivos', icon: 'bi-bicycle', title: 'biz.gym', flow: 'biz.gym.flow' },
-    { image: 'Yoga_Pilates_color_scheme_202607060947.jpeg', alt: 'Sistema de gestión para estudios de yoga y pilates', icon: 'bi-flower1', title: 'biz.yoga', flow: 'biz.yoga.flow' },
-    { image: 'Imagen_quita_fondo_pone_deporte_202607061122.jpeg', alt: 'Sistema administrativo para escuelas deportivas', icon: 'bi-trophy', title: 'biz.deportes', flow: 'biz.deportes.flow' },
-    { image: 'Mejora_imagen_quita_lineas_negras_202607061114.jpeg', alt: 'Sistema de gestión para artes marciales', icon: 'bi-yin-yang', title: 'biz.martial', flow: 'biz.martial.flow' },
-    { image: 'Colores_neon_y_EntityX_fondo_202607061004.jpeg', alt: 'Sistema de gestión para danza y música', icon: 'bi-music-note-beamed', title: 'biz.danza', flow: 'biz.danza.flow' },
-    { image: 'mejora_la_calida_esa_imagen_202607061126.jpeg', alt: 'Sistema de gestión para institutos educativos', icon: 'bi-book', title: 'biz.education', flow: 'biz.education.flow' },
-    { image: 'Mejora_calidad_de_imagen_202607061128.jpeg', alt: 'Sistema de gestión para spas y estética', icon: 'bi-heart', title: 'biz.spa', flow: 'biz.spa.flow' },
-    { image: 'Generate_other_images_neon_202607061007.jpeg', alt: 'Sistema de gestión para coworking y clubes', icon: 'bi-laptop', title: 'biz.coworking', flow: 'biz.coworking.flow' },
+    { image: 'gyms.jpeg', alt: 'niche.gym.alt', icon: 'bi-bicycle', title: 'biz.gym', flow: 'biz.gym.flow' },
+    { image: 'Yoga_Pilates_color_scheme_202607060947.jpeg', alt: 'niche.yoga.alt', icon: 'bi-flower1', title: 'biz.yoga', flow: 'biz.yoga.flow' },
+    { image: 'Imagen_quita_fondo_pone_deporte_202607061122.jpeg', alt: 'niche.deportes.alt', icon: 'bi-trophy', title: 'biz.deportes', flow: 'biz.deportes.flow' },
+    { image: 'Mejora_imagen_quita_lineas_negras_202607061114.jpeg', alt: 'niche.martial.alt', icon: 'bi-yin-yang', title: 'biz.martial', flow: 'biz.martial.flow' },
+    { image: 'Colores_neon_y_EntityX_fondo_202607061004.jpeg', alt: 'niche.danza.alt', icon: 'bi-music-note-beamed', title: 'biz.danza', flow: 'biz.danza.flow' },
+    { image: 'mejora_la_calida_esa_imagen_202607061126.jpeg', alt: 'niche.education.alt', icon: 'bi-book', title: 'biz.education', flow: 'biz.education.flow' },
+    { image: 'Mejora_calidad_de_imagen_202607061128.jpeg', alt: 'niche.spa.alt', icon: 'bi-heart', title: 'biz.spa', flow: 'biz.spa.flow' },
+    { image: 'Generate_other_images_neon_202607061007.jpeg', alt: 'niche.coworking.alt', icon: 'bi-laptop', title: 'biz.coworking', flow: 'biz.coworking.flow' },
 ];
 const workflowSteps = [
     { icon: 'bi-sliders', number: '01', title: 'workflow.step1.title', desc: 'workflow.step1.desc' },
@@ -131,7 +131,7 @@ const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
             {nicheCards.map((card) => (
                 <div class="col-md-6 col-lg-4">
                     <article class="niche-card d-flex flex-row h-100 rounded-4 overflow-hidden border border-secondary border-opacity-10">
-                        <img src={import.meta.env.BASE_URL + `imagenes/${card.image}`} class="niche-card__image" alt={card.alt} loading="lazy" decoding="async" />
+                        <img src={import.meta.env.BASE_URL + `imagenes/${card.image}`} class="niche-card__image" alt={t(card.alt)} loading="lazy" decoding="async" />
                         <div class="niche-card__body">
                             <h3 class="text-white h5 fw-bold mb-2"><i class={`bi ${card.icon} me-2 text-neon`}></i>{t(card.title)}</h3>
                             <p class="text-light mb-0">{t(card.flow)}</p>

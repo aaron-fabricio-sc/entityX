@@ -22,6 +22,33 @@ const alternateUrls = {
     en: new URL(englishPath, siteUrl),
     default: new URL(spanishPath, siteUrl),
 };
+const defaultDescription = lang === 'en'
+    ? 'An app for organizing the daily work of small and medium-sized businesses.'
+    : 'Una aplicación para ordenar el trabajo diario de pequeñas y medianas empresas.';
+const imageAlt = lang === 'en'
+    ? 'EntityX, an app for organizing businesses and companies'
+    : 'EntityX, una aplicación para organizar negocios y empresas';
+const featureList = lang === 'en'
+    ? [
+        'Customer management',
+        'Payment and membership control',
+        'Access verification',
+        'Sales records',
+        'Personal space for customers',
+        'Staff control and attendance',
+        'Business reports',
+        'Activity schedule',
+      ]
+    : [
+        'Gestión de clientes',
+        'Control de cobros y membresías',
+        'Verificación de accesos',
+        'Registro de ventas',
+        'Espacio personal para clientes',
+        'Control del personal y asistencia',
+        'Reportes del negocio',
+        'Cartelera de actividades',
+      ];
 const structuredData = [
     {
         '@context': 'https://schema.org',
@@ -45,22 +72,13 @@ const structuredData = [
         operatingSystem: 'Web',
         url: siteUrl.toString(),
         image: socialImageUrl.toString(),
-        description: description || 'Aplicación de gestión para centros deportivos, academias y clubes.',
+        description: description || defaultDescription,
         offers: {
             '@type': 'Offer',
             url: new URL('/pricing', siteUrl).toString(),
             availability: 'https://schema.org/InStock',
         },
-        featureList: [
-            'Gestión de clientes',
-            'Control de cobros y membresías',
-            'Verificación de accesos',
-            'Registro de ventas',
-            'Portal de autogestión para clientes',
-            'Recursos humanos y asistencia de empleados',
-            'Reportes financieros',
-            'Cartelera de actividades',
-        ],
+        featureList,
         publisher: {
             '@type': 'Organization',
             name: 'EntityX',
@@ -102,7 +120,7 @@ const structuredData = [
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="EntityX, aplicación de gestión para centros deportivos, academias y clubes" />
+        <meta property="og:image:alt" content={imageAlt} />
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />

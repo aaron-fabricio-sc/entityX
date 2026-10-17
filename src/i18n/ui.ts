@@ -14,7 +14,9 @@ export const ui = {
     "nav.pricing": "Precios",
     "nav.login": "Iniciar Sesión",
     "nav.terms_conditions": "Términos y Condiciones",
-    "hero.title": "La aplicación que te ayuda a ordenar y hacer crecer tu empresa.",
+    "nav.logo_alt": "Logo de EntityX, aplicación para organizar negocios y empresas",
+    "nav.toggle": "Abrir menú de navegación",
+    "hero.title": "La aplicación que pone en orden el trabajo de tu negocio desde cualquier dispositivo.",
     "hero.subtitle":
       "Centraliza clientes, ventas, cobros, productos, inventario por sucursal, personal y reportes. Gestiona la operación diaria con información clara y datos confiables.",
     "hero.cta": "Solicitar una demostración",
@@ -23,9 +25,9 @@ export const ui = {
     "hero.cta_pricing": "Conocer los planes",
 
     // SEO
-    "seo.home.title": "EntityX | Software de gestión empresarial en la nube",
+    "seo.home.title": "EntityX | Software de gestión para negocios y empresas",
     "seo.home.desc":
-      "Software de gestión empresarial en la nube para pequeñas y medianas empresas de servicios. Centraliza clientes, cobros, ventas, personal, membresías y accesos.",
+      "Gestiona clientes, membresías, accesos, ventas, productos, servicios, actividades, personal y reportes desde un solo lugar.",
     "seo.home.keywords":
       "software de gestión empresarial, software de gestión en la nube, sistema administrativo en la nube, software para pequeñas y medianas empresas, gestión de clientes, control de cobros, registro de pagos, gestión de ventas, control de membresías, verificación de membresías, control de accesos, gestión de personal, asistencia de empleados, reportes de negocio, empresas con ingresos recurrentes, software para gimnasios, software para academias, software para clubes, SaaS de gestión empresarial",
 
@@ -287,6 +289,17 @@ export const ui = {
     "common.active": "Activo",
     "common.inactive": "Vencido",
     "common.contact": "Contacto",
+    "common.contact_whatsapp": "Contactar por WhatsApp",
+    "common.contact_linkedin": "Contactar por LinkedIn",
+
+    "niche.gym.alt": "Aplicación de gestión para gimnasios y centros deportivos",
+    "niche.yoga.alt": "Aplicación de gestión para estudios de yoga y pilates",
+    "niche.deportes.alt": "Aplicación de gestión para escuelas deportivas",
+    "niche.martial.alt": "Aplicación de gestión para artes marciales",
+    "niche.danza.alt": "Aplicación de gestión para danza y música",
+    "niche.education.alt": "Aplicación de gestión para institutos educativos",
+    "niche.spa.alt": "Aplicación de gestión para spas y estética",
+    "niche.coworking.alt": "Aplicación de gestión para espacios compartidos y clubes",
 
     // Business Types
     "biz.gym": "Gimnasios y Crossfit",
@@ -367,7 +380,9 @@ export const ui = {
     "nav.pricing": "Pricing",
     "nav.login": "Login",
     "nav.terms_conditions": "Terms and Conditions",
-    "hero.title": "The operational ERP to organize and grow your business.",
+    "nav.logo_alt": "EntityX logo, an app for organizing businesses and companies",
+    "nav.toggle": "Open navigation menu",
+    "hero.title": "The app that brings order to your business's work from any device.",
     "hero.subtitle":
       "Centralize customers, sales, payments, products, branch inventory, staff, and reports. Manage daily operations with clear information and reliable data.",
     "hero.cta": "Request a demo",
@@ -376,9 +391,9 @@ export const ui = {
     "hero.cta_pricing": "Explore plans",
 
     // SEO
-    "seo.home.title": "EntityX | Cloud business management software",
+    "seo.home.title": "EntityX | Business management software for companies",
     "seo.home.desc":
-      "Cloud business management software for small and medium-sized service companies. Centralize customers, payments, sales, staff, memberships, and access.",
+      "Manage customers, memberships, access, sales, products, services, activities, staff, and reports in one place.",
     "seo.home.keywords":
       "business management software, cloud management software, cloud administrative system, software for small and medium-sized businesses, customer management, payment tracking, sales management, membership management, membership verification, access control, staff management, employee attendance, business reports, recurring revenue businesses, gym management software, academy management software, club management software, business management SaaS",
 
@@ -400,7 +415,7 @@ export const ui = {
     "feat.whatis.p1":
       "Built for small and medium-sized service companies with recurring revenue.",
     "footer.description":
-      "EntityX is a cloud management system for small and medium-sized service companies with recurring revenue. It organizes operations, verifies memberships and access, and turns data into reliable decisions.",
+      "EntityX brings together customers, payments, sales, staff, and operational information so your company can work with order, control, and reliable data.",
     // Problemas (Tarjeta Izquierda)
     "feat.prob.1.title": "Expired clients keep entering",
     "feat.prob.1.desc": "Clients with expired memberships who keep entering due to lack of control.",
@@ -472,15 +487,15 @@ export const ui = {
     "feat.membership.list1.title": "Organized payments and memberships",
     "feat.membership.list1.desc":
       "Create plans, packages, and promotions with clear conditions to charge according to your business model.",
-    "feat.membership.list2.title": "Sales with product control",
+    "feat.membership.list2.title": "Sales and products under control",
     "feat.membership.list2.desc":
-      "Record products, services, and activities in one sale; stock is updated for the selected branch.",
-    "feat.membership.list3.title": "Team access by role",
+      "Record your sales of products, services, and activities, and see how many units of each product remain available.",
+    "feat.membership.list3.title": "Everyone sees only what they need",
     "feat.membership.list3.desc":
-      "Each worker logs in with their own user and sees only the modules they need to do their job.",
-    "feat.membership.list4.title": "Better organized clients",
+      "Give each team member their own user and limit information and actions according to their work.",
+    "feat.membership.list4.title": "Complete customer management",
     "feat.membership.list4.desc":
-      "Keep client history, memberships, due dates, usage, and important data in a centralized database.",
+      "View each customer's contact details, memberships, payments, due dates, and usage from one place.",
     "feat.membership.list5.title": "Activities visible to everyone",
     "feat.membership.list5.desc":
       "Publish schedules, prices, and details of your services or activities to reduce repeated questions at reception or by message.",
@@ -498,8 +513,8 @@ export const ui = {
       "Manage your operation from any device without depending on notebooks, physical files, or scattered spreadsheets.",
 
     "inventory.badge": "Product sales",
-    "inventory.title": "Record sales and keep control of your products",
-    "inventory.desc": "EntityX brings each customer's products, services, and activities together in one sale. For products, the system shows availability and updates the stock of the selected branch.",
+    "inventory.title": "Record your sales and know which products you have left",
+    "inventory.desc": "Record the products, services, and activities you sell. Each time you sell a product, you can see how many units remain available.",
     "inventory.highlight": "Your team sells with clear information: it knows which products are available, applies the branch price, and avoids recording more units than are in stock.",
     "inventory.benefit1.title": "One sale, multiple items",
     "inventory.benefit1.desc": "Add the products, services, and activities a customer buys in the same sales record.",
@@ -511,8 +526,8 @@ export const ui = {
     "inventory.benefit4.desc": "Every entry, exit, adjustment, or transfer is recorded so you understand why stock changed.",
 
     "workflow.badge": "How it works",
-    "workflow.title": "From setup to daily control",
-    "workflow.desc": "EntityX fits into your company's operations through simple steps, without relying on costly infrastructure.",
+    "workflow.title": "Getting started with EntityX is this simple",
+    "workflow.desc": "Prepare your company information, record what happens each day, and review everything you need to make better decisions.",
     "workflow.step1.title": "Set up your company",
     "workflow.step1.desc": "Define your company details, users, permissions, plans, and services according to the way you work.",
     "workflow.step2.title": "Create your branches",
@@ -580,15 +595,15 @@ export const ui = {
     "feat.agnostic.list3":
       "Shared Spaces: Coworking and Recreational/Social Clubs.",
 
-    "feat.access.title": "CLIENT SELF-MANAGEMENT PORTAL",
+    "feat.access.title": "A personal space for your customers",
     "feat.access.desc":
-      "Your client receives their credentials to access a private dashboard where they can autonomously:",
+      "Your customer receives their login details to check on their own:",
     "feat.access.list1":
       "Check the validity and details of their current plan.",
     "feat.access.list2":
       "View the activity schedule, available classes, and important business announcements.",
     "feat.access.card_desc":
-      "Clients check status, payments, usage, due dates, schedules, and announcements from their own panel.",
+      "Each customer can sign in to their account to check memberships, payments, due dates, schedules, and notices.",
 
     "feat.portal.title": "PERSONAL CLIENT PORTAL",
     "feat.portal.desc":
@@ -615,7 +630,7 @@ export const ui = {
       "Generate recurring revenue by helping businesses eliminate notebook chaos through our system.",
     "partners.list1.title": "Comprehensive System Training",
     "partners.list1.desc":
-      "Master the modules (Memberships, POS, HR) to demonstrate value to your prospects.",
+      "You will learn to use EntityX to show other businesses how it can help them.",
     "partners.list2.title": "Exclusive Dashboard",
     "partners.list2.desc":
       "Panel to manage your activity, register prospects, and track them.",
@@ -625,15 +640,26 @@ export const ui = {
     "partners.list4.title": "Portfolio Control",
     "partners.list4.desc":
       "Ensure long-term client loyalty by monitoring their status.",
-    "partners.list5.title": "Real Impact",
+    "partners.list5.title": "A solution that truly helps",
     "partners.list5.desc":
-      "Sell a solution that truly helps businesses reduce overdue payments and administrative disorder.",
+      "Offer businesses a clear way to organize their customers, payments, sales, and daily work.",
     "partners.badge": "EntityX Partners",
     "partners.cta.title": "Ready to monetize your network?",
     "partners.cta.button": "Join the Program",
     "common.active": "Active",
     "common.inactive": "Expired",
     "common.contact": "Contact",
+    "common.contact_whatsapp": "Contact us on WhatsApp",
+    "common.contact_linkedin": "Contact us on LinkedIn",
+
+    "niche.gym.alt": "Management app for gyms and sports centers",
+    "niche.yoga.alt": "Management app for yoga and pilates studios",
+    "niche.deportes.alt": "Management app for sports schools",
+    "niche.martial.alt": "Management app for martial arts schools",
+    "niche.danza.alt": "Management app for dance and music schools",
+    "niche.education.alt": "Management app for educational institutes",
+    "niche.spa.alt": "Management app for spas and beauty centers",
+    "niche.coworking.alt": "Management app for shared spaces and clubs",
 
     // Business Types
     "biz.gym": "Gyms & Crossfit",
@@ -685,11 +711,11 @@ export const ui = {
     "pricing.inc1.desc": "",
     "pricing.inc2.title": "Income, sales, and payments recorded in real time",
     "pricing.inc2.desc": "",
-    "pricing.inc3.title": "Portal for clients to check due dates, usage, and account status",
+    "pricing.inc3.title": "A space for customers to review payments, due dates, and usage",
     "pricing.inc3.desc": "",
-    "pricing.inc4.title": "Role-based access, attendance, and human resources control",
+    "pricing.inc4.title": "Team permissions, attendance, and staff payments",
     "pricing.inc4.desc": "",
-    "pricing.inc5.title": "Digital activity board with schedules, prices, and available classes",
+    "pricing.inc5.title": "Publish activities, schedules, prices, and available classes",
     "pricing.inc5.desc": "",
     "pricing.inc6.title": "Reports and indicators to understand income, growth, and stability",
     "pricing.inc6.desc": "",
@@ -701,7 +727,7 @@ export const ui = {
       "As your client community grows, the system scales with you. You can level up without interruptions.",
     "pricing.transparency.title": "Total Transparency",
     "pricing.transparency.desc":
-      "Audit every payment made to the platform to guarantee the transparency of our B2B services.",
+      "Review the payments you make to EntityX and keep a clear history of your service.",
 
     "footer.copyright":
       "© 2026 EntityX - Aaron Fabricio Santa Cruz Valdez (AaronCode). All rights reserved.",
