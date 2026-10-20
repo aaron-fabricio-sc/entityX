@@ -11,6 +11,7 @@ interface Props {
 
   statementLabel: string;
   statement: string;
+  statementImage: string;
   pillars: Pillar[];
   pillarsEyebrow: string;
   pillarsTitle: string;
@@ -26,6 +27,7 @@ const {
 
   statementLabel,
   statement,
+  statementImage,
   pillars,
   pillarsEyebrow,
   pillarsTitle,
@@ -49,9 +51,11 @@ const {
   <section class="purpose-statement">
     <div class="container">
       <div class="purpose-statement__card">
-        <span class="purpose-statement__mark" aria-hidden="true">“</span>
-        <p class="purpose-eyebrow">{statementLabel}</p>
-        <p>{statement}</p>
+        <img class="purpose-statement__background" src={statementImage} alt="" aria-hidden="true" loading="eager" />
+        <div class="purpose-statement__content">
+          <p class="purpose-eyebrow">{statementLabel}</p>
+          <p class="purpose-statement__text">{statement}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -165,35 +169,49 @@ const {
   }
   .purpose-statement__card {
     position: relative;
-    max-width: 930px;
+    isolation: isolate;
+    max-width: 1060px;
+    height: clamp(300px, 32vw, 360px);
     margin: auto;
-    padding: clamp(2rem, 5vw, 4rem);
     overflow: hidden;
-    border: 1px solid rgba(0, 243, 255, 0.19);
-    background: linear-gradient(
-      145deg,
-      rgba(14, 61, 66, 0.74),
-      rgba(3, 27, 32, 0.8)
-    );
-    box-shadow: 0 0 70px rgba(0, 255, 200, 0.06);
+    border: 1px solid rgba(52, 232, 221, 0.65);
+    border-radius: 1.5rem;
+    background: #071925;
+    box-shadow: 0 0 0 1px rgba(52, 232, 221, 0.12), 0 20px 55px rgba(0, 0, 0, 0.34), 0 0 45px rgba(30, 224, 210, 0.12);
   }
-  .purpose-statement__mark {
+  .purpose-statement__background {
     position: absolute;
-    top: -2.2rem;
-    right: 1rem;
-    color: rgba(0, 255, 200, 0.12);
-    font-family: Georgia, serif;
-    font-size: 12rem;
-    line-height: 1;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
   }
-  .purpose-statement__card p:last-child {
+  .purpose-statement__card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(2, 16, 27, 0.95) 0%, rgba(2, 18, 29, 0.88) 48%, rgba(2, 18, 29, 0.2) 85%);
+  }
+  .purpose-statement__content {
     position: relative;
-    max-width: 790px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 76%;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .purpose-statement__text {
     margin: 0;
     color: #f1ffff;
-    font-size: clamp(1.35rem, 3vw, 2.1rem);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     font-weight: 500;
-    line-height: 1.38;
+    line-height: 1.4;
     letter-spacing: -0.025em;
   }
   .purpose-pillars {
@@ -271,9 +289,10 @@ const {
     .purpose-hero {
       padding-top: 8rem;
     }
-    .purpose-statement__card {
-      padding: 2rem 1.45rem;
-    }
+    .purpose-statement__background { object-position: 70% center; }
+    .purpose-statement__card::before { background: linear-gradient(90deg, rgba(2, 16, 27, 0.95), rgba(2, 16, 27, 0.8)); }
+    .purpose-statement__card { height: auto; }
+    .purpose-statement__content { max-width: none; height: auto; padding: 2rem 1.45rem; }
     .purpose-card {
       padding: 1.45rem;
     }

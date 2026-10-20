@@ -320,9 +320,13 @@ export const ui = {
     "biz.coworking.flow": "Su núcleo de clientes, planes, cobros y roles aporta una base para adaptar la operación a espacios y beneficios compartidos.",
 
     // Pricing Page
-    "pricing.title": "Inversión: Planes que Crecen Contigo",
-    "pricing.desc":
-      "No limitamos módulos. Obtienes el sistema completo (Membresías, Ventas, RRHH, Portal) en todos los planes. Pagas únicamente según la cantidad de clientes activos.",
+    "pricing.trial.eyebrow": "Empieza hoy con EntityX",
+    "pricing.trial.name": "Plan de prueba",
+    "pricing.trial.highlight": "para empezar sin riesgo",
+    "pricing.trial.duration": "30 días para probar",
+    "pricing.trial.support": "Asesoría personalizada",
+    "pricing.trial.cta": "Probar EntityX durante 30 días",
+    "pricing.trial.description_en": "Try the platform free for 30 days with personalized guidance.",
     "pricing.note":
       "Nota Clave: El límite aplica solo a CLIENTES ACTIVOS. Tu base de datos histórica es ilimitada; cobramos por quienes tienen un plan vigente hoy.",
     "pricing.subtitle": "Nuestros Planes (BOB)",
@@ -680,9 +684,13 @@ export const ui = {
     "biz.coworking.flow": "Its core of customers, plans, payments, and roles provides a base for adapting operations to shared spaces and benefits.",
 
     // Pricing Page
-    "pricing.title": "Investment: Plans That Grow With You",
-    "pricing.desc":
-      "We don't limit modules. You get the full system (memberships, sales, HR, and client portal) on all plans. You only pay based on the number of active clients.",
+    "pricing.trial.eyebrow": "Start today with EntityX",
+    "pricing.trial.name": "Trial plan",
+    "pricing.trial.highlight": "to get started risk free",
+    "pricing.trial.duration": "30 days to try it",
+    "pricing.trial.support": "Personal guidance",
+    "pricing.trial.cta": "Try EntityX for 30 days",
+    "pricing.trial.description_en": "Try the platform free for 30 days with personalized guidance.",
     "pricing.note":
       "Key Note: The limit applies only to ACTIVE CLIENTS. Your historical database is unlimited; we charge for those with a valid plan today.",
     "pricing.subtitle": "Our Plans (BOB)",

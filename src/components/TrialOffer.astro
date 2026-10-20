@@ -1,0 +1,130 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="trial-offer mx-auto" data-trial-offer hidden>
+  <img class="trial-offer__background" src="/imagenes/entityx-prueba-fondo.png" alt="" aria-hidden="true" loading="eager" />
+  <div class="trial-offer__content">
+    <div class="trial-offer__intro">
+      <span class="trial-offer__eyebrow"><i class="bi bi-stars me-2"></i>{t('pricing.trial.eyebrow')}</span>
+      <h1 class="trial-offer__title"><span data-trial-name data-default-name-en={t('pricing.trial.name')}></span> <span class="trial-offer__accent">{t('pricing.trial.highlight')}</span></h1>
+      <p class="trial-offer__description" data-trial-description data-default-description-en={t('pricing.trial.description_en')}></p>
+      <div class="trial-offer__details">
+        <span><i class="bi bi-people-fill me-2"></i><span data-trial-capacity></span></span>
+        <span><i class="bi bi-calendar-check me-2"></i>{t('pricing.trial.duration')}</span>
+        <span><i class="bi bi-person-heart me-2"></i>{t('pricing.trial.support')}</span>
+      </div>
+      <div class="trial-offer__action">
+        <a class="trial-offer__button" data-trial-cta href="#" target="_blank" rel="noopener noreferrer">
+          {t('pricing.trial.cta')} <i class="bi bi-arrow-up-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .trial-offer {
+    position: relative;
+    isolation: isolate;
+    max-width: 1060px;
+    overflow: hidden;
+    border: 1px solid rgba(52, 232, 221, .65);
+    border-radius: 1.5rem;
+    background: #071925;
+    box-shadow: 0 0 0 1px rgba(52, 232, 221, .12), 0 20px 55px rgba(0, 0, 0, .34), 0 0 45px rgba(30, 224, 210, .12);
+    text-align: left;
+  }
+  .trial-offer[hidden] { display: none; }
+  .trial-offer__background {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+  .trial-offer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(2, 16, 27, .93) 0%, rgba(2, 18, 29, .85) 43%, rgba(2, 18, 29, .24) 78%, rgba(2, 18, 29, .15) 100%);
+  }
+  .trial-offer__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .trial-offer__eyebrow {
+    display: inline-block;
+    margin-bottom: .6rem;
+    color: #7bf5ed;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .trial-offer__title {
+    margin: 0 0 .6rem;
+    color: #fff;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.12;
+  }
+  .trial-offer__accent { color: #75f3e8; }
+  .trial-offer__description {
+    max-width: 570px;
+    margin: 0 0 .9rem;
+    color: #d2e5eb;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .trial-offer__details { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .trial-offer__details > span {
+    padding: .5rem .75rem;
+    border: 1px solid rgba(123, 245, 237, .3);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .06);
+    color: #e5fbfa;
+    font-size: .88rem;
+    font-weight: 600;
+  }
+  .trial-offer__action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .45rem;
+    margin-top: 1rem;
+  }
+  .trial-offer__button {
+    display: inline-block;
+    padding: .8rem 1rem;
+    border-radius: .7rem;
+    background: #74f3df;
+    color: #072b32;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .trial-offer__button:hover, .trial-offer__button:focus-visible {
+    color: #072b32;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(116, 243, 223, .28);
+  }
+  @media (max-width: 700px) {
+    .trial-offer__background { object-position: 70% center; }
+    .trial-offer::before { background: linear-gradient(90deg, rgba(2, 16, 27, .95), rgba(2, 16, 27, .8)); }
+    .trial-offer__content { max-width: none; }
+    .trial-offer__action { align-items: flex-start; }
+  }
+</style>

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import TrialOffer from "../components/TrialOffer.astro";
 import { useTranslations } from "../i18n/utils";
 
 const lang = "es";
@@ -60,18 +61,10 @@ const features = [
     <!-- Hero Section -->
     <section class="py-5 bg-dark-teal text-light text-center">
       <div class="container">
-        <h1 class="text-neon mb-4 responsive-title fw-bold">
-          {t("pricing.title")}
-        </h1>
-        <p
-          class="text-light mx-auto mb-4 responsive-desc"
-          style="max-width: 800px;"
-        >
-          {t("pricing.desc")}
-        </p>
+        <TrialOffer lang={lang} />
 
         <div
-          class="alert alert-info bg-sidebar border-info text-info mx-auto"
+          class="alert alert-info bg-sidebar border-info text-info mx-auto mt-4"
           style="max-width: 700px;"
         >
           <i class="bi bi-info-circle-fill me-2"></i>
@@ -85,7 +78,7 @@ const features = [
       <div class="container">
         <h2 class="text-center text-neon mb-5 fw-bold">{t("pricing.subtitle")}</h2>
 
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center" data-paid-plans data-lang={lang}>
           {
             plans.map((plan, index) => (
               <div class="col-md-6 col-lg-4" data-plan-index={index}>
@@ -93,11 +86,7 @@ const features = [
                   class={`card h-100 card-neon-animated border-0 text-center feature-card plan-card ${plan.featured ? "border-primary" : ""}`}
                 >
                   <div class="card-header bg-transparent border-0 pt-4">
-                    {plan.featured && (
-                      <span class="badge bg-success mb-2 plan-badge">
-                        {t("pricing.badge.popular")}
-                      </span>
-                    )}
+                    <span class="badge bg-success mb-2 plan-badge" hidden>{t("pricing.badge.popular")}</span>
                     <h3 class="text-neon plan-name">{plan.name || "..."}</h3>
 
                     <p class="text-light mb-3" style="font-size: 1.05rem;">
@@ -105,7 +94,7 @@ const features = [
                     </p>
                     <div class="mb-3">
                       <span class="badge bg-transparent border border-primary text-neon plan-max-clients px-3 py-2 fw-medium fs-6">
-                        <i class="bi bi-people-fill me-1"></i> {plan.max_clients}
+                        <i class="bi bi-people-fill me-1"></i> <span class="plan-max-clients-text">{plan.max_clients}</span>
                       </span>
                     </div>
                   </div>
@@ -126,6 +115,7 @@ const features = [
                     <a
                       href="#"
                       target="_blank"
+                      rel="noopener noreferrer"
                       class={`btn w-100 plan-cta ${plan.featured ? "btn-primary" : "btn-outline-primary"}`}
                     >
                       <i class="bi bi-whatsapp me-2" />{" "}
@@ -204,6 +194,7 @@ const features = [
 </Layout>
 
 <style>
+  .plan-badge[hidden], [data-plan-index][hidden] { display: none !important; }
   .responsive-title {
     font-size: 2.25rem;
     font-weight: 700;
@@ -596,93 +587,5 @@ const features = [
 </style>
 
 <script>
-  const API_URL = "https://api.entityx.tech/api";
-
-  async function fetchPlans() {
-    try {
-      // Add skeleton classes to placeholders while fetching
-      const placeholders = document.querySelectorAll('.plan-name, .plan-description, .plan-max-clients, .plan-monthly, .plan-yearly');
-      placeholders.forEach(el => {
-        if (el.textContent && el.textContent.includes("...")) el.classList.add('skeleton-text');
-      });
-
-      const response = await fetch(`${API_URL}/plans/public?currency=BOB`);
-      if (response.ok) {
-        const data = await response.json();
-        
-        if (Array.isArray(data) && data.length > 0) {
-          data.forEach((d: any, index: number) => {
-            const formatNumber = (num: number) => {
-              if (!num) return "0";
-              return num.toLocaleString('es-BO').replace(',', '.');
-            };
-
-            const isFeatured = d.max_clients === 250;
-            const container = document.querySelector(`[data-plan-index="${index}"]`);
-            
-            if (container) {
-              // Update content structure
-              const nameEl = container.querySelector('.plan-name');
-              const descriptionEl = container.querySelector('.plan-description');
-              const maxClientsEl = container.querySelector('.plan-max-clients');
-              const monthlyEl = container.querySelector('.plan-monthly');
-              const yearlyEl = container.querySelector('.plan-yearly');
-              const ctaEl = container.querySelector('.plan-cta') as HTMLAnchorElement;
-              const cardEl = container.querySelector('.plan-card');
-
-              if (nameEl) {
-                nameEl.textContent = d.name;
-                nameEl.classList.remove('skeleton-text');
-              }
-              if (descriptionEl) {
-                descriptionEl.textContent = d.description;
-                descriptionEl.classList.remove('skeleton-text');
-              }
-              if (maxClientsEl) {
-                if (d.max_clients === null) {
-                  maxClientsEl.innerHTML = `<i class="bi bi-people-fill me-1"></i> Ilimitados`;
-                } else {
-                  maxClientsEl.innerHTML = `<i class="bi bi-people-fill me-1"></i> Hasta ${d.max_clients} clientes`;
-                }
-                maxClientsEl.classList.remove('skeleton-text');
-              }
-              if (monthlyEl) {
-                monthlyEl.textContent = `${formatNumber(Number(d.price_monthly))} ${d.currency}`;
-                monthlyEl.classList.remove('skeleton-text');
-              }
-              if (yearlyEl) {
-                yearlyEl.textContent = `${formatNumber(Number(d.price_yearly))} ${d.currency}`;
-                yearlyEl.classList.remove('skeleton-text');
-                
-                // Keep the same visual gap for the Free plan (index 0) even if we hide the yearly text logically,
-                // or just show it as 0
-              }
-              
-              if (ctaEl) {
-                ctaEl.href = `https://wa.me/59170668135?text=Hola!%20%F0%9F%91%8B%20estoy%20interesado%20en%20el%20${encodeURIComponent(d.name)}%20%F0%9F%9A%80`;
-              }
-
-              if (cardEl && isFeatured) {
-                cardEl.classList.add('border-primary');
-              }
-            }
-          });
-
-          // Hide any extra placeholder cards if API returned fewer plans
-          const allCards = document.querySelectorAll('.col-md-6.col-lg-4[data-plan-index]');
-          if (data.length < allCards.length) {
-            for (let i = data.length; i < allCards.length; i++) {
-              const extraCard = document.querySelector(`[data-plan-index="${i}"]`) as HTMLElement;
-              if (extraCard) extraCard.style.display = 'none';
-            }
-          }
-        }
-      }
-    } catch (error) {
-      console.error("Error fetching plans from API:", error);
-    }
-  }
-
-  // Fetch plans on initial load
-  document.addEventListener('DOMContentLoaded', fetchPlans);
+  import "../scripts/pricing-plans";
 </script>
