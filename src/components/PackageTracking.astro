@@ -1,0 +1,182 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+
+const isEnglish = getLangFromUrl(Astro.url) === 'en';
+const copy = isEnglish ? {
+  eyebrow: 'Package tracking',
+  title: 'Check your package',
+  intro: 'Enter the tracking code you received to see its latest status and pickup branch.',
+  label: 'Tracking code',
+  placeholder: 'For example, GUIA-123',
+  search: 'Search',
+  loading: 'Searching…',
+  invalid: 'Enter a tracking code.',
+  missing: 'We could not find a package with that code. Check it and try again.',
+  failed: 'We could not check the package right now. Please try again later.',
+  status: 'Status',
+  received: 'Received',
+  ready_for_pickup: 'Ready for pickup',
+  delivered: 'Delivered',
+  received_at: 'Received on',
+  delivered_at: 'Delivered on',
+  entity: 'Business',
+  branch: 'Pickup branch',
+  address: 'Address',
+} : {
+  eyebrow: 'Seguimiento de paquetes',
+  title: 'Consulta tu paquete',
+  intro: 'Ingresa el código de tracking que te entregaron para conocer su estado y la sucursal de retiro.',
+  label: 'Código de tracking',
+  placeholder: 'Por ejemplo, GUIA-123',
+  search: 'Buscar',
+  loading: 'Buscando…',
+  invalid: 'Ingresa un código de tracking.',
+  missing: 'No encontramos un paquete con ese código. Revísalo e intenta nuevamente.',
+  failed: 'No pudimos consultar el paquete ahora. Intenta más tarde.',
+  status: 'Estado',
+  received: 'Recibido',
+  ready_for_pickup: 'Listo para retiro',
+  delivered: 'Entregado',
+  received_at: 'Recibido el',
+  delivered_at: 'Entregado el',
+  entity: 'Empresa',
+  branch: 'Sucursal de retiro',
+  address: 'Dirección',
+};
+---
+
+<section class="tracking-page" data-copy={JSON.stringify(copy)} data-locale={isEnglish ? 'en' : 'es'}>
+  <div class="tracking-shell">
+    <div class="tracking-heading">
+      <span class="tracking-eyebrow"><i class="bi bi-box-seam" aria-hidden="true"></i> {copy.eyebrow}</span>
+      <h1>{copy.title}</h1>
+      <p>{copy.intro}</p>
+    </div>
+
+    <form class="tracking-form" id="tracking-form">
+      <label for="tracking-code">{copy.label}</label>
+      <div class="tracking-controls">
+        <input id="tracking-code" name="trackingCode" type="text" maxlength="100" required autocomplete="off" placeholder={copy.placeholder} />
+        <button type="submit" id="tracking-submit"><i class="bi bi-search" aria-hidden="true"></i><span>{copy.search}</span></button>
+      </div>
+    </form>
+
+    <p id="tracking-error" class="tracking-error" role="alert" hidden></p>
+
+    <article id="tracking-result" class="tracking-result" aria-live="polite" hidden>
+      <div class="tracking-result-head">
+        <div><small>{copy.label}</small><strong id="result-code"></strong></div>
+        <span id="result-status" class="tracking-status"></span>
+      </div>
+      <dl class="tracking-details">
+        <div><dt>{copy.entity}</dt><dd id="result-entity"></dd></div>
+        <div><dt>{copy.branch}</dt><dd id="result-branch"></dd></div>
+        <div id="result-address-row"><dt>{copy.address}</dt><dd id="result-address"></dd></div>
+        <div><dt>{copy.received_at}</dt><dd id="result-received"></dd></div>
+        <div id="result-delivered-row" hidden><dt>{copy.delivered_at}</dt><dd id="result-delivered"></dd></div>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<script>
+  type TrackingResponse = {
+    tracking_code: string;
+    status: 'received' | 'ready_for_pickup' | 'delivered';
+    received_at: string;
+    delivered_at: string | null;
+    entity_name: string;
+    branch_name: string;
+    branch_address: string | null;
+  };
+
+  const root = document.querySelector<HTMLElement>('.tracking-page');
+  if (root) {
+    const copy = JSON.parse(root.dataset.copy ?? '{}') as Record<string, string>;
+    const locale = root.dataset.locale === 'en' ? 'en-US' : 'es-BO';
+    const form = root.querySelector<HTMLFormElement>('#tracking-form')!;
+    const input = root.querySelector<HTMLInputElement>('#tracking-code')!;
+    const submit = root.querySelector<HTMLButtonElement>('#tracking-submit')!;
+    const submitLabel = submit.querySelector('span')!;
+    const error = root.querySelector<HTMLElement>('#tracking-error')!;
+    const result = root.querySelector<HTMLElement>('#tracking-result')!;
+    const put = (id: string, value: string) => {
+      root.querySelector<HTMLElement>(id)!.textContent = value;
+    };
+    const formatDate = (value: string) => new Intl.DateTimeFormat(locale, {
+      dateStyle: 'medium', timeStyle: 'short',
+    }).format(new Date(value));
+    const apiBase = (import.meta.env.PUBLIC_API_URL || (location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+      ? 'http://localhost:3000/api'
+      : 'https://api.entityx.tech/api')).replace(/\/$/, '');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const code = input.value.trim();
+      error.hidden = true;
+      result.hidden = true;
+      if (!code) {
+        error.textContent = copy.invalid;
+        error.hidden = false;
+        input.focus();
+        return;
+      }
+      submit.disabled = true;
+      submitLabel.textContent = copy.loading;
+      try {
+        const response = await fetch(`${apiBase}/packages/public/track/${encodeURIComponent(code)}`);
+        if (!response.ok) throw new Error(response.status === 404 ? 'missing' : 'failed');
+        const parcel = await response.json() as TrackingResponse;
+        put('#result-code', parcel.tracking_code);
+        put('#result-entity', parcel.entity_name);
+        put('#result-branch', parcel.branch_name);
+        put('#result-address', parcel.branch_address ?? '—');
+        put('#result-received', formatDate(parcel.received_at));
+        put('#result-delivered', parcel.delivered_at ? formatDate(parcel.delivered_at) : '');
+        root.querySelector<HTMLElement>('#result-delivered-row')!.hidden = !parcel.delivered_at;
+        const status = root.querySelector<HTMLElement>('#result-status')!;
+        status.textContent = copy[parcel.status] ?? parcel.status;
+        status.dataset.status = parcel.status;
+        result.hidden = false;
+      } catch (cause) {
+        error.textContent = cause instanceof Error && cause.message === 'missing' ? copy.missing : copy.failed;
+        error.hidden = false;
+      } finally {
+        submit.disabled = false;
+        submitLabel.textContent = copy.search;
+      }
+    });
+  }
+</script>
+
+<style>
+  .tracking-page { min-height: calc(100vh - 230px); padding: 9rem 1.25rem 5rem; background: radial-gradient(circle at 50% 0%, #113b42 0, #061c22 45%, #021014 100%); color: #e8f8f7; }
+  .tracking-shell { max-width: 760px; margin: 0 auto; }
+  .tracking-heading { text-align: center; margin-bottom: 2rem; }
+  .tracking-eyebrow { display: inline-flex; align-items: center; gap: .5rem; color: #00e8cf; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
+  .tracking-heading h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.5rem); margin: .8rem 0; }
+  .tracking-heading p { color: #bdd3d4; max-width: 590px; margin: 0 auto; }
+  .tracking-form, .tracking-result { background: #0d2930; border: 1px solid #31545a; border-radius: 18px; box-shadow: 0 20px 50px #0004; }
+  .tracking-form { padding: clamp(1.25rem, 4vw, 2rem); }
+  .tracking-form label { display: block; font-weight: 700; margin-bottom: .7rem; }
+  .tracking-controls { display: flex; gap: .75rem; }
+  .tracking-controls input { min-width: 0; flex: 1; padding: .85rem 1rem; border: 1px solid #5a797d; border-radius: 10px; background: #061b20; color: #fff; outline: none; }
+  .tracking-controls input:focus { border-color: #00e8cf; box-shadow: 0 0 0 3px #00e8cf33; }
+  .tracking-controls input::placeholder { color: #a5b9bb; }
+  .tracking-controls button { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 1.4rem; border: 0; border-radius: 10px; background: #00d6c3; color: #052126; font-weight: 700; }
+  .tracking-controls button:hover:not(:disabled) { background: #42f5de; }
+  .tracking-controls button:disabled { opacity: .65; cursor: wait; }
+  .tracking-error { margin: 1.25rem 0 0; padding: .9rem 1rem; color: #ffdddd; background: #702d36; border-radius: 10px; }
+  .tracking-result { margin-top: 1.25rem; padding: clamp(1.25rem, 4vw, 2rem); }
+  .tracking-result-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1.25rem; border-bottom: 1px solid #31545a; }
+  .tracking-result-head small { display: block; color: #a9c7c8; }
+  .tracking-result-head strong { font-size: 1.35rem; overflow-wrap: anywhere; }
+  .tracking-status { padding: .45rem .75rem; border-radius: 999px; background: #31545a; font-weight: 700; text-align: center; }
+  .tracking-status[data-status='ready_for_pickup'] { color: #052126; background: #55f0c7; }
+  .tracking-status[data-status='delivered'] { color: #fff; background: #3458a4; }
+  .tracking-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin: 1.5rem 0 0; }
+  .tracking-details div[hidden] { display: none; }
+  .tracking-details dt { color: #a9c7c8; font-size: .85rem; font-weight: 500; }
+  .tracking-details dd { color: #fff; margin: .2rem 0 0; font-weight: 600; overflow-wrap: anywhere; }
+  @media (max-width: 560px) { .tracking-controls { flex-direction: column; } .tracking-controls button { justify-content: center; } .tracking-result-head { align-items: flex-start; flex-direction: column; } .tracking-details { grid-template-columns: 1fr; } }
+</style>
