@@ -68,7 +68,7 @@ function renderPlans(data: PublicPlan[]) {
       : freePlan.name;
     setText(name, displayName);
     const description = trial.querySelector<HTMLElement>('[data-trial-description]');
-    const defaultSpanishDescription = 'Plan gratuito para probar la plataforma durante 30 días, con asesoría personalizada';
+    const defaultSpanishDescription = 'Plan gratuito para probar EntityX durante 30 días, con asesoría personalizada';
     setText(description, lang === 'en' && freePlan.description?.trim() === defaultSpanishDescription
       ? description?.dataset.defaultDescriptionEn || ''
       : freePlan.description || '');

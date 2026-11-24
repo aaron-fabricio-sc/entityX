@@ -5,26 +5,34 @@ import DigitalCredential from './DigitalCredential.astro';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const moduleCards = [
-    { icon: 'bi-patch-check', title: 'feat.membership.list1.title', desc: 'feat.membership.list1.desc' },
-    { icon: 'bi-person-vcard', title: 'feat.membership.list4.title', desc: 'feat.membership.list4.desc' },
-    { icon: 'bi-calendar2-week', title: 'feat.membership.list5.title', desc: 'feat.membership.list5.desc' },
-    { icon: 'bi-cart-check', title: 'feat.membership.list2.title', desc: 'feat.membership.list2.desc' },
-    { icon: 'bi-shield-lock', title: 'feat.membership.list3.title', desc: 'feat.membership.list3.desc' },
-    { icon: 'bi-qr-code-scan', title: 'feat.access.title', desc: 'feat.access.card_desc' },
-    { icon: 'bi-bar-chart-line', title: 'feat.membership.list6.title', desc: 'feat.membership.list6.desc' },
-    { icon: 'bi-clock-history', title: 'feat.membership.list7.title', desc: 'feat.membership.list7.desc' },
-    { icon: 'bi-wallet2', title: 'feat.membership.list8.title', desc: 'feat.membership.list8.desc' },
-    { icon: 'bi-cloud-check', title: 'feat.membership.list9.title', desc: 'feat.membership.list9.desc' },
+    { icon: 'bi-people', title: 'erp.clients.title', desc: 'erp.clients.desc' },
+    { icon: 'bi-shop', title: 'erp.sales.title', desc: 'erp.sales.desc' },
+    { icon: 'bi-box-seam', title: 'erp.inventory.title', desc: 'erp.inventory.desc' },
+    { icon: 'bi-truck', title: 'erp.suppliers.title', desc: 'erp.suppliers.desc' },
+    { icon: 'bi-kanban', title: 'erp.tasks.title', desc: 'erp.tasks.desc' },
+    { icon: 'bi-cash-stack', title: 'erp.cash.title', desc: 'erp.cash.desc' },
+    { icon: 'bi-buildings', title: 'erp.branches.title', desc: 'erp.branches.desc' },
+    { icon: 'bi-person-lock', title: 'erp.team.title', desc: 'erp.team.desc' },
+    { icon: 'bi-calendar2-check', title: 'erp.memberships.title', desc: 'erp.memberships.desc' },
+    { icon: 'bi-graph-up-arrow', title: 'erp.reports.title', desc: 'erp.reports.desc' },
 ];
 const nicheCards = [
-    { image: 'gyms.jpeg', alt: 'niche.gym.alt', icon: 'bi-bicycle', title: 'biz.gym', flow: 'biz.gym.flow' },
-    { image: 'Yoga_Pilates_color_scheme_202607060947.jpeg', alt: 'niche.yoga.alt', icon: 'bi-flower1', title: 'biz.yoga', flow: 'biz.yoga.flow' },
-    { image: 'Imagen_quita_fondo_pone_deporte_202607061122.jpeg', alt: 'niche.deportes.alt', icon: 'bi-trophy', title: 'biz.deportes', flow: 'biz.deportes.flow' },
-    { image: 'Mejora_imagen_quita_lineas_negras_202607061114.jpeg', alt: 'niche.martial.alt', icon: 'bi-yin-yang', title: 'biz.martial', flow: 'biz.martial.flow' },
-    { image: 'Colores_neon_y_EntityX_fondo_202607061004.jpeg', alt: 'niche.danza.alt', icon: 'bi-music-note-beamed', title: 'biz.danza', flow: 'biz.danza.flow' },
-    { image: 'mejora_la_calida_esa_imagen_202607061126.jpeg', alt: 'niche.education.alt', icon: 'bi-book', title: 'biz.education', flow: 'biz.education.flow' },
-    { image: 'Mejora_calidad_de_imagen_202607061128.jpeg', alt: 'niche.spa.alt', icon: 'bi-heart', title: 'biz.spa', flow: 'biz.spa.flow' },
-    { image: 'Generate_other_images_neon_202607061007.jpeg', alt: 'niche.coworking.alt', icon: 'bi-laptop', title: 'biz.coworking', flow: 'biz.coworking.flow' },
+    { icon: 'bi-bicycle', title: 'biz.gym', flow: 'biz.gym.flow' },
+    { icon: 'bi-flower1', title: 'biz.yoga', flow: 'biz.yoga.flow' },
+    { icon: 'bi-trophy', title: 'biz.deportes', flow: 'biz.deportes.flow' },
+    { icon: 'bi-yin-yang', title: 'biz.martial', flow: 'biz.martial.flow' },
+    { icon: 'bi-music-note-beamed', title: 'biz.danza', flow: 'biz.danza.flow' },
+    { icon: 'bi-book', title: 'biz.education', flow: 'biz.education.flow' },
+    { icon: 'bi-heart-pulse', title: 'biz.health', flow: 'biz.health.flow' },
+    { icon: 'bi-capsule', title: 'biz.pharmacy', flow: 'biz.pharmacy.flow' },
+    { icon: 'bi-bag-check', title: 'biz.retail', flow: 'biz.retail.flow' },
+    { icon: 'bi-printer', title: 'biz.printing', flow: 'biz.printing.flow' },
+    { icon: 'bi-tools', title: 'biz.workshops', flow: 'biz.workshops.flow' },
+    { icon: 'bi-truck', title: 'biz.distribution', flow: 'biz.distribution.flow' },
+    { icon: 'bi-box2-heart', title: 'biz.parcels', flow: 'biz.parcels.flow' },
+    { icon: 'bi-stars', title: 'biz.spa', flow: 'biz.spa.flow' },
+    { icon: 'bi-laptop', title: 'biz.coworking', flow: 'biz.coworking.flow' },
+    { icon: 'bi-briefcase', title: 'biz.services', flow: 'biz.services.flow' },
 ];
 const workflowSteps = [
     { icon: 'bi-sliders', number: '01', title: 'workflow.step1.title', desc: 'workflow.step1.desc' },
@@ -37,6 +45,18 @@ const inventoryBenefits = [
     { icon: 'bi-shop-window', title: 'inventory.benefit2.title', desc: 'inventory.benefit2.desc' },
     { icon: 'bi-arrow-left-right', title: 'inventory.benefit3.title', desc: 'inventory.benefit3.desc' },
     { icon: 'bi-receipt', title: 'inventory.benefit4.title', desc: 'inventory.benefit4.desc' },
+];
+const teamBenefits = [
+    { icon: 'bi-person-vcard', title: 'team.benefit1.title', desc: 'team.benefit1.desc' },
+    { icon: 'bi-calendar2-check', title: 'team.benefit2.title', desc: 'team.benefit2.desc' },
+    { icon: 'bi-cash-coin', title: 'team.benefit3.title', desc: 'team.benefit3.desc' },
+    { icon: 'bi-person-check', title: 'team.benefit4.title', desc: 'team.benefit4.desc' },
+];
+const connectedFlow = [
+    { icon: 'bi-cart-check', number: '01', title: 'flow.step1.title', desc: 'flow.step1.desc' },
+    { icon: 'bi-kanban', number: '02', title: 'flow.step2.title', desc: 'flow.step2.desc' },
+    { icon: 'bi-box-seam', number: '03', title: 'flow.step3.title', desc: 'flow.step3.desc' },
+    { icon: 'bi-cash-stack', number: '04', title: 'flow.step4.title', desc: 'flow.step4.desc' },
 ];
 const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
 ---
@@ -119,6 +139,51 @@ const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
     </div>
 </section>
 
+<!-- Team and people -->
+<section class="inventory-section py-5 bg-sidebar">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill bg-primary text-dark px-3 py-2 mb-3">{t('team.badge')}</span>
+            <h2 class="display-5 fw-bold text-white mb-3">{t('team.title')}</h2>
+            <p class="lead text-light mx-auto" style="max-width: 760px;">{t('team.desc')}</p>
+        </div>
+        <div class="row g-3 justify-content-center">
+            {teamBenefits.map((benefit) => (
+                <div class="col-sm-6 col-xl-3">
+                    <article class="inventory-benefit h-100 rounded-4 p-4">
+                        <i class={`bi ${benefit.icon} fs-2 text-neon mb-3`}></i>
+                        <h3 class="h5 text-white fw-bold mb-2">{t(benefit.title)}</h3>
+                        <p class="mb-0">{t(benefit.desc)}</p>
+                    </article>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<!-- Connected operations -->
+<section class="workflow-section py-5 bg-dark-teal">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill bg-primary text-dark px-3 py-2 mb-3">{t('flow.badge')}</span>
+            <h2 class="display-5 fw-bold text-neon mb-3">{t('flow.title')}</h2>
+            <p class="lead text-light mx-auto" style="max-width: 760px;">{t('flow.desc')}</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {connectedFlow.map((step) => (
+                <div class="col-md-6 col-xl-3">
+                    <article class="workflow-card h-100 rounded-4 p-4">
+                        <span class="workflow-card__number">{step.number}</span>
+                        <i class={`bi ${step.icon} workflow-card__icon`}></i>
+                        <h3 class="h5 text-white fw-bold mt-4 mb-2">{t(step.title)}</h3>
+                        <p class="text-light mb-0">{t(step.desc)}</p>
+                    </article>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
 <!-- Compatible sectors -->
 <section class="py-5 bg-dark-teal">
     <div class="container py-5">
@@ -127,13 +192,13 @@ const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
             <p class="lead text-light mx-auto mb-4" style="max-width: 800px;">{t('feat.agnostic.desc')}</p>
         </div>
         
-        <div class="row g-4 justify-content-center">
+        <div class="row g-3 justify-content-center">
             {nicheCards.map((card) => (
                 <div class="col-md-6 col-lg-4">
-                    <article class="niche-card d-flex flex-row h-100 rounded-4 overflow-hidden border border-secondary border-opacity-10">
-                        <img src={import.meta.env.BASE_URL + `imagenes/${card.image}`} class="niche-card__image" alt={t(card.alt)} loading="lazy" decoding="async" />
+                    <article class="niche-card h-100 rounded-4 border border-secondary border-opacity-10">
+                        <div class="niche-card__icon" aria-hidden="true"><i class={`bi ${card.icon}`}></i></div>
                         <div class="niche-card__body">
-                            <h3 class="text-white h5 fw-bold mb-2"><i class={`bi ${card.icon} me-2 text-neon`}></i>{t(card.title)}</h3>
+                            <h3 class="text-white h5 fw-bold mb-2">{t(card.title)}</h3>
                             <p class="text-light mb-0">{t(card.flow)}</p>
                         </div>
                     </article>
@@ -219,26 +284,28 @@ const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
         line-height: 1.45;
     }
     .niche-card {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
         background: rgba(5, 25, 33, 0.82);
+        padding: 1.25rem;
         transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .niche-card__image {
-        flex: 0 0 172px !important;
-        width: 172px !important;
-        height: 172px !important;
-        aspect-ratio: 1;
-        object-fit: contain;
-        object-position: center;
-        background: #021014;
-        border-right: 1px solid rgba(148, 163, 184, 0.16);
+    .niche-card__icon {
+        display: grid;
+        flex: 0 0 3.25rem;
+        width: 3.25rem;
+        height: 3.25rem;
+        place-items: center;
+        border: 1px solid rgba(0, 255, 200, 0.25);
+        border-radius: 1rem;
+        background: rgba(0, 255, 200, 0.08);
+        color: var(--active-color);
+        font-size: 1.6rem;
     }
     .niche-card__body {
         flex: 1 1 auto;
         min-width: 0;
-        padding: 1rem;
     }
     .niche-card h3 {
         font-size: 1.1rem;
@@ -391,11 +458,8 @@ const faqItems = Array.from({ length: 6 }, (_, index) => index + 1);
             font-size: 0.82rem;
             line-height: 1.35;
         }
-        .niche-card__image {
-            flex-basis: 138px !important;
-            width: 138px !important;
-            height: 138px !important;
-        }
+        .niche-card { padding: 1rem; gap: 0.75rem; }
+        .niche-card__icon { flex-basis: 2.75rem; width: 2.75rem; height: 2.75rem; font-size: 1.35rem; border-radius: 0.8rem; }
         .niche-card p {
             font-size: 0.88rem;
         }
